@@ -1,0 +1,17 @@
+*{
+    /* background-color: #F67221; */
+}
+
+section#boas-vindas{
+    background: #47837B;
+    padding: 7%;
+}
+
+section#boas-vindas div.msg-bem-vindo h2{
+    /* width: 50%; */
+    padding-bottom: 8px;
+    border-bottom: 7px solid white;
+}
+.text-suave{
+    font-family: 300;
+}
