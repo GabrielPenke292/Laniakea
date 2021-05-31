@@ -31,7 +31,7 @@
                         </nav>
                     </div><!-- menu top -->
                     <div class="btn-entrar d-inline-block">
-                        <button class="btn btn-primary ">Entrar</button>
+                        <button class="btn btn-entrar">Entrar</button>
                     </div>
                 </div>
             </div><!-- row -->
@@ -54,7 +54,45 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section><!-- boas vindas -->
+
+        <section id="servicos-destaque">
+            <div class="container">
+                <div class="text-center pb-3">
+                    <h2>Serviços em destaque</h2>
+                </div>
+
+                <div class="row d-flex justify-content-center">
+                    
+                    <div class="col-md-3 destaque-single bg-secondary">
+
+                    </div><!-- destaque single -->
+
+                    <div class="col-md-3 destaque-single bg-secondary">
+                        
+                    </div><!-- destaque single -->
+
+                    <div class="col-md-3 destaque-single bg-secondary">
+                        
+                    </div><!-- destaque single -->
+                </div><!-- row -->
+
+                <div class="row d-flex justify-content-center">
+                    
+                    <div class="col-md-3 destaque-single bg-secondary">
+
+                    </div><!-- destaque single -->
+
+                    <div class="col-md-3 destaque-single bg-secondary">
+                        
+                    </div><!-- destaque single -->
+
+                    <div class="col-md-3 destaque-single bg-secondary">
+                        
+                    </div><!-- destaque single -->
+                </div><!-- row -->
+            </div><!-- container -->
+        </section><!-- servicos destaque -->
     </main>
     
 </body>

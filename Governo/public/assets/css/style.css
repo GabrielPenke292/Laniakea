@@ -15,3 +15,24 @@ section#boas-vindas div.msg-bem-vindo h2{
 .text-suave{
     font-family: 300;
 }
+button.btn-entrar{
+    background: #F67221;
+    color: white;
+}
+.title-top{
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 28px;
+}
+.menu-top{
+    padding-top: 25px;
+}
+
+section#servicos-destaque{
+    padding: 3% 0;
+    height: 700px;
+}
+.destaque-single{
+    width: 33%;
+    height: 300px;
+    margin: 15px 25px;
+}

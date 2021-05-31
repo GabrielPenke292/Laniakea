@@ -20,4 +20,8 @@
 <!--  sweet alert 2  -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-<title>Governo de Laneakea</title>
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+
+<title>Governo de Laniakea</title>
