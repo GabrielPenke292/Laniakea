@@ -5,7 +5,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="logo">
-                        <img src="assets/img/governo-logo-sem-fundo.png" alt="Logo do governo">
+                        <a href="<?= base_url() ?>/public">
+                            <img src="assets/img/governo-logo-sem-fundo.png" alt="Logo do governo">
+                        </a>
                     </div>
                 </div>
 

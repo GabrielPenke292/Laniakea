@@ -39,7 +39,10 @@
                     </div><!-- destaque single -->
 
                     <div class="col-md-3 destaque-single bg-secondary text-center">
-                        <h2>História Oficial do país</h2>
+                        <a href="historia-oficial">
+                            <h2>História Oficial do país</h2>                        
+                        </a>
+
                     </div><!-- destaque single -->
 
                     <div class="col-md-3 destaque-single bg-secondary">

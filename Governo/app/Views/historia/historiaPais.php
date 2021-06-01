@@ -5,30 +5,24 @@
 </head>
 <body>
     <?= $this->include('templates/header') ?>
-    <section id="dados">
+    <section id="historia">
         <div class="container">
             <div class="title text-center m-5">
                 <h1>República Constitucional de Laniakea</h1>
             </div>
-            Número de cidades: 9
-            Número de habitantes: 0
-            Número de empresas registradas: 0
-            Extensão territória: Desconhecida
-            PIB: Desconhecido
-
-            Unidade Monetária: Átono
-            Cambio com Dóllar: Desconhecido
-            Cambio com Euro: Desconhecido
-            Cambio com Libra: Desconhecido
-
-            Número de escolas: 0
-            Número de Universidades: 0
-            Número Creches: 0
-            Índice de desempenho escolar: Desconhecido
-
             
-
-
+            <p>
+                Composta por 9 cidades, Laniakea é um país que faz fronteira ao sul de Portugal e ao norte da África, banhado pelo oceano atlântico.
+                Antes um território de disputa entre portugueses e franceses, Laniakea conquistou sua independência no ano de 2021 de forma pacífica e a partir de então surge a República Constitucional de Laniakea.
+            </p>
+            
+            <p>
+                Sua capital é Groombridge, ao sudeste do país. O idioma oficial é o português e o inglês é a segunda lingua da população. As outras 8 cidades são: Prócio, Luyten, Maffei, Dwingeloo, Antlia, Fornax, Oberon e Proteu.
+            </p>
+            
+            <p>
+                Como o país acaba de surgir, ainda carece de uma fonte consistente de dados.      
+            </p>
         </div>
     </section>
 

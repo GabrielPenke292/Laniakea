@@ -14,4 +14,9 @@ class Home extends BaseController
 		$dados = ['title' => "Dados Oficiais"];
 		return view('dados/dadosOficiais', $dados);
 	}
+	
+	public function historiaOficial(){
+		$dados = ['title' => "História oficial"];
+		return view('historia/historiaPais', $dados);
+	}
 }
