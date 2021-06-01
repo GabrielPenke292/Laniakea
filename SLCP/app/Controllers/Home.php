@@ -5,7 +5,8 @@ namespace App\Controllers;
 class Home extends BaseController
 {
 	public function index()
-	{
-		echo "Hello Laniakea";
+	{	
+		$dados = ['title'=> "Home"];
+		return view("home", $dados);
 	}
 }
