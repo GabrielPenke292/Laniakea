@@ -4,39 +4,7 @@
     <?= $this->include('templates/head') ?>
 </head>
 <body>  
-    <header class="p-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="logo">
-                        <img src="assets/img/governo-logo-sem-fundo.png" alt="Logo do governo">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="title-top">Governo<br>de<br>Laniakea</div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="menu-top d-inline-block">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">ministérios</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">noticias</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div><!-- menu top -->
-                    <div class="btn-entrar d-inline-block">
-                        <button class="btn btn-entrar">Entrar</button>
-                    </div>
-                </div>
-            </div><!-- row -->
-        </div><!-- container -->
-    </header>
+    <?= $this->include('templates/header') ?>
 
     <main>
         <section id="boas-vindas">
@@ -64,12 +32,14 @@
 
                 <div class="row d-flex justify-content-center">
                     
-                    <div class="col-md-3 destaque-single bg-secondary">
-
+                    <div class="col-md-3 destaque-single bg-secondary text-center inline-block align-middle">
+                        <a href="dados-oficiais">
+                            <h2>Dados Oficiais do país</h2>
+                        </a>                    
                     </div><!-- destaque single -->
 
-                    <div class="col-md-3 destaque-single bg-secondary">
-                        
+                    <div class="col-md-3 destaque-single bg-secondary text-center">
+                        <h2>História Oficial do país</h2>
                     </div><!-- destaque single -->
 
                     <div class="col-md-3 destaque-single bg-secondary">

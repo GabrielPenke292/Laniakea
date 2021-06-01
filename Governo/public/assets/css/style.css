@@ -30,9 +30,21 @@ button.btn-entrar{
 section#servicos-destaque{
     padding: 3% 0;
     height: 700px;
+    font-family: 'Lato', sans-serif;
 }
 .destaque-single{
     width: 33%;
     height: 300px;
     margin: 15px 25px;
+    cursor: pointer;
+    
+}
+.destaque-single a{
+    text-decoration: none;
+
+}
+.destaque-single h2{
+    font-size: 23px;
+    padding-top: 50%; 
+    color: white;
 }
