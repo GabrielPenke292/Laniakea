@@ -48,7 +48,13 @@
                                                 <label for="">UF</label>
                                             </div>
                                             <div class="col-md-2 text-left">
-                                                <input type="text" class="form-control" placeholder="UF" aria-label="Last name" maxlength="2">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected class="bg-secondary">Selecione</option>
+                                                    <?php foreach ($UFs as $UF) { ?>
+                                                        <option value="<?= $UF['ESTADO_ID']?>"><?= $UF['ESTADO_SIGLA'] ?></option>
+                                                    <?php } ?>
+
+                                                </select>
                                             </div>
 
                                             <div class="col-md-1">
@@ -100,6 +106,12 @@
                                             <div class="col-md-5">
                                                 <input type="text" class="form-control" placeholder="Número do cartório" aria-label="First name">
                                             </div> 
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <a href="cadastrar-pessoa" type="button" class="btn btn-primary">Cadastrar</a>
+                                            </div>
                                         </div>
                                         
 
