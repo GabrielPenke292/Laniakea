@@ -26,6 +26,16 @@ class Home extends BaseController
 
 	}
 
+	public function getCidadesByUF(){
+		$cidades = new Cidade_Model();
+
+		$id = $this->request->getGet("uf");
+
+		$cidadesByUf = $cidades->getByUF($id);
+
+		echo json_encode($cidadesByUf);		
+	}
+
 	public function getEstados(){
 		$estados = new Estado_Model();
 

@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/cadastrar-pessoa', 'Home::cadastrarPessoa');
+$routes->get('/get-cidades-by-uf', 'Home::getCidadesByUF');
 
 
 /*

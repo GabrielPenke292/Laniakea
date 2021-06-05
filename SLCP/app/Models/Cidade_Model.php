@@ -12,4 +12,19 @@ class Cidade_Model extends Model
         "CIDADE_NOME", 
         "CIDADE_ESTADO_ID", 
     ];
+
+    public function getByUF($id){   
+
+        return $this->where('CIDADE_ESTADO_ID', $id)->findAll();
+
+
+        // $builder = $this->db->table($this->table);
+        // $builder->select("*");
+        // $builder->join("estados as e", "e.ESTADO_ID = cidades.CIDADE_ESTADO_ID");
+        // $builder->where("CIDADE_ESTADO_ID ", $id);
+        // $sql = $builder->getCompiledSelect();
+        // $query = $builder->get();
+
+        // return $query;
+    }
 }
