@@ -8,6 +8,11 @@
         <div class='d-flex justify-content-center'>
             <h1>SLCP</h1>
         </div>
+        <?php if(isset($msg)){?>
+            <div class="bg-alert">
+                <h2><?= $msg ?></h2>
+            </div>
+        <?php } ?>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 " >

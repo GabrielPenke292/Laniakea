@@ -8,14 +8,14 @@ use App\Models\Cidade_Model;
 
 class Home extends BaseController
 {
-	public function index()
-	{	
+	public function index(){	
 		$estados = $this->getEstados();
 
 		$dados = [
 			'title' => "Home",
 			"UFs"	=> $estados,
 		];
+
 		return view("home", $dados);
 	}
 
@@ -37,10 +37,11 @@ class Home extends BaseController
 		];
 
 		if($pessoas->save($dataInsert)){
-			echo "Sucesso";
+			$msg = "Operação realizada com sucesso!";
 		}else{
-			echo "Fail";
+			$msg = "Ocorreu algum erro ao realizar a operação! Contate o administrador!";
 		}
+		return redirect()->to(BASE_URL); 
 	}
 
 	public function getCidadesByUF(){
