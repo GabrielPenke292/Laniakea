@@ -108,7 +108,7 @@
                                                 <label for="">Nº Cartório</label>
                                             </div>
                                             <div class="col">
-                                                <input type="number" id="numeroCartorio" name="numCartorio" required class="form-control" placeholder="Número do cartório" aria-label="First name">
+                                                <input type="number" id="numeroCartorio" min="1" name="numCartorio" required class="form-control" placeholder="Número do cartório" aria-label="First name">
                                             </div> 
 
                                             <div class="col-md-1">
@@ -124,7 +124,7 @@
                                                 <label for="">Cod Usuário</label>
                                             </div>
                                             <div class="col-md-5">
-                                                <input type="text" id="codUsuario" 
+                                                <input type="number" id="codUsuario" min="1"
                                                 name="codUsuario"class="form-control" placeholder="Código do usuário" aria-label="First name">
                                             </div> 
                                         </div>
@@ -150,7 +150,7 @@
 
                         <div class="col-md-12 bg-primary mt-5 text-center">
                             <h3>Última pessoa cadastrada:</h3>
-                            <p id="lastRegistered">Fulano de tal</p>
+                            <p id="lastRegistered">-</p>
                         </div>
                     </div>
                     
