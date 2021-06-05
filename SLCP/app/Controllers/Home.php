@@ -59,4 +59,14 @@ class Home extends BaseController
 	public function getCidades(){
 		$cidades = new Cidade_Model();
 	}
+
+	public function getNextRegisterNumber(){
+		$pessoas = new Pessoa_Model();
+
+		// $todas_pessoas = $pessoas->findAll()->get("PES_ID");
+		$maiorId = $pessoas->getMaiorId();
+		$proximoId = $maiorId[0]["PES_ID"] + 1;
+		
+		echo json_encode($proximoId);
+	}
 }

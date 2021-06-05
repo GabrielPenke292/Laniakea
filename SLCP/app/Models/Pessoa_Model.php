@@ -18,4 +18,15 @@ class Pessoa_Model extends Model
         "PES_NUM_REGISTRO", 
         "PES_COD_USUARIO_CARTORIO"
     ];
+
+    public function getMaiorId(){
+        $builder = $this->db->table($this->table);
+        $builder->select("PES_ID");
+        $builder->limit(1);
+        $builder->orderBy("PES_ID", "desc");
+
+        $query =  $builder->get()->getResultArray();
+
+        return $query;
+    }   
 }

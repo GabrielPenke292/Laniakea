@@ -32,7 +32,7 @@
                                                 <label for="">Nome</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Nome completo" aria-label="First name">
+                                                <input type="text" class="form-control" placeholder="Nome completo" id="name" name="name" aria-label="First name">
                                             </div>
                                         </div>
 
@@ -41,7 +41,7 @@
                                                 <label for="">Data nasc</label>
                                             </div>
                                             <div class="col">
-                                                <input type="date" class="form-control" placeholder="Data nasc" aria-label="First name">
+                                                <input type="date" class="form-control" id="dataNasc" name="dataNasc" placeholder="Data nasc" aria-label="First name">
                                             </div> 
 
                                             <div class="col-md-1 text-right">
@@ -74,7 +74,7 @@
                                                 <label for="">Nome Pai</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Nome do pai" aria-label="First name">
+                                                <input type="text" id="fathersName" name="fathersName" class="form-control" placeholder="Nome do pai" aria-label="First name">
                                             </div>
                                         </div>
 
@@ -83,7 +83,7 @@
                                                 <label for="">Nome Mãe</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Nome da mãe" aria-label="First name">
+                                                <input type="text" id="mothersName" name="mothersName" class="form-control" placeholder="Nome da mãe" aria-label="First name">
                                             </div>
                                         </div>
 
@@ -92,14 +92,14 @@
                                                 <label for="">Nº Cartório</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Número do cartório" aria-label="First name">
+                                                <input type="number" required class="form-control" placeholder="Número do cartório" aria-label="First name">
                                             </div> 
 
                                             <div class="col-md-1">
                                                 <label for="">Nº Registro</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Número do registro" aria-label="First name">
+                                                <input type="text" required id='registerNumber' name="registerNumber" readonly class="form-control" placeholder="Número do registro" aria-label="First name">
                                             </div> 
                                         </div>
 

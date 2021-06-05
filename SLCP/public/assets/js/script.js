@@ -1,7 +1,17 @@
+$(document).ready(function () {
+    $.ajax({
+        type: "get",
+        url: "get-next-register-number",
+        dataType: "json",
+        success: function (response) {
+            console.log(response);
+            $("#registerNumber").val("LK-"+response);
+        }
+    });
+});
+
 function mostra_cidades(){
     uf = $("#uf").val();
-
-    // console.log(uf);
 
     $.ajax({
         type: "get",
@@ -9,40 +19,8 @@ function mostra_cidades(){
         data: {uf},
         dataType: "html",
         success: function (response) {
-            // carregaCidades(response);
            $("#city").find('option').remove();
            $("#city").html(response);
         }
     });
-}
-
-function carregaCidades(data){
-    console.log(data[0]['CIDADE_NOME']);
-    let cidade = data[0]['CIDADE_NOME'];
-    let option = document.createElement("option");
-    option.text = document.createTextNode(cidade);
-
-    function inicia(){
-        // document.getElementById("#city").appendChild(node);
-        let select = $("#city");
-        select.appendChild(option);
-        console.log('iniciou')
-    }
-
-        window.addEventListener("load", inicia);
-
-
-    // data.forEach(cidade => {
-    //     // console.log(cidade)
-    //     let option = document.createElement("option");
-    //     option.text = document.createTextNode(cidade["CIDADE_NOME"]);
-        
-    //     function inicia(){
-    //         // document.getElementById("#city").appendChild(node);
-    //         let select = $("#city");
-    //         select.appendChild(option);
-    //     }
-
-    //     window.addEventListener("load", inicia);
-    // });
 }
