@@ -78,13 +78,19 @@ class Home extends BaseController
 		$cidades = new Cidade_Model();
 	}
 
-	public function getNextRegisterNumber(){
+	public function lastRegister(){
 		$pessoas = new Pessoa_Model();
 
 		// $todas_pessoas = $pessoas->findAll()->get("PES_ID");
-		$maiorId = $pessoas->getMaiorId();
-		$proximoId = $maiorId[0]["PES_ID"] + 1;
+		$lastRegister = $pessoas->getLastRegister();
+		$proximoId = $lastRegister[0]["PES_ID"] + 1;
+		$lastName = $lastRegister[0]["PES_NOME"];
+
+		$dataReturn = [
+			"proximoId" => $proximoId,
+			"lastName"	=> $lastName
+		];
 		
-		echo json_encode($proximoId);
+		echo json_encode($dataReturn);
 	}
 }

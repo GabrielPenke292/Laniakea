@@ -135,23 +135,30 @@
                                             </div>
                                         </div>
                                         
-
                                     </form>
                                 </div>
                             </div>
                         </div>
-
-                        
                     </div>
-                </div>
-
+                </div><!-- col -->
+                                                        
                 <div class="col-md-3 " >
-                    <div class="bg-secondary" id='numeros'>   
-                        <h3 class="contadorDeRegistros">Já existem <span id="numberPeopleRegistered">0</span> Laniakers no registro oficial</h3>
+                    <div class="row">
+                        <div class="bg-secondary col-md-12 text-center pt-4" id='numeros'>   
+                            <h3 class="contadorDeRegistros">Já existem <span id="numberPeopleRegistered">0</span> Laniakers no registro oficial</h3>
+                        </div>
+
+                        <div class="col-md-12 bg-primary mt-5 text-center">
+                            <h3>Última pessoa cadastrada:</h3>
+                            <p id="lastRegistered">Fulano de tal</p>
+                        </div>
                     </div>
+                    
                 </div>
-            </div>
-        </div>
+
+
+            </div><!-- Row -->
+        </div><!-- container fluid -->
         
     </main>
 

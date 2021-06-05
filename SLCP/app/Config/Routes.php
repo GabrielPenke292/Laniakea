@@ -36,7 +36,7 @@ $routes->get('/', 							'Home::index');
 // $routes->get('/(:any)', 					'Home::index/$1');
 $routes->post('/cadastrar-pessoa', 			'Home::cadastrarPessoa');
 $routes->get('/get-cidades-by-uf', 			'Home::getCidadesByUF');
-$routes->get('/get-next-register-number', 	'Home::getNextRegisterNumber');
+$routes->get('/get-last-register', 	'Home::lastRegister');
 
 
 /*

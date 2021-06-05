@@ -1,11 +1,12 @@
 $(document).ready(function () {
     $.ajax({
         type: "get",
-        url: "get-next-register-number",
+        url: "get-last-register",
         dataType: "json",
         success: function (response) {
-            $("#registerNumber").val("LK-"+response);
-            $("#numberPeopleRegistered").html(response-1);
+            $("#registerNumber").val("LK-"+response['proximoId']);
+            $("#numberPeopleRegistered").html(response['proximoId']-1);
+            $("#lastRegistered").html(response['lastName']);
         }
     });
 });

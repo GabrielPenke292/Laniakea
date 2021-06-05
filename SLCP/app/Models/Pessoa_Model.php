@@ -21,9 +21,9 @@ class Pessoa_Model extends Model
         "PES_COD_USUARIO_CARTORIO"
     ];
 
-    public function getMaiorId(){
+    public function getLastRegister(){
         $builder = $this->db->table($this->table);
-        $builder->select("PES_ID");
+        $builder->select("PES_ID, PES_NOME");
         $builder->limit(1);
         $builder->orderBy("PES_ID", "desc");
 
@@ -31,4 +31,5 @@ class Pessoa_Model extends Model
 
         return $query;
     }   
+
 }
