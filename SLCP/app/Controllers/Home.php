@@ -23,7 +23,24 @@ class Home extends BaseController
 
 		$pessoas = new Pessoa_Model();
 
+		$dataInsert = [
+			"PES_NOME" 					=> $this->request->getPost("name"), 
+			"PES_SEXO"					=> $this->request->getPost("sexo"),
+			"PES_DATA_NASC" 			=> $this->request->getPost('dataNasc'), 
+			"PES_UF" 					=> $this->request->getPost('uf'), 
+			"PES_CIDADE" 				=> $this->request->getPost('city'),  
+			"PES_NOME_PAI" 				=> $this->request->getPost('nomePai'),
+			"PES_NOME_MAE" 				=> $this->request->getPost('nomeMae'), 
+			"PES_NUM_CARTORIO" 			=> $this->request->getPost('numCartorio'), 
+			"PES_NUM_REGISTRO" 			=> $this->request->getPost('numRegistro'), 
+			"PES_COD_USUARIO_CARTORIO" 	=> $this->request->getPost('codUsuario'),
+		];
 
+		if($pessoas->save($dataInsert)){
+			echo "Sucesso";
+		}else{
+			echo "Fail";
+		}
 	}
 
 	public function getCidadesByUF(){

@@ -10,8 +10,10 @@ class Pessoa_Model extends Model
     protected $primaryKey = "PES_ID";
     protected $allowedFields = [
         "PES_NOME", 
+        "PES_SEXO",
         "PES_DATA_NASC", 
-        "PES_UF, PES_CIDADE", 
+        "PES_UF",
+        "PES_CIDADE", 
         "PES_NOME_PAI",
         "PES_NOME_MAE", 
         "PES_NUM_CARTORIO", 

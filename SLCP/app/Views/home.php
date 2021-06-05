@@ -26,13 +26,24 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <form action="">
+                                    <form action="cadastrar-pessoa" method="post">
                                         <div class="mb-3 row">
                                             <div class="col-md-1">
                                                 <label for="">Nome</label>
                                             </div>
-                                            <div class="col">
+                                            <div class="col-md-7">
                                                 <input type="text" class="form-control" placeholder="Nome completo" id="name" name="name" aria-label="First name">
+                                            </div>
+
+                                            <div class="col-md-1">
+                                                <label for="">Sexo</label>
+                                            </div>
+                                            <div class="col">
+                                                <select name="sexo" id="sexo" required>
+                                                    <option readonly value="">Selecione</option>
+                                                    <option value="M">Masculino</option>
+                                                    <option value="F">Feminino</option>
+                                                </select>
                                             </div>
                                         </div>
 
@@ -48,7 +59,7 @@
                                                 <label for="">UF</label>
                                             </div>
                                             <div class="col-md-2 text-left">
-                                                <select class="form-select" aria-label="Default select example" id="uf" onchange='mostra_cidades()'>
+                                                <select class="form-select" aria-label="Default select example" id="uf" name="uf" onchange='mostra_cidades()'>
                                                     <option selected readonly class="bg-secondary">Selecione</option>
                                                     <?php foreach ($UFs as $UF) { ?>
                                                         <option value="<?= $UF['ESTADO_ID']?>"><?= $UF['ESTADO_SIGLA'] ?></option>
@@ -61,7 +72,7 @@
                                                 <label for="">Cidade</label>
                                             </div>
                                             <div class="col">
-                                                <select class="form-select" aria-label="Default select example" id="city">
+                                                <select class="form-select" aria-label="Default select example" id="city" name="city">
                                                     <option readonly class="bg-secondary">Selecione</option>
                                                     
 
@@ -74,7 +85,7 @@
                                                 <label for="">Nome Pai</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" id="fathersName" name="fathersName" class="form-control" placeholder="Nome do pai" aria-label="First name">
+                                                <input type="text" id="fathersName" name="nomePai"  class="form-control" placeholder="Nome do pai" aria-label="First name">
                                             </div>
                                         </div>
 
@@ -83,7 +94,7 @@
                                                 <label for="">Nome Mãe</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" id="mothersName" name="mothersName" class="form-control" placeholder="Nome da mãe" aria-label="First name">
+                                                <input type="text" id="mothersName" name="nomeMae" class="form-control" placeholder="Nome da mãe" aria-label="First name">
                                             </div>
                                         </div>
 
@@ -92,14 +103,14 @@
                                                 <label for="">Nº Cartório</label>
                                             </div>
                                             <div class="col">
-                                                <input type="number" required class="form-control" placeholder="Número do cartório" aria-label="First name">
+                                                <input type="number" id="numeroCartorio" name="numCartorio" required class="form-control" placeholder="Número do cartório" aria-label="First name">
                                             </div> 
 
                                             <div class="col-md-1">
                                                 <label for="">Nº Registro</label>
                                             </div>
                                             <div class="col">
-                                                <input type="text" required id='registerNumber' name="registerNumber" readonly class="form-control" placeholder="Número do registro" aria-label="First name">
+                                                <input type="text" required id='registerNumber' name="numRegistro" readonly class="form-control" placeholder="Número do registro" aria-label="First name">
                                             </div> 
                                         </div>
 
@@ -108,13 +119,14 @@
                                                 <label for="">Cod Usuário</label>
                                             </div>
                                             <div class="col-md-5">
-                                                <input type="text" class="form-control" placeholder="Número do cartório" aria-label="First name">
+                                                <input type="text" id="codUsuario" 
+                                                name="codUsuario"class="form-control" placeholder="Código do usuário" aria-label="First name">
                                             </div> 
                                         </div>
 
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <a href="cadastrar-pessoa" type="button" class="btn btn-primary">Cadastrar</a>
+                                                <input type="submit" class="btn btn-primary" value="Cadastrar">
                                             </div>
                                         </div>
                                         
@@ -130,7 +142,7 @@
 
                 <div class="col-md-3 " >
                     <div class="bg-secondary" id='numeros'>   
-                        [lado C]
+                        <h3 class="contadorDeRegistros">Já existem <span id="numberPeopleRegistered">0</span> Laniakers no registro oficial</h3>
                     </div>
                 </div>
             </div>
