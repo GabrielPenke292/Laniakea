@@ -49,7 +49,7 @@
                                             </div>
                                             <div class="col-md-2 text-left">
                                                 <select class="form-select" aria-label="Default select example" id="uf" onchange='mostra_cidades()'>
-                                                    <option selected class="bg-secondary">Selecione</option>
+                                                    <option selected readonly class="bg-secondary">Selecione</option>
                                                     <?php foreach ($UFs as $UF) { ?>
                                                         <option value="<?= $UF['ESTADO_ID']?>"><?= $UF['ESTADO_SIGLA'] ?></option>
                                                     <?php } ?>
@@ -61,8 +61,8 @@
                                                 <label for="">Cidade</label>
                                             </div>
                                             <div class="col">
-                                                <select class="form-select" aria-label="Default select example" id="city" onchange='mostra_cidades()'>
-                                                    <option selected class="bg-secondary">Selecione</option>
+                                                <select class="form-select" aria-label="Default select example" id="city">
+                                                    <option readonly class="bg-secondary">Selecione</option>
                                                     
 
                                                 </select>

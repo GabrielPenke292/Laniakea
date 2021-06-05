@@ -32,8 +32,16 @@ class Home extends BaseController
 		$id = $this->request->getGet("uf");
 
 		$cidadesByUf = $cidades->getByUF($id);
+		$data = ['cities'=>$cidadesByUf];
+		return view('select_cidades', $data);
 
-		echo json_encode($cidadesByUf);		
+		$option = "<option selected class='bg-secondary'>Selecione";
+
+		foreach ($cidadesByUf as $city) {
+			$option = $option."<option value='".$city['CIDADE_ID']."'>".$city['CIDADE_NOME'];
+		}
+
+		echo json_encode($option);		
 	}
 
 	public function getEstados(){
