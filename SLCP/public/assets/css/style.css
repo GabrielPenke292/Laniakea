@@ -12,6 +12,9 @@
 
 #login-screen{
     background-image: url("../img/background-login.jpg");
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
 }
 
 .title-login{

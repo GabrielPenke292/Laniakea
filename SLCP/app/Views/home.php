@@ -21,7 +21,7 @@
                             <div class="row">
                                 [Aqui entra um imagem]<br>
                                 <div class="col">
-                                    <p>Bem-vindo(a), Fulano</p>
+                                    <p>Bem-vindo(a), <?= $userName ?></p>
                                     <a href="logout">Sair</a>
                                 </div>
                             </div>

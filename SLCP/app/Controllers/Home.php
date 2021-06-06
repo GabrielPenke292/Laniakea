@@ -19,8 +19,9 @@ class Home extends BaseController
 			$estados = $this->getEstados();
 
 			$dados = [
-				'title' => "Home",
-				"UFs"	=> $estados,
+				'title' 	=> "Home",
+				"UFs"		=> $estados,
+				"userName"	=> $_SESSION['userName'],
 			];
 	
 			return view("home", $dados);				
@@ -195,14 +196,17 @@ class Home extends BaseController
             $funcionario = new \App\Models\Funcionario_Model();
 
             $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
-            $checkPassword = Hash::checkPassword($password, $userInfo['FUNCIONARIO_PASSWORD']);
+            $userInfo = $funcionario->getData($email);
+            $checkPassword = Hash::checkPassword($password, $userInfo[0]['FUNCIONARIO_PASSWORD']);
 
             if(!$checkPassword){
                 session()->setFlashdata('fail', 'Incorrect password');
                 return redirect()->to(BASE_URL.'login')->withInput();
             }else{
-                $user_id = $userInfo['FUNCIONARIO_ID'];
+                $user_id = $userInfo[0]['FUNCIONARIO_ID'];
+				$user_name = $userInfo[0]['PES_NOME'];
                 session()->set('loggedUser', $user_id);
+                session()->set('userName', $user_name);
                 return redirect()->to(BASE_URL);
             }
         }

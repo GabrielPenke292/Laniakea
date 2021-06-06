@@ -42,6 +42,7 @@
                         <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
                     </div>
                 </form>
+                <i class="fas fa-arrow-circle-left"></i>
             </div>
         </div>
     </div>
