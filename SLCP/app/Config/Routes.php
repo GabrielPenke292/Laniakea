@@ -38,6 +38,8 @@ $routes->get('/get-cidades-by-uf', 			'Home::getCidadesByUF');
 $routes->get('/get-last-register', 			'Home::lastRegister');
 
 $routes->get('/login', 						'Home::loginPage');
+$routes->get('/check', 						'Home::checkLogin');
+
 
 
 /*

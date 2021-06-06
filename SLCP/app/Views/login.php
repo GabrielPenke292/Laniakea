@@ -16,15 +16,18 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-login text-white">
-                    <form>
+                    <form method="get" action="check">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                            <span class='text-danger'><?= isset($validation) ? display_error($validation, 'email') : '' ?></span>
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" id="password" name="password">
+                        <span class='text-danger'><?= isset($validation) ? display_error($validation, 'password') : '' ?></span>
+
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Submit</button>
