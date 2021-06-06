@@ -9,3 +9,18 @@
 #numeros{
     height: 20vh;
 }
+
+#login-screen{
+    background-image: url("../img/background-login.jpg");
+}
+
+.title-login{
+    background-color: rgba(212, 198, 197, 0.4);
+    padding: 20px;
+}
+
+.form-login{
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #363b59;
+}

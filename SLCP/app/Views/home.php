@@ -28,6 +28,13 @@
                                 <h2>Formulário de Cadastro</h2>
                             </div>
                         </div>
+                        <?php if(!empty(session()->getFlashdata('fail'))) :?>
+                            <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+                        <?php endif ?>
+                        
+                        <?php if(!empty(session()->getFlashdata('success'))) :?>
+                            <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+                        <?php endif?>
                         <div class="container">
                             <div class="row">
                                 <div class="col">
@@ -144,12 +151,12 @@
                                                         
                 <div class="col-md-3 " >
                     <div class="row">
-                        <div class="bg-secondary col-md-12 text-center pt-4" id='numeros'>   
-                            <h3 class="contadorDeRegistros">Já existem <span id="numberPeopleRegistered">0</span> Laniakers no registro oficial</h3>
+                        <div class="bg-secondary col-md-12 text-center p-4 text-white" id='numeros'>   
+                            <h4 class="contadorDeRegistros">Já existem <span id="numberPeopleRegistered">0</span> Laniakers no registro oficial</h4>
                         </div>
 
-                        <div class="col-md-12 bg-primary mt-5 text-center">
-                            <h3>Última pessoa cadastrada:</h3>
+                        <div class="col-md-12 bg-primary mt-5 text-center text-white p-3">
+                            <h4>Última pessoa cadastrada:</h4>
                             <p id="lastRegistered">-</p>
                         </div>
                     </div>

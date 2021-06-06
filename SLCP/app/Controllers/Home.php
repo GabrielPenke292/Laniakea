@@ -37,11 +37,11 @@ class Home extends BaseController
 		];
 
 		if($pessoas->save($dataInsert)){
-			$msg = "Operação realizada com sucesso!";
+			return redirect()->to(BASE_URL)->with('success', "usuário inserido com sucesso!"); 
 		}else{
-			$msg = "Ocorreu algum erro ao realizar a operação! Contate o administrador!";
+			return redirect()->to(BASE_URL)->with('fail', "Algo deu errado! Contate o suporte de TI!"); 
 		}
-		return redirect()->to(BASE_URL); 
+		
 	}
 
 	public function getCidadesByUF(){
@@ -92,5 +92,14 @@ class Home extends BaseController
 		];
 		
 		echo json_encode($dataReturn);
+	}
+
+	public function loginPage(){
+		$dados = [
+			'title' => "Home",
+			
+		];
+
+		return view("login", $dados);
 	}
 }
