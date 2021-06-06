@@ -9,18 +9,28 @@ use App\Libraries\Hash;
 
 class Home extends BaseController
 {	
+
 	public function __construct(){
 		helper(['form']);
 	}
+
 	public function index(){	
-		$estados = $this->getEstados();
+		if(session()->has('loggedUser')){
+			$estados = $this->getEstados();
+
+			$dados = [
+				'title' => "Home",
+				"UFs"	=> $estados,
+			];
+	
+			return view("home", $dados);				
+		}
 
 		$dados = [
-			'title' => "Home",
-			"UFs"	=> $estados,
+			'title' => "Login",
 		];
 
-		return view("home", $dados);
+		return view("login", $dados);
 	}
 
 	public function cadastrarPessoa(){
@@ -150,7 +160,7 @@ class Home extends BaseController
 
 	public function loginPage(){
 		$dados = [
-			'title' => "Home",
+			'title' => "Login",
 		];
 
 		return view("login", $dados);
@@ -159,19 +169,18 @@ class Home extends BaseController
 	public function checkLogin(){
 		$validation = $this->validate([
             'email'=>[
-                'rules' =>'required|valid_email|is_not_unique[users.email]',
+                'rules' =>'required|valid_email',
                 'errors'=>[
-                    'required'      =>  'Email is required',
-                    'valid_email'   =>  'Enter a valid email address',
-                    'is_not_unique' =>  'This email is not registered on our service'
+                    'required'      =>  'Email é um campo obrigatório',
+                    'valid_email'   =>  'Digite um email válido',
                     ]
                 ],
             'password'=>[
                 'rules'     =>  'required|min_length[5]|max_length[12]',
                 'errors'    =>  [
-                    'required'      =>  'Password is required',
-                    'min_length'    =>  'Password must have at least 5 characters in length',
-                    'max_length'    =>  'Password must not have more than 12 characters in length'
+                    'required'      =>  'Senha é um campo obrigatório',
+                    'min_length'    =>  'A senha deve ter pelo menos 5 caracteres',
+                    'max_length'    =>  'A senha deve ter no máximo 12 caracteres'
                 ]
             ]
         ]);
@@ -183,20 +192,27 @@ class Home extends BaseController
             $email = $this->request->getGet('email');
             $password = $this->request->getGet('password');
 
-            $usersModel = new \App\Models\UsersModel();
+            $funcionario = new \App\Models\Funcionario_Model();
 
-            $userInfo = $usersModel->where('email', $email)->first();
-            $checkPassword = Hash::checkPassword($password, $userInfo['password']);
+            $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
+            $checkPassword = Hash::checkPassword($password, $userInfo['FUNCIONARIO_PASSWORD']);
 
             if(!$checkPassword){
                 session()->setFlashdata('fail', 'Incorrect password');
-                return redirect()->to('/auth')->withInput();
+                return redirect()->to(BASE_URL.'login')->withInput();
             }else{
-                $user_id = $userInfo['id'];
+                $user_id = $userInfo['FUNCIONARIO_ID'];
                 session()->set('loggedUser', $user_id);
-                return redirect()->to('/dashboard');
+                return redirect()->to(BASE_URL);
             }
         }
 
+	}
+
+	public function logout(){
+		if(session()->has('loggedUser')){
+            session()->remove('loggedUser');
+        }
+		return redirect()->to(BASE_URL.'login');
 	}
 }

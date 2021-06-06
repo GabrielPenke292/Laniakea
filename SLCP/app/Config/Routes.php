@@ -39,6 +39,7 @@ $routes->get('/get-last-register', 			'Home::lastRegister');
 
 $routes->get('/login', 						'Home::loginPage');
 $routes->get('/check', 						'Home::checkLogin');
+$routes->get('/logout', 					'Home::logout');
 
 
 $routes->get('/cadastro-usuario', 			'Home::cadastroUsuarioPage');

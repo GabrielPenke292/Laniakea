@@ -20,7 +20,10 @@
                         <div class="container-fluid">
                             <div class="row">
                                 [Aqui entra um imagem]<br>
-                                [DADOS DO USUÁRIO LOGADO]
+                                <div class="col">
+                                    <p>Bem-vindo(a), Fulano</p>
+                                    <a href="logout">Sair</a>
+                                </div>
                             </div>
                             <div class="row">
                                 <ul class="list-group w-100">
