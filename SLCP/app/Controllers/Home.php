@@ -5,9 +5,13 @@ namespace App\Controllers;
 use App\Models\Pessoa_Model;
 use App\Models\Estado_Model;
 use App\Models\Cidade_Model;
+use App\Libraries\Hash;
 
 class Home extends BaseController
-{
+{	
+	public function __construct(){
+		helper(['form']);
+	}
 	public function index(){	
 		$estados = $this->getEstados();
 
@@ -94,10 +98,59 @@ class Home extends BaseController
 		echo json_encode($dataReturn);
 	}
 
+	public function cadastroUsuarioPage(){
+		$dados = [
+			'title' => "Home",
+		];
+
+		return view("cadastroPage", $dados);
+	}
+
+	public function registerUser(){
+		$pessoas = new Pessoa_Model();
+		 
+		$validation = $this->validate([
+            'name'      =>  'required',
+            'email'     =>  'required|valid_email|is_unique[funcionarios_cartorio.FUNCIONARIO_EMAIL]',
+            'password'  =>  [
+                    'rules' => 'required|min_length[5]|max_length[12]',
+            ],
+            'cpassword' =>  'required|min_length[5]|max_length[12]|matches[password]'
+        ]);
+        
+
+        if(!$validation){
+            return view("cadastroPage", ['validation'=>$this->validator, 'title' => "Registro"]);
+        }else{
+            $name = $this->request->getPost('name');
+            $email = $this->request->getPost('email');
+            $password = $this->request->getPost('password');   
+			
+			$nome = $pessoas->getIdByName($name);
+
+			if($nome == null){
+				return redirect()->to(BASE_URL)->with("fail", "Essa pessoa não existe na SLCP");
+			}
+
+            $values = [
+                'FUNCIONARIO_NOME_ID'      	=>  $nome[0]['PES_ID'],
+				'FUNCIONARIO_CARTORIO_ID'	=>  1,
+                'FUNCIONARIO_EMAIL'     	=>  $email,
+                'FUNCIONARIO_PASSWORD'  	=>  Hash::make($password)
+            ];
+            $funcionario = new \App\Models\Funcionario_Model();
+
+            $query = $funcionario->insert($values);
+            if(!$query){
+                return redirect()->to(BASE_URL)->with("fail", "Algo deu errado");
+            }
+            return redirect()->to(BASE_URL)->with('success', 'Usuário registrado com sucesso');
+        }
+	}
+
 	public function loginPage(){
 		$dados = [
 			'title' => "Home",
-			
 		];
 
 		return view("login", $dados);

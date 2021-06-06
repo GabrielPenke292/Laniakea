@@ -32,4 +32,15 @@ class Pessoa_Model extends Model
         return $query;
     }   
 
+    public function getIdByName($name){
+        $builder = $this->db->table($this->table);
+        $builder->select("PES_ID");
+        $builder->limit(1);
+        $builder->where("PES_NOME", $name);
+        $builder->orderBy("PES_ID", "desc");
+
+        $query =  $builder->get()->getResultArray();
+
+        return $query;
+    }
 }

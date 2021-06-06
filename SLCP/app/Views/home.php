@@ -17,9 +17,23 @@
             <div class="row">
                 <div class="col-md-3 " >
                     <div class="bg-secondary" id="outras-opcoes">   
-                        [lado A]
-                    </div>
-                </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                [Aqui entra um imagem]<br>
+                                [DADOS DO USUÁRIO LOGADO]
+                            </div>
+                            <div class="row">
+                                <ul class="list-group w-100">
+                                    <li class="list-group-item"><a href="cadastro-usuario">Cadastrar novo usuário</a></li>
+                                    <li class="list-group-item">A second item</li>
+                                    <li class="list-group-item">A third item</li>
+                                    <li class="list-group-item">A fourth item</li>
+                                    <li class="list-group-item">And a fifth one</li>
+                                </ul>
+                            </div> <!-- row -->
+                        </div><!-- container fluid -->
+                    </div><!-- outras opções -->
+                </div><!-- col -->
 
                 <div class="col-md-6 " >
                     <div class='bg-secondary' id="formulario">   

@@ -24,3 +24,12 @@
     padding: 25px;
     background-color: #363b59;
 }
+
+#register-screen{
+    background-image: url("../img/register.jpg");
+}
+.register-form{
+    background-color: #363b59;
+    padding: 30px;
+    color: white;
+}

@@ -41,6 +41,11 @@ $routes->get('/login', 						'Home::loginPage');
 $routes->get('/check', 						'Home::checkLogin');
 
 
+$routes->get('/cadastro-usuario', 			'Home::cadastroUsuarioPage');
+$routes->post('/register-user', 			'Home::registerUser');
+
+
+
 
 /*
  * --------------------------------------------------------------------
