@@ -195,7 +195,7 @@ class Home extends BaseController
 
             $funcionario = new \App\Models\Funcionario_Model();
 
-            $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
+            // $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
             $userInfo = $funcionario->getData($email);
             $checkPassword = Hash::checkPassword($password, $userInfo[0]['FUNCIONARIO_PASSWORD']);
 
@@ -218,5 +218,22 @@ class Home extends BaseController
             session()->remove('loggedUser');
         }
 		return redirect()->to(BASE_URL.'login');
+	}
+
+	public function listaFuncionarios(){
+		if(session()->has('loggedUser')){
+			$funcionario = new \App\Models\Funcionario_Model();
+
+			$funcionarios = $funcionario->getFuncionarios();
+			
+			$data = [
+				'title' => "Login",
+				'funcionarios' => $funcionarios,
+				'userName' => $_SESSION['userName'],
+			];
+			return view("listaFuncionarios", $data);
+		}
+
+		
 	}
 }

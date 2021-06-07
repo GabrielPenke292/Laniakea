@@ -16,29 +16,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3" >
-                    <div class="bg-secondary" id="outras-opcoes">   
-                        <div class="container-fluid">
-                            <div class="row">
-                                [Aqui entra um imagem]<br>
-                                <div class="col mt-3">
-                                    <p>Bem-vindo(a), <?= $userName ?></p>
-                                    <div class="link-logout text-right mb-3">
-                                        <a href="logout">Sair</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="row">
-                                <ul class="list-group w-100 side-list">
-                                    <li class="list-group-item"><a href="cadastro-usuario">Cadastrar novo usuário</a></li>
-                                    <li class="list-group-item">A second item</li>
-                                    <li class="list-group-item">A third item</li>
-                                    <li class="list-group-item">A fourth item</li>
-                                    <li class="list-group-item"><a href="<?= WORLD_URL ?>governo/public">Site do Governo</a></li>
-                                </ul>
-                            </div> <!-- row -->
-                        </div><!-- container fluid -->
-                    </div><!-- outras opções -->
+                    <?= $this->include('template/sidebar') ?>
                 </div><!-- col -->
 
                 <div class="col-md-6 " >
