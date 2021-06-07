@@ -78,3 +78,4 @@ defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 defined("BASE_URL")            || define('BASE_URL', 'http://localhost/meus-projetos/Laniakea/SLCP/public/'); 
+defined("WORLD_URL")           || define('WORLD_URL', 'http://localhost/meus-projetos/Laniakea/'); 

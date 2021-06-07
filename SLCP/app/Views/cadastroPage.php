@@ -42,7 +42,7 @@
                         <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
                     </div>
                 </form>
-                <i class="fas fa-arrow-circle-left"></i>
+                <a href="<?= BASE_URL ?>" id="back-to-home"><i class="fas fa-arrow-circle-left">Voltar</i></a>
             </div>
         </div>
     </div>
