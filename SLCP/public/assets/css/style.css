@@ -1,13 +1,25 @@
 #outras-opcoes{
     height: 80vh;
     width: 70%;
+    position: absolute;
+    left: 0;
+}
+.side-list a{
+    text-decoration: none;
+}
+.side-list li:hover{
+    background-color: #afadad;
 }
 #formulario{
-    height: 80vh;
+    height: 83vh;
+    border-radius: 15px;
 }
 
 #numeros{
     height: 20vh;
+    width: 70%;
+    position: absolute;
+    right: 0;
 }
 
 #login-screen{
@@ -35,4 +47,29 @@
     background-color: #363b59;
     padding: 30px;
     color: white;
+}
+
+.link-logout a{
+    color: white;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#btn-close-msg{
+    cursor: pointer;
+    text-align: right;
+    float: right;
+}
+
+#home-page{
+    background-image: url("../img/home-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#title-site{
+    margin-top: 10px;
+    padding: 15px;
+    background: rgba(212, 198, 197, 0.6);
 }

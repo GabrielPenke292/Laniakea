@@ -25,3 +25,8 @@ function mostra_cidades(){
     });
 }
 
+function close_msg(){
+    $("#retorno-fail").hide();
+    $("#retorno-success").hide();
+}
+

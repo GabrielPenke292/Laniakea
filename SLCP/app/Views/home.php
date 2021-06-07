@@ -3,10 +3,10 @@
 <head>
     <?= $this->include('template/head') ?>
 </head>
-<body>
+<body id="home-page">
     <main>
-        <div class='d-flex justify-content-center'>
-            <h1>SLCP</h1>
+        <div class='d-flex justify-content-center text-white'>
+            <h1 id="title-site">SLCP</h1>
         </div>
         <?php if(isset($msg)){?>
             <div class="bg-alert">
@@ -15,18 +15,21 @@
         <?php } ?>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 " >
+                <div class="col-md-3" >
                     <div class="bg-secondary" id="outras-opcoes">   
                         <div class="container-fluid">
                             <div class="row">
                                 [Aqui entra um imagem]<br>
-                                <div class="col">
+                                <div class="col mt-3">
                                     <p>Bem-vindo(a), <?= $userName ?></p>
-                                    <a href="logout">Sair</a>
+                                    <div class="link-logout text-right mb-3">
+                                        <a href="logout">Sair</a>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="row">
-                                <ul class="list-group w-100">
+                                <ul class="list-group w-100 side-list">
                                     <li class="list-group-item"><a href="cadastro-usuario">Cadastrar novo usuário</a></li>
                                     <li class="list-group-item">A second item</li>
                                     <li class="list-group-item">A third item</li>
@@ -46,11 +49,11 @@
                             </div>
                         </div>
                         <?php if(!empty(session()->getFlashdata('fail'))) :?>
-                            <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+                            <div class="alert alert-danger" id="retorno-fail"><?= session()->getFlashdata('fail'); ?> <div class="text-right"><i onclick="close_msg()" id='btn-close-msg' class="fas fa-times"></i></div></div>
                         <?php endif ?>
                         
                         <?php if(!empty(session()->getFlashdata('success'))) :?>
-                            <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+                            <div class="alert alert-success" id="retorno-success"><?= session()->getFlashdata('success'); ?> <i onclick="close_msg()" id='btn-close-msg' class="fas fa-times"></i></div>
                         <?php endif?>
                         <div class="container">
                             <div class="row">
@@ -166,9 +169,9 @@
                     </div>
                 </div><!-- col -->
                                                         
-                <div class="col-md-3 " >
+                <div class="col-md-3 " id='numeros' >
                     <div class="row">
-                        <div class="bg-secondary col-md-12 text-center p-4 text-white" id='numeros'>   
+                        <div class="bg-secondary col-md-12 text-center p-4 text-white" >   
                             <h4 class="contadorDeRegistros">Já existem <span id="numberPeopleRegistered">0</span> Laniakers no registro oficial</h4>
                         </div>
 
