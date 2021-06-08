@@ -14,8 +14,8 @@
         </div><!-- row -->
         <div class="row">
             <ul class="list-group w-100 side-list">
-                <li class="list-group-item"><a href="cadastro-usuario">Cadastrar novo usuário</a></li>
-                <li class="list-group-item">A second item</li>
+                <li class="list-group-item"><a href="<?= BASE_URL ?>">Cadastro de Pessoa</a></li>
+                <li class="list-group-item"><a href="cadastro-usuario">Novo usuário</a></li>
                 <li class="list-group-item">A third item</li>
                 <li class="list-group-item"><a href="listagem">Listagem de funcionários</a></li>
                 <li class="list-group-item"><a href="<?= WORLD_URL ?>governo/public">Site do Governo</a></li>
