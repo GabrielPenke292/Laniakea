@@ -40,5 +40,21 @@
 
         </div><!-- container -->
     </section><!-- services -->
+
+    <section id="dual-cards">
+        <div class="row my-4">
+            <div class="col-6">
+                <div class="card-img">
+                
+                </div>
+            </div><!-- col -->
+
+            <div class="col-6">
+                <div class="card-info">
+                
+                </div>
+            </div><!-- col -->
+        </div><!-- row -->
+    </section><!-- dual cards -->
 </body>
 </html>
