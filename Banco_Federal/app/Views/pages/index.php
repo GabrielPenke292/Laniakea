@@ -56,5 +56,7 @@
             </div><!-- col -->
         </div><!-- row -->
     </section><!-- dual cards -->
+
+    <?= $this->include("templates/footer"); ?>
 </body>
 </html>
