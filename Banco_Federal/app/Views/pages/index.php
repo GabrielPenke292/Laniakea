@@ -5,5 +5,10 @@
 </head>
 <body>
     <?= $this->include('templates/header') ?>
+
+    <section id="banner-principal">
+
+    
+    </section>
 </body>
 </html>
