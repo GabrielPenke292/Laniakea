@@ -1,10 +1,9 @@
 <header>
-    <div class="top-header">
+    <div class="top-header p-2">
         <div class="container">
-            <div class="row top-header-row p-5">
-                <div class="col-12 text-center">
+            <div class="row top-header-row">
+                <div class="col-12 text-center d-flex justify-content-center">
                     <div class="logo">
-                        [LOGO]
                     </div>
                 </div><!-- col -->
             </div><!-- row -->
@@ -23,7 +22,7 @@
                                         <label>Agência</label>                            
                                     </div>
                                     <div class="col-3">
-                                        <input type="text" class="form-control-sm">
+                                        <input type="text" class="form-control-sm" id='agencia'>
                                     </div>
                                 </div>
                             </div><!-- col agencia side -->
@@ -34,7 +33,7 @@
                                         <label for="">Conta</label>
                                     </div>
                                     <div class="col-3">
-                                        <input type="text" class="form-control-sm">
+                                        <input type="text" class="form-control-sm" id='conta'>
                                     </div>
                                 </div><!-- row -->
                             </div><!-- col conta side -->

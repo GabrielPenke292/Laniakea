@@ -12,10 +12,21 @@ body{
 .login-form{
     background-color: #C4C4C4;
 }
+header .logo{
+    width: 150px;
+    height: 100px;
+    background-image: url("../img/logo-fundo-branco.png");
+    background-position: center;
+    background-size: cover;
+}
 
 /* BANNER */
 #banner-principal{
     background-color: #C4C4C4;
+    background-image: url("../img/contrato.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 300px;
 }
@@ -26,6 +37,7 @@ body{
 }
 .service-box{
     height: 125px;
+    background-color: #013295;
 }
 
 /* DUAL CARDS */
@@ -38,4 +50,8 @@ body{
 footer{
     background-color: #A99033;
     height: 200px;
+}
+
+#agencia, #conta{
+    border-radius: 10px;
 }

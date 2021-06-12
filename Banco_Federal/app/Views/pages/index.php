@@ -21,20 +21,20 @@
             </div><!-- row -->
             
             <div class="row d-flex justify-content-around mb-5">
-                <div class="col-2 bg-secondary service-box" id="service-one">
-                    <p>SERVIÇO 01</p>
+                <div class="col-2 text-white service-box" id="service-one">
+                    <p>Abertura de conta</p>
                 </div><!-- service one -->
 
-                <div class="col-2 bg-secondary service-box" id="service-two">
-                    <p>SERVIÇO 02</p>
+                <div class="col-2 text-white service-box" id="service-two">
+                    <p>Crédito</p>
                 </div><!-- service two -->
 
-                <div class="col-2 bg-secondary service-box" id="service-three">
-                    <p>SERVIÇO 03</p>
+                <div class="col-2 text-white service-box" id="service-three">
+                    <p>Financiamentos e consórcios</p>
                 </div><!-- service three -->
 
-                <div class="col-2 bg-secondary service-box" id="service-four">
-                    <p>SERVIÇO 04</p>
+                <div class="col-2 text-white service-box" id="service-four">
+                    <p>Renegociação de dívidas</p>
                 </div><!-- service four -->
             </div><!-- row -->
 
