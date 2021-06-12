@@ -1,0 +1,14 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.top-header{
+    background-color: #7C640C;
+}
+.bottom-header{
+    background-color: #C2BA8B;
+}
+.login-form{
+    background-color: #C4C4C4;
+}
