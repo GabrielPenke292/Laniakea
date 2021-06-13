@@ -21,8 +21,8 @@
             </div><!-- row -->
             
             <div class="row d-flex justify-content-around mb-5">
-                <div class="col-2 text-white service-box text-center " id="service-one">
-                    <p class="align-self-center">Abertura de conta</p>
+                <div class="col-2 text-white service-box text-center align-self-center" id="service-one">
+                    <p>Abertura de conta</p>
                 </div><!-- service one -->
 
                 <div class="col-2 text-white service-box" id="service-two">

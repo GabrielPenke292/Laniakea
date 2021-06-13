@@ -30,3 +30,11 @@ function close_msg(){
     $("#retorno-success").hide();
 }
 
+function openModal(id, nome, email){
+    $("#modalEditar").modal("show");
+    $("#idFuncionario").val(id);  
+    
+    $("#name").val(nome);
+    $("#email").val(email);
+}
+
