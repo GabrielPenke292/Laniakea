@@ -21,8 +21,8 @@
             </div><!-- row -->
             
             <div class="row d-flex justify-content-around mb-5">
-                <div class="col-2 text-white service-box" id="service-one">
-                    <p>Abertura de conta</p>
+                <div class="col-2 text-white service-box text-center " id="service-one">
+                    <p class="align-self-center">Abertura de conta</p>
                 </div><!-- service one -->
 
                 <div class="col-2 text-white service-box" id="service-two">
@@ -50,8 +50,11 @@
             </div><!-- col -->
 
             <div class="col-6">
-                <div class="card-info">
-                
+                <div class="card-info d-flex h-100 justify-content-center">
+                    <div class="msg align-self-center">
+                        <p>Somos o primeiro banco de Laniakea!</p>
+                        <p>Contem conosco para construir essa incrível nação!</p>
+                    </div>
                 </div>
             </div><!-- col -->
         </div><!-- row -->

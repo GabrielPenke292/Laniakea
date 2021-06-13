@@ -43,7 +43,16 @@ header .logo{
 /* DUAL CARDS */
 .card-img{
     background-color: #C4C4C4;
+    background-image: url("../img/cowork.jpg");
+    /* background-origin: content-box; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 400px;
+}
+.msg p{
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 24px;
 }
 
 /* FOOTER */
