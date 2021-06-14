@@ -46,6 +46,8 @@ $routes->get('/cadastro-usuario', 			'Home::cadastroUsuarioPage');
 $routes->post('/register-user', 			'Home::registerUser');
 
 $routes->get("/listagem",					"Home::listaFuncionarios");
+$routes->post("/editar-funcionario",		"Home::editarFuncionario");
+
 
 
 

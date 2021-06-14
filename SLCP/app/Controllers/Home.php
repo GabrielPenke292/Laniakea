@@ -236,4 +236,24 @@ class Home extends BaseController
 
 		
 	}
+
+	public function editarFuncionario(){
+		$email = $this->request->getPost('email');
+		$id = $this->request->getPost('id');
+
+		$funcionario = new \App\Models\Funcionario_Model();
+
+		$func = $funcionario->find($id);
+
+		if($func){
+			$func['FUNCIONARIO_EMAIL'] = $email;
+
+			if($funcionario->update($id, $func)){
+				return true;
+			}
+			return false;
+		}
+		return false;
+
+	}
 }

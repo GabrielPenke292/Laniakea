@@ -38,3 +38,21 @@ function openModal(id, nome, email){
     $("#email").val(email);
 }
 
+function editarFuncionario(){
+
+    let email = $("#email").val();
+    let id    = $("#idFuncionario").val();  
+    $.ajax({
+        type: "post",
+        url: "editar-funcionario",
+        data: {
+            email,
+            id
+        },
+        dataType: "json",
+        success: function (response) {
+            console.log(response)
+        }
+    });
+}
+

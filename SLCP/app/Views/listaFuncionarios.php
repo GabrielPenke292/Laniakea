@@ -53,7 +53,7 @@
             <div class="row mb-3">
                 <label for="name" class="col-sm-2 col-form-label">Nome</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" readonly>
                 </div>
             </div>
 
@@ -66,8 +66,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Salvar alterações</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="editarFuncionario();">Salvar alterações</button>
       </div>
     </div>
   </div>
