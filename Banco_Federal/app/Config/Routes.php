@@ -35,7 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 $routes->get('/administrativo', 'Administrativo::dashboard');
-$routes->get('/administrativo/abrir-conta', 'Administrativo::OpenAccount');
+$routes->get('/administrativo/abrir-conta', 'Administrativo::openAccount');	// Renderiza a view de abertura de conta
+$routes->post('/administrativo/abrirConta', 'Administrativo::startAccount');	// Realiza a abertura de conta
 $routes->get('/administrativo/avaliar-credito', 'Administrativo::creditRating');
 $routes->get('/administrativo/pagar-conta', 'Administrativo::payBill');
 $routes->get('/administrativo/renegociacao', 'Administrativo::renegociation');

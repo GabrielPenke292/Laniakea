@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
@@ -22,7 +25,7 @@
         </div><!-- row -->
 
         <div class="row">
-            <form class="row g-3">
+            <form  method="post"  enctype='multipart/form-data' class="row g-3">
                 <div class="col-md-6">
                     <label for="nome" class="form-label">Nome Completo</label>
                     <input type="text" class="form-control" id="nome">
@@ -64,17 +67,19 @@
                 </div>
                 <div class="col-md-4">
                     <label for="copiaIdentidade" class="form-label">Copia da Identidade</label>
-                    <input class="form-control" type="file" id="comprovanteRenda">
+                    <input class="form-control" type="file" id="copiaIdentidade">
                 </div>
                 <div class="col-md-4">
                     <label for="comprovanteRenda" class="form-label">Comprovante de renda</label>
                     <input class="form-control" type="file" id="comprovanteRenda">
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Criar Conta</button>
+                    <button type="button" class="btn btn-primary" onclick="openAccount()">Criar Conta</button>
                 </div>
             </form>
         </div><!-- row -->
     </div>
+
+    <script src="<?= BASE_URL ?>assets/js/script-administrativo.js"></script>
 </body>
 </html>

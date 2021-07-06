@@ -9,7 +9,7 @@ class Administrativo extends BaseController
 		return view("administrativo/dashboard");
 	}
 
-    public function OpenAccount(){
+    public function openAccount(){
         return view("administrativo/openAccount");
     }
     
@@ -29,4 +29,23 @@ class Administrativo extends BaseController
         return view("administrativo/financing");
     }
     
+    public function startAccount(){
+        $dados = $this->request->getPost();
+
+        if($dados){
+            $dataInsert = [
+                "nome"  =>  dados['nome'],
+                "identidade"  =>  dados['identidade'],
+                "endereco"  =>  dados['endereco'],
+                "uf"  =>  dados['uf'],
+                "ocupacao"  =>  dados['ocupacao'],
+                "salario"  =>  dados['salario'],
+                "comprovanteResidencia"  =>  dados['comprovanteResidencia'],
+                "copiaIdentidade"  =>  dados['copiaIdentidade'],
+                "comprovanteRenda"  =>  dados['comprovanteRenda'],
+            ];
+        }
+        
+        echo "Conta aberta";
+    }
 }
