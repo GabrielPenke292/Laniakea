@@ -30,22 +30,30 @@ class Administrativo extends BaseController
     }
     
     public function startAccount(){
+        helper("gerais_helper");
+
         $dados = $this->request->getPost();
+
+        $comprovanteResidencia = $_FILES['comprovanteResidencia'];
+        $copiaIdentidade = $_FILES['copiaIdentidade'];
+        $comprovanteRenda = $_FILES['comprovanteRenda'];
 
         if($dados){
             $dataInsert = [
-                "nome"  =>  dados['nome'],
-                "identidade"  =>  dados['identidade'],
-                "endereco"  =>  dados['endereco'],
-                "uf"  =>  dados['uf'],
-                "ocupacao"  =>  dados['ocupacao'],
-                "salario"  =>  dados['salario'],
-                "comprovanteResidencia"  =>  dados['comprovanteResidencia'],
-                "copiaIdentidade"  =>  dados['copiaIdentidade'],
-                "comprovanteRenda"  =>  dados['comprovanteRenda'],
+                "nome"  =>  $dados['nome'],
+                "identidade"  =>  $dados['identidade'],
+                "endereco"  =>  $dados['endereco'],
+                "uf"  =>  $dados['uf'],
+                "cidade"  =>  $dados['cidade'],
+                "ocupacao"  =>  $dados['ocupacao'],
+                "salario"  =>  $dados['salario'],
+                "comprovanteResidencia"  =>  renomeiaArquivo($comprovanteResidencia['name'], "residencia"),
+                "copiaIdentidade"  =>  renomeiaArquivo($copiaIdentidade['name'], "identidade"),
+                "comprovanteRenda"  =>  renomeiaArquivo($comprovanteRenda['name'], "renda"),
             ];
         }
-        
+        $dados;
+        $dataInsert;
         echo "Conta aberta";
     }
 }
