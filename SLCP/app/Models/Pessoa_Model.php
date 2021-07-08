@@ -43,4 +43,14 @@ class Pessoa_Model extends Model
 
         return $query;
     }
+
+    public function nameByIdentity($identidade){
+        $builder = $this->db->table($this->table);
+        $builder->select("PES_NOME");
+        $builder->where("PES_NUM_REGISTRO", $identidade);
+
+        $query = $builder->get()->getResultArray();
+
+        return $query;
+    }
 }

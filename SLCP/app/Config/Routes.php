@@ -48,6 +48,10 @@ $routes->post('/register-user', 			'Home::registerUser');
 $routes->get("/listagem",					"Home::listaFuncionarios");
 $routes->post("/editar-funcionario",		"Home::editarFuncionario");
 
+// CONSULTAS
+$routes->group("consultas",					function($routes){
+	$routes->get("name-by-identity",		"Consultas::name_by_identity");
+});
 
 
 
