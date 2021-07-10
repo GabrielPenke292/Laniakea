@@ -13,7 +13,7 @@ class Consultas extends BaseController{
         $retorno = $pessoa_model->nameByIdentity($dados['identidade']);
 
         if($retorno){
-            if($retorno['PES_NOME'] == $dados['nome']){
+            if($retorno[0]['PES_NOME'] == $dados['nome']){
                 return true;
             }
             return false;
