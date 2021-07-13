@@ -33,7 +33,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
+$routes->get("get-all-people", 		"SLCP/Cadastro::get_all_people");	// busca todas as pessoas cadastras no sistema
+$routes->get("get-specific-people", "SLCP/Cadastro::get_specific_people"); // busca uma pessoa específica
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -73,10 +73,10 @@ class Administrativo extends BaseController
             'nome'       => $nome,
         ];
 
-        $response = $client->request('GET', WORLD_URL.'SLCP/public/consultas/name-by-identity', [
+        $response = $client->request('GET', API_URL.'SLCP/public/consultas/name-by-identity', [
             'http_errors' => false,
             // 'headers' => $this->getHeaders(),
-            'query' => $query,
+            'query' => $query,  
         ]);
 
         $httpCode = $response->getStatusCode(); //HTTP Code

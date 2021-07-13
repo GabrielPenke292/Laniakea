@@ -79,3 +79,4 @@ defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 defined('BASE_URL')            || define('BASE_URL', 'http://localhost/meus-projetos/Laniakea/Banco_Federal/public/');
 defined("WORLD_URL")           || define('WORLD_URL', 'http://localhost/meus-projetos/Laniakea/'); 
+defined("API")                 || define('API', 'http://localhost/meus-projetos/api/'); 
