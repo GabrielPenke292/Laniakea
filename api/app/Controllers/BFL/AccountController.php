@@ -48,7 +48,7 @@ class Accountcontroller extends ResourceController
                 $dados_conta = $bankAccount->where('CONTA_PESSOA_ID', $id)->get()->getRow();
                 $retorno = [
                     'status' => 'success',
-                    'message'=> "Conta aberta com sucesso! Número da conta:".$dados_conta->CONTA_ID." Agência: ".$$dados_conta->CONTA_AGENCIA_ID
+                    'message'=> "Conta aberta com sucesso! Número da conta:".$dados_conta->CONTA_ID." Agência: ".$dados_conta->CONTA_AGENCIA_ID
                 ];
             }else{
                 $retorno = [
