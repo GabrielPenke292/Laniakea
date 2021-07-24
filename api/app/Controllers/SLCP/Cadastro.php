@@ -25,8 +25,10 @@ class Cadastro extends ResourceController
         $model = new M_Cadastro();
 
         $data = $this->request->getGet();
+        $dados = $model->where('PES_NUM_REGISTRO', $data['identidade'])->get()->getRow();
 
-        return $this->respond($model->where('PES_NUM_REGISTRO', $data['identidade'])->get()->getRow());
+        $retorno = ($dados == null) ? false : $dados;
+        return $this->respond($retorno);
     }
 
 }

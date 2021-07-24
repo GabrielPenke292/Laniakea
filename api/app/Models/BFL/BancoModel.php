@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\BFL;
 
 use CodeIgniter\Model;
 
-class M_Cadastro extends Model
+class BancoModel extends Model
 {
-    protected $table      = 'pessoas';
-    protected $primaryKey = 'PES_ID';
+    protected $table      = 'banco';
+    protected $primaryKey = 'CONTA_ID';
     protected $allowedFields = [
         "PES_NOME",
         "PES_SEXO",
@@ -20,12 +20,6 @@ class M_Cadastro extends Model
         "PES_NUM_REGISTRO",
         "PES_COD_USUARIO_CARTORIO",        
     ];
-
-    public function get_id_people($identity){
-        return $this->select('PES_ID')
-             ->where('PES_NUM_REGISTRO', $identity)
-             ->get()->getRow()->PES_ID;
-    }
 
     
 
