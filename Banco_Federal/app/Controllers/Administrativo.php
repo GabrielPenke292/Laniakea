@@ -2,8 +2,14 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\API\ResponseTrait;
+use App\Controllers\BaseController;
+
+
 class Administrativo extends BaseController
 {
+    use ResponseTrait;
+
 	public function dashboard()
 	{
 		return view("administrativo/dashboard");
@@ -33,54 +39,60 @@ class Administrativo extends BaseController
         helper("gerais_helper");
 
         $dados = $this->request->getPost();
+        $verificacao = $this->verificaIdentidade($dados['identidade'], $dados['nome']);
 
-        $comprovanteResidencia = $_FILES['comprovanteResidencia'];
-        $copiaIdentidade = $_FILES['copiaIdentidade'];
-        $comprovanteRenda = $_FILES['comprovanteRenda'];
-
-        $n_comp_resid = renomeiaArquivo($comprovanteResidencia['name'], $dados['identidade'],"residencia");
-        $n_copia_ident = renomeiaArquivo($copiaIdentidade['name'], $dados['identidade'], "identidade");
-        $n_comp_renda = renomeiaArquivo($comprovanteRenda['name'], $dados['identidade'], "renda");
-
-        if($dados){
-            $verificacao = $this->verificaIdentidade($dados['identidade'], $dados['nome']);
-
-            $dataInsert = [
-                "nome"  =>  $dados['nome'],
-                "identidade"  =>  $dados['identidade'],
-                "endereco"  =>  $dados['endereco'],
-                "uf"  =>  $dados['uf'],
-                "cidade"  =>  $dados['cidade'],
-                "ocupacao"  =>  $dados['ocupacao'],
-                "salario"  =>  $dados['salario'],
-                "comprovanteResidencia"  =>  $n_comp_resid,
-                "copiaIdentidade"  =>  $n_copia_ident,
-                "comprovanteRenda"  =>  $n_comp_renda,
-            ];
-
-
+        if($verificacao){ // Se a verificação de identidade for true
+            $comprovanteResidencia = $_FILES['comprovanteResidencia'];
+            $copiaIdentidade = $_FILES['copiaIdentidade'];
+            $comprovanteRenda = $_FILES['comprovanteRenda'];
+    
+            $n_comp_resid = renomeiaArquivo($comprovanteResidencia['name'], $dados['identidade'],"residencia");
+            $n_copia_ident = renomeiaArquivo($copiaIdentidade['name'], $dados['identidade'], "identidade");
+            $n_comp_renda = renomeiaArquivo($comprovanteRenda['name'], $dados['identidade'], "renda");
+    
+            if($dados){
+    
+                $dataInsert = [
+                    "nome"  =>  $dados['nome'],
+                    "identidade"  =>  $dados['identidade'],
+                    "endereco"  =>  $dados['endereco'],
+                    "uf"  =>  $dados['uf'],
+                    "cidade"  =>  $dados['cidade'],
+                    "ocupacao"  =>  $dados['ocupacao'],
+                    "salario"  =>  $dados['salario'],
+                    "comprovanteResidencia"  =>  $n_comp_resid,
+                    "copiaIdentidade"  =>  $n_copia_ident,
+                    "comprovanteRenda"  =>  $n_comp_renda,
+                ];
+    
+    
+            }
+    
+            echo "Conta aberta";
+        }else{
+            
         }
-
-        echo "Conta aberta";
     }
 
     public function verificaIdentidade($identidade, $nome){
         
         $client = \Config\Services::curlrequest(); // inicializa o curl
-        
+
+
         $query = [
-            'identidade' => $identidade,
-            'nome'       => $nome,
+            'identidade' => $identidade, // Preparando os dados para a requisição
         ];
 
-        $response = $client->request('GET', API_URL.'SLCP/public/consultas/name-by-identity', [
-            'http_errors' => false,
-            // 'headers' => $this->getHeaders(),
-            'query' => $query,  
+        $response = $client->request('GET', API_URL.'get-specific-people', [
+            'query' => $query // Dados passados na requisição
         ]);
 
-        $httpCode = $response->getStatusCode(); //HTTP Code
 		$responseBody = json_decode($response->getBody()); //Corpo da Requisição
-		return (object) ['httpCode' => $httpCode, 'responseBody' => $responseBody];
+        
+        if($responseBody->PES_NOME == $nome){ // Se o nome da pessoa cadastrado for igual ao indicado
+            return true; // Retorna true
+        }
+
+        return false; // Retorna falso indicando que essa pessoa não corresponde a essa identidade
     }
 }

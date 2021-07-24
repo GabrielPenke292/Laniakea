@@ -36,13 +36,13 @@ function openAccount(){
 
 
 
-    // $.ajax({
-    //     type: "post",
-    //     url: BASE_URL + "administrativo/abrirConta",
-    //     data: {formData},
-    //     dataType: "dataType",
-    //     success: function (response) {
-    //         console.log(response)
-    //     }
-    // });
+    $.ajax({
+        type: "post",
+        url: BASE_URL + "administrativo/abrirConta",
+        data: {formData},
+        dataType: "dataType",
+        success: function (response) {
+            console.log(response)
+        }
+    });
 }
