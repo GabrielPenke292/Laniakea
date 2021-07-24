@@ -3,12 +3,14 @@
 namespace App\Controllers\SLCP;
 
 use CodeIgniter\RESTful\ResourceController;
-use App\models\M_Cadastro;
 use CodeIgniter\HTTP\ResponseInterface;
+use CodeIgniter\API\ResponseTrait;
+use App\models\M_Cadastro;
 
 
 class Cadastro extends ResourceController
 {
+    use ResponseTrait;
     /**
      * Retorna a lista de dados de todas as pessoas cadastradas
      *
@@ -24,7 +26,7 @@ class Cadastro extends ResourceController
 
         $data = $this->request->getGet();
 
-        return $this->respond($model->getWhere(['PES_NUM_REGISTRO' => $data['num']]));
+        return $this->respond($model->where('PES_NUM_REGISTRO', $data['identidade'])->get()->getRow());
     }
 
 }
