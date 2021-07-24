@@ -79,7 +79,9 @@
             </form>
         </div><!-- row -->
     </div>
-
+    
+    <!--  sweet alert 2  -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="<?= BASE_URL ?>assets/js/script-administrativo.js"></script>
 </body>
 </html>
