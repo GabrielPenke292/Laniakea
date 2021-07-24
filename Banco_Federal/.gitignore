@@ -59,7 +59,7 @@ writable/session/*
 
 writable/uploads/*
 !writable/uploads/index.html
-public/uploads/*
+public/assets/upload/*
 writable/debugbar/*
 
 php_errors.log
