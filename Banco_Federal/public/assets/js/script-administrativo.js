@@ -31,6 +31,9 @@ function openAccount(){
         if(xhttp.readyState == 4){
             let data = JSON.parse(xhttp.responseText);         
             showAlert(data);
+            if(data.status == 'success'){
+                $("#form-open-account").reset();
+            }
         }
     }
     
