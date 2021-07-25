@@ -36,8 +36,19 @@ $routes->get('/', 'Home::index');
 $routes->get("get-all-people", 		"SLCP/Cadastro::get_all_people");	// busca todas as pessoas cadastras no sistema
 $routes->get("get-specific-people", "SLCP/Cadastro::get_specific_people"); // busca uma pessoa específica
 
+// Banco federal
 $routes->group('federal-bank', function($routes){
 	$routes->post('open-account', 			"BFL/AccountController::open_account"); // Abre uma conta para um usuário
+});
+
+// Estados
+$routes->group('states', function($routes){
+	$routes->get('get-all-states',			"States/StateController::get_all_states"); // retorna todos os estados
+});
+
+// Cidades
+$routes->group('cities', function($routes){
+	$routes->get('get-cities-by-uf', 				"City/CityController::get_cities_by_uf"); // retorna todas as cidades
 });
 /*
  * --------------------------------------------------------------------
