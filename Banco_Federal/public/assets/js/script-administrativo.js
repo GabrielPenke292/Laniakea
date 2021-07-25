@@ -52,3 +52,18 @@ function openAccount(){
     }
 
 }
+
+$(document).on("change", '#uf', function(e){
+    e.preventDefault();
+    let uf = $("#uf").val();
+    
+    $.ajax({
+        type: "GET",
+        url: BASE_URL + "administrativo/get-cities-by-uf",
+        data: {uf},
+        dataType: "HTML",
+        success: function (response) {
+            $('#cidade').html(response);
+        }
+    });
+})

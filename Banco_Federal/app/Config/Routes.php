@@ -41,6 +41,7 @@ $routes->get('/administrativo/avaliar-credito', 'Administrativo::creditRating');
 $routes->get('/administrativo/pagar-conta', 'Administrativo::payBill');
 $routes->get('/administrativo/renegociacao', 'Administrativo::renegociation');
 $routes->get('/administrativo/financiamento', 'Administrativo::financing');
+$routes->get('/administrativo/get-cities-by-uf', 'Administrativo::get_cities_by_uf');
 
 
 /*

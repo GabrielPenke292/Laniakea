@@ -12,11 +12,39 @@ class Administrativo extends BaseController
 
 	public function dashboard()
 	{
+    
 		return view("administrativo/dashboard");
 	}
 
     public function openAccount(){
-        return view("administrativo/openAccount");
+        $client = \Config\Services::curlrequest(); // inicializa o curl
+
+        $response = $client->request('GET', API_URL.'states/get-all-states');
+
+        $estados = json_decode($response->getBody());    
+
+        $dados = [
+            'estados' => $estados,
+        ];
+
+        return view("administrativo/openAccount", $dados); // view com o formulário de abertura de conta
+    }
+
+    public function get_cities_by_uf(){
+        $client = \Config\Services::curlrequest(); // inicializa o curl
+
+        $dados = $this->request->getGet();
+
+        $response = $client->request('GET', API_URL.'cities/get-cities-by-uf', [
+            'query' => $dados
+        ]);
+
+        $data = [
+            'cidades' => json_decode($response->getBody()), 
+        ]; 
+
+        echo (view('administrativo/cities_options', $data));
+
     }
     
     public function creditRating(){
@@ -107,7 +135,6 @@ class Administrativo extends BaseController
     public function verificaIdentidade($identidade, $nome){
         
         $client = \Config\Services::curlrequest(); // inicializa o curl
-
 
         $query = [
             'identidade' => $identidade, // Preparando os dados para a requisição

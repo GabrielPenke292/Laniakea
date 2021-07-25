@@ -42,16 +42,17 @@
                     <input type="text" class="form-control" id="endereco" placeholder="">
                 </div>
                 <div class="col-3">
-                    <label for="cidade" class="form-label">Cidade</label>
-                    <select class="form-select" id="cidade">
-                        <option selected>Escolha</option>
-                        <option value="">..</option>
+                    <label for="uf" class="form-label">UF</label>
+                    <select class="form-select" id="uf">
+                        <option selected readonly>Escolha..</option>
+                        <?php foreach ($estados as $estado) { ?>
+                            <option value="<?= $estado->ESTADO_ID ?>"><?= $estado->ESTADO_SIGLA ?></option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="col-3">
-                    <label for="uf" class="form-label">UF</label>
-                    <select class="form-select" id="uf">
-                        <option selected>Escolha..</option>
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <select class="form-select" id="cidade">
                     </select>
                 </div>
                 <div class="col-md-6">
@@ -76,8 +77,11 @@
                     <label for="comprovanteRenda" class="form-label">Comprovante de renda</label>
                     <input class="form-control" type="file" id="comprovanteRenda">
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                     <button type="button" class="btn btn-primary" onclick="openAccount()">Criar Conta</button>
+                </div>
+                <div class="col-6 text-end">
+                    <a href="<?= BASE_URL?>administrativo" class="pr-5">Voltar</a>
                 </div>
             </form>
         </div><!-- row -->
