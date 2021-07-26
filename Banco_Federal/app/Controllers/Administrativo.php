@@ -19,12 +19,12 @@ class Administrativo extends BaseController
     public function openAccount(){
         $client = \Config\Services::curlrequest(); // inicializa o curl
 
-        $response = $client->request('GET', API_URL.'states/get-all-states');
+        $response = $client->request('GET', API_URL.'states/get-all-states'); // Busca os estados (UF) para montar a view
 
-        $estados = json_decode($response->getBody());    
+        $estados = json_decode($response->getBody()); // Array com os estados   
 
         $dados = [
-            'estados' => $estados,
+            'estados' => $estados, // Preparando os dados para view
         ];
 
         return view("administrativo/openAccount", $dados); // view com o formulário de abertura de conta
@@ -33,22 +33,32 @@ class Administrativo extends BaseController
     public function get_cities_by_uf(){
         $client = \Config\Services::curlrequest(); // inicializa o curl
 
-        $dados = $this->request->getGet();
+        $dados = $this->request->getGet(); //dados da requisição (codigo uf)
 
-        $response = $client->request('GET', API_URL.'cities/get-cities-by-uf', [
-            'query' => $dados
+        $response = $client->request('GET', API_URL.'cities/get-cities-by-uf', [  // requisição para a API
+            'query' => $dados // Corpo da requisição
         ]);
 
         $data = [
-            'cidades' => json_decode($response->getBody()), 
+            'cidades' => json_decode($response->getBody()), // Array com a cidades para view 
         ]; 
 
-        echo (view('administrativo/cities_options', $data));
+        echo (view('administrativo/cities_options', $data)); // Retorna a view
 
     }
     
     public function creditRating(){
+
+
         return view("administrativo/creditRating");
+    }
+
+    public function ativarReativarContaView(){
+        return view('administrativo/ativReativConta');
+    }
+    public function ativarReativarConta(){
+        
+        $dados_da_conta = $this->request->getPost(); // Post com os dados da conta
     }
     
     public function payBill(){

@@ -34,14 +34,16 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/administrativo', 'Administrativo::dashboard');
-$routes->get('/administrativo/abrir-conta', 'Administrativo::openAccount');	// Renderiza a view de abertura de conta
-$routes->post('/administrativo/abrirConta', 'Administrativo::startAccount');	// Realiza a abertura de conta
-$routes->get('/administrativo/avaliar-credito', 'Administrativo::creditRating');
-$routes->get('/administrativo/pagar-conta', 'Administrativo::payBill');
-$routes->get('/administrativo/renegociacao', 'Administrativo::renegociation');
-$routes->get('/administrativo/financiamento', 'Administrativo::financing');
-$routes->get('/administrativo/get-cities-by-uf', 'Administrativo::get_cities_by_uf');
+$routes->get('/administrativo', 					'Administrativo::dashboard'); // Dashboard com todas as opções administrativas
+$routes->get('/administrativo/abrir-conta', 		'Administrativo::openAccount');	// Renderiza a view de abertura de conta
+$routes->post('/administrativo/abrirConta', 		'Administrativo::startAccount');	// Realiza a abertura de conta
+$routes->get('/administrativo/ativ-reativ-conta', 	'Administrativo::ativarReativarContaView'); // View de ativar ou reativar uma conta
+$routes->get('/administrativo/ativ-reativ-conta', 	'Administrativo::ativarReativarConta'); // Ativar ou reativar uma conta
+$routes->get('/administrativo/avaliar-credito', 	'Administrativo::creditRating'); // Avaliação de crédito
+$routes->get('/administrativo/pagar-conta', 		'Administrativo::payBill'); // Pagamento de contas
+$routes->get('/administrativo/renegociacao', 		'Administrativo::renegociation'); // Renegociação de dívidas
+$routes->get('/administrativo/financiamento', 		'Administrativo::financing'); // Financiamentos
+$routes->get('/administrativo/get-cities-by-uf', 	'Administrativo::get_cities_by_uf'); // Busca todas as cidades pelo estado (uf)
 
 
 /*
