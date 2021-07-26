@@ -17,7 +17,7 @@
             <div class="col-12">
                 <div class="mb-3">
                     <label for="senha" class="form-label">Nova senha</label>
-                    <input type="password" class="form-control" id="senha" placeholder="Digite a nova senha">
+                    <input type="password" class="form-control" id="senha" placeholder="Digite a nova senha entre 6 e 8 caracteres">
                 </div>
             </div>
 

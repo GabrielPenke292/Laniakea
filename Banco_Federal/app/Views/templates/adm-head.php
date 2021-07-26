@@ -28,6 +28,8 @@
 <!-- sweet alert -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- blockUI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <!-- script admistrativo -->
 <script src="<?= BASE_URL ?>assets/js/script-administrativo.js"></script>
 

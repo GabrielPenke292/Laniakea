@@ -74,8 +74,9 @@ $(document).on('click', '#ativar_conta', function(e){
     let numero_conta = $('#numero_conta').val(); // numero da conta
     let senha = $('#senha').val(); // senha
     let c_senha = $('#c_senha').val(); // confirmação de senha
-
-    if(senha == c_senha){ // Se a senha for igual a confirmação de senha ...
+    
+    if(senha == c_senha && verifica_padrao_senha(senha)){ // Se a senha for igual a confirmação de senha e estiver no padrão correto
+        $.blockUI();
         $.ajax({
             type: "post",
             url: BASE_URL + "administrativo/ativar-reativar-conta",
@@ -85,6 +86,7 @@ $(document).on('click', '#ativar_conta', function(e){
             },
             dataType: "json",
             success: function (response) {
+                $.unblockUI();
                 Swal.fire({ //mostra um alerta na tela
                     position: 'top-end',
                     icon: response['status'],
@@ -99,6 +101,13 @@ $(document).on('click', '#ativar_conta', function(e){
             }
         });
     }else{ // Se a senha não for igual a confirmação de senha ...
-        Swal.fire('As senhas não conferem'); // ... é exibido um alerta
+        Swal.fire('As senhas não conferem ou a quantidade de caracteres está incorreta'); // ... é exibido um alerta
     }
 });
+
+function verifica_padrao_senha(senha){
+    if(senha.length < 6 || senha.length > 8){
+        return false;
+    }
+    return true;
+}
