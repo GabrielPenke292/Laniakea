@@ -72,26 +72,32 @@ class Accountcontroller extends ResourceController
         $dados = $this->request->getPost(); // dados da requisição
 
         $conta_id = $dados['conta_id']; // id da conta
-
-        $dados_update = [ // Dados a serem atualizados
-            'CONTA_SENHA' => Hash::make($dados['senha']), // senha cadastrada
-            'CONTA_SENHA_MESTRA' => Hash::make('DankJeWell'), // senha mestra (padrãp)
-            'CONTA_ATIVA' => 1 // conta ativa = 1 conta inativa = 0 
-        ];
-
-        if($bankAccountModel->update($conta_id, $dados_update)){
-            $resposta = [
-                'status' => 'success',
-                'message' => 'Conta ativada com sucesso'
+        if($bankAccountModel->select('conta_id')->where('CONTA_ID', $conta_id)->get()->getRow()){ // Verifica se a conta existe
+            $dados_update = [ // Dados a serem atualizados
+                'CONTA_SENHA' => Hash::make($dados['senha']), // senha cadastrada
+                'CONTA_SENHA_MESTRA' => Hash::make('DankJeWell'), // senha mestra (padrãp)
+                'CONTA_ATIVA' => 1 // conta ativa = 1 conta inativa = 0 
             ];
-        }else{
-            $resposta = [
+    
+            if($bankAccountModel->update($conta_id, $dados_update)){ // Se o update retornar 'true'
+                $resposta = [ // Prepara a resposta com status 'success'
+                    'status' => 'success',
+                    'message' => 'Conta ativada com sucesso'
+                ];
+            }else{ // se não atualizar
+                $resposta = [ // prepara a resposta com status 'error'
+                    'status' => 'error',
+                    'message' => 'Não foi possivel ativar essa conta'
+                ];
+            }
+        }else{ // se a conta não existe
+            $resposta = [ // prepara a resposta com status 'error'
                 'status' => 'error',
-                'message' => 'Não foi possivel ativar essa conta'
+                'message' => 'Essa conta não existe'
             ];
         }
 
-        return $this->respond($resposta);
+        return $this->respond($resposta); // Retorna com a resposta
     }
 
 }
