@@ -1,5 +1,6 @@
 const BASE_URL = "http://localhost/meus-projetos/Laniakea/Banco_Federal/public/";
 
+// abertura de conta
 function openAccount(){
     
     let nome = $("#nome").val();
@@ -53,6 +54,7 @@ function openAccount(){
 
 }
 
+// buscar as cidades de acordo com o estado selecionado
 $(document).on("change", '#uf', function(e){
     e.preventDefault();
     let uf = $("#uf").val();
@@ -66,4 +68,37 @@ $(document).on("change", '#uf', function(e){
             $('#cidade').html(response);
         }
     });
-})
+});
+
+$(document).on('click', '#ativar_conta', function(e){
+    let numero_conta = $('#numero_conta').val(); // numero da conta
+    let senha = $('#senha').val(); // senha
+    let c_senha = $('#c_senha').val(); // confirmação de senha
+
+    if(senha == c_senha){ // Se a senha for igual a confirmação de senha ...
+        $.ajax({
+            type: "post",
+            url: BASE_URL + "administrativo/ativar-reativar-conta",
+            data: {
+                numero_conta,
+                senha,
+            },
+            dataType: "json",
+            success: function (response) {
+                Swal.fire({ //mostra um alerta na tela
+                    position: 'top-end',
+                    icon: response['status'],
+                    title: response['message'],
+                    showConfirmButton: false,
+                    timer: 2500
+                });
+                if(response['status'] == 'success'){ // se o retorno da requisição tiver o status 'success'
+                    location.replace(BASE_URL + 'administrativo'); // Retorna para dashboard
+                }
+            
+            }
+        });
+    }else{ // Se a senha não for igual a confirmação de senha ...
+        Swal.fire('As senhas não conferem'); // ... é exibido um alerta
+    }
+});

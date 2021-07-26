@@ -57,8 +57,33 @@ class Administrativo extends BaseController
         return view('administrativo/ativReativConta');
     }
     public function ativarReativarConta(){
+        $client = \Config\Services::curlrequest(); // inicializa o curl
         
         $dados_da_conta = $this->request->getPost(); // Post com os dados da conta
+
+        $dataRequest = [ // Preparando os dados para a requisição
+            'senha' => $dados_da_conta['senha'],
+            'conta_id' => $dados_da_conta['numero_conta'],
+        ];
+
+        $response = $client->request('POST', API_URL.'federal-bank/ativ-reativ-account', [
+            'form_params' => $dataRequest // Dados passados na requisição
+        ], false);
+
+        $responseBody = json_decode($response->getBody()); //Corpo da Requisição
+
+        if($responseBody){
+            echo json_encode($responseBody);
+            die();
+        }else{
+            $retornoFalse = [
+                'status' => 'error',
+                'message'=> 'Algo deu errado!'
+            ];
+            echo json_encode($responseBody);
+            die();
+        }
+
     }
     
     public function payBill(){
