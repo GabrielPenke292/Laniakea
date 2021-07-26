@@ -22,6 +22,9 @@ class BankAccountModel extends Model
         "CONTA_COMP_RESID",        
         "CONTA_COPIA_IDENT",        
         "CONTA_COMP_RENDA",        
+        "CONTA_SENHA",
+        "CONTA_SENHA_MESTRA",
+        "CONTA_ATIVA",
     ];
 
     

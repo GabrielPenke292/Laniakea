@@ -39,6 +39,7 @@ $routes->get("get-specific-people", "SLCP/Cadastro::get_specific_people"); // bu
 // Banco federal
 $routes->group('federal-bank', function($routes){
 	$routes->post('open-account', 			"BFL/AccountController::open_account"); // Abre uma conta para um usuário
+	$routes->post('ativ-reativ-account', 	"BFL/AccountController::activate_reactivate_account"); // Ativa ou reativa uma conta para um usuário
 });
 
 // Estados

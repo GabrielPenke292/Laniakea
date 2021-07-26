@@ -7,6 +7,8 @@ use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\API\ResponseTrait;
 use App\models\bancos\BankAccountModel;
 use App\models\M_Cadastro;
+use App\Libraries\Hash;
+
 
 
 class Accountcontroller extends ResourceController
@@ -32,8 +34,8 @@ class Accountcontroller extends ResourceController
                 'CONTA_AGENCIA_ID' => 1,
                 'CONTA_PESSOA_ID' => $id,
                 'CONTA_ENDERECO'    => $dados['endereco'],
-                'CONTA_UF'    => ($dados['uf'] == null) ? 'GR' : $dados['uf'],
-                'CONTA_CIDADE'    => ($dados['cidade'] == null) ? 'Groombridge' : $dados['cidade'],
+                'CONTA_UF'    => ($dados['uf'] == null) ? 1 : $dados['uf'],
+                'CONTA_CIDADE'    => ($dados['cidade'] == null) ? 1 : $dados['cidade'],
                 'CONTA_OCUPACAO'    => $dados['ocupacao'],
                 'CONTA_SALARIO_USUARIO'    => $dados['salario'],
                 'CONTA_TIPO'    => 0,
@@ -42,6 +44,7 @@ class Accountcontroller extends ResourceController
                 'CONTA_COMP_RESID'    => $dados['comprovanteResidencia'],
                 'CONTA_COPIA_IDENT'    => $dados['copiaIdentidade'],
                 'CONTA_COMP_RENDA'    => $dados['comprovanteRenda'],
+                'CONTA_ATIVA'   => 0,
             ];
     
             if($bankAccount->insert($dadosInsert)){
@@ -61,6 +64,34 @@ class Accountcontroller extends ResourceController
         }
         
 
+    }
+
+    public function activate_reactivate_account(){
+        $bankAccountModel = new BankAccountModel(); // Instancia da model
+
+        $dados = $this->request->getPost(); // dados da requisição
+
+        $conta_id = $dados['conta_id']; // id da conta
+
+        $dados_update = [ // Dados a serem atualizados
+            'CONTA_SENHA' => Hash::make($dados['senha']), // senha cadastrada
+            'CONTA_SENHA_MESTRA' => Hash::make('DankJeWell'), // senha mestra (padrãp)
+            'CONTA_ATIVA' => 1 // conta ativa = 1 conta inativa = 0 
+        ];
+
+        if($bankAccountModel->update($conta_id, $dados_update)){
+            $resposta = [
+                'status' => 'success',
+                'message' => 'Conta ativada com sucesso'
+            ];
+        }else{
+            $resposta = [
+                'status' => 'error',
+                'message' => 'Não foi possivel ativar essa conta'
+            ];
+        }
+
+        return $this->respond($resposta);
     }
 
 }
