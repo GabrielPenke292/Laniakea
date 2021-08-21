@@ -86,8 +86,17 @@ class Administrativo extends BaseController
 
     }
     
-    public function payBill(){
+    public function payBillView(){
         return view("administrativo/payBill");
+    }
+
+    public function payBill(){
+        $codBarras = $this->request->getPost('codBarras'); // Código de barras passado na requisição
+
+        $client = \Config\Services::curlrequest(); // inicializa o curl
+
+        $response = $client->request('POST', API_URL.'federal-bank/pay-bill'); // Busca os estados (UF) para montar a view
+
     }
     
     public function renegociation(){

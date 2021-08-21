@@ -40,7 +40,7 @@ $routes->post('/administrativo/abrirConta', 			'Administrativo::startAccount');	
 $routes->get('/administrativo/ativ-reativ-conta', 		'Administrativo::ativarReativarContaView'); // View de ativar ou reativar uma conta
 $routes->post('/administrativo/ativar-reativar-conta', 	'Administrativo::ativarReativarConta'); // Ativar ou reativar uma conta
 $routes->get('/administrativo/avaliar-credito', 		'Administrativo::creditRating'); // Avaliação de crédito
-$routes->get('/administrativo/pagar-conta', 			'Administrativo::payBill'); // Pagamento de contas
+$routes->get('/administrativo/pagar-conta', 			'Administrativo::payBillView'); // Pagamento de contas
 $routes->get('/administrativo/renegociacao', 			'Administrativo::renegociation'); // Renegociação de dívidas
 $routes->get('/administrativo/financiamento', 			'Administrativo::financing'); // Financiamentos
 $routes->get('/administrativo/get-cities-by-uf', 		'Administrativo::get_cities_by_uf'); // Busca todas as cidades pelo estado (uf)
