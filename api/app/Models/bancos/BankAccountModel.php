@@ -27,6 +27,24 @@ class BankAccountModel extends Model
         "CONTA_ATIVA",
     ];
 
+    /**
+     * Verifica se uma conta existe
+     */
+    public function verifyIfExists($conta){
+        return $this->
+            where('CONTA_ID', $conta)->
+            get()->getResult();
+    }
+
+    /**
+     * Verifica se uma conta está ativa
+     */
+    public function isActive($conta){
+        return $this->
+            where('CONTA_ID', $conta)->
+            where('CONTA_ATIVA', 1)->
+            get()->getResult();
+    }
     
 
 }

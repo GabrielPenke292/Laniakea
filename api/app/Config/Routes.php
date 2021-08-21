@@ -41,6 +41,7 @@ $routes->group('federal-bank', function($routes){
 	//Account
 	$routes->post('open-account', 			"BFL/AccountController::open_account"); // Abre uma conta para um usuário
 	$routes->post('ativ-reativ-account', 	"BFL/AccountController::activate_reactivate_account"); // Ativa ou reativa uma conta para um usuário
+	$routes->post('deposit-cash', 			"BFL/AccountController::cashDeposit"); // depositar saldo em uma conta
 	
 	//Payments
 	$routes->post('pay-billet',	 			"BFL/PaymentsController::pay_billet"); // Rota para pagamento de boleto

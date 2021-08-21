@@ -50,6 +50,13 @@ class Paymentscontroller extends ResourceController
             $nossoNum = '001';
             $codBanco = $this->request->getPost('codBanco');
             $dataVencimento = $this->request->getPost('dataVencimento');
+            if(strtodate($dataVencimento) <= date('Y-m-d')){
+                $dadosReturn = [
+                    'status'  => false,
+                    'message' => "O vencimento do boleto não pode ser inferior a data atual!" 
+                ];
+                return $this->respond($dadosReturn);
+            }
             $valor = $this->request->getPost('valor');
             $beneficiario = $this->request->getPost('beneficiario');
             $pagador = $this->request->getPost('pagador');
@@ -68,7 +75,19 @@ class Paymentscontroller extends ResourceController
                 'BOLETO_JUROS'                  => $this->request->getPost('juros'),
             ];
 
-            return $this->respond($dadosInsert);
+            $billetModel = new BilletsModel();
+            if($billetModel->insert($dadosInsert)){
+                $dadosReturn = [
+                    'status'  => true,
+                    'message' => "Boleto gerado com sucesso!" 
+                ];
+            }else{
+                $dadosReturn = [
+                    'status'  => false,
+                    'message' => "Não foi possível gerar o boleto!" 
+                ];
+            }
+            return $this->respond($dadosReturn);
 
         }catch(Exception $e){
             return $this->respond(['status' => Error, 'messege' => $e->getMessege]);

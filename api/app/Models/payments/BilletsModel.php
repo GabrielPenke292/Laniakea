@@ -20,11 +20,9 @@ class BilletsModel extends Model
         'BOLETO_BENEFICIARIO',
         'BOLETO_PAGADOR',
         'BOLETO_JUROS',
+        'BOLETO_STATUS',
     ];
 
-    public function getQtdBillets(){
-        return $this->
-        countAll();
-    }
+    
 
 }

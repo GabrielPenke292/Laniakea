@@ -6,6 +6,7 @@ use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\API\ResponseTrait;
 use App\models\bancos\BankAccountModel;
+use App\models\bancos\AccountBallanceModel;
 use App\models\M_Cadastro;
 use App\Libraries\Hash;
 
@@ -80,10 +81,18 @@ class Accountcontroller extends ResourceController
             ];
     
             if($bankAccountModel->update($conta_id, $dados_update)){ // Se o update retornar 'true'
-                $resposta = [ // Prepara a resposta com status 'success'
-                    'status' => 'success',
-                    'message' => 'Conta ativada com sucesso'
-                ];
+                $accountBallance = new AccountBallanceModel();
+                if($accountBallance->insert(['CS_CONTA_ID' => $conta_id, 'CS_SALDO' => 0])){
+                    $resposta = [ // Prepara a resposta com status 'success'
+                        'status' => 'success',
+                        'message' => 'Conta ativada com sucesso'
+                    ];
+                }else{
+                    $resposta = [ // Prepara a resposta com status 'success'
+                        'status' => 'Cuccess/Fail',
+                        'message' => 'A Conta está ativada mas não foi possível vincular saldo! Contate a TI!'
+                    ];
+                }
             }else{ // se não atualizar
                 $resposta = [ // prepara a resposta com status 'error'
                     'status' => 'error',
@@ -100,4 +109,36 @@ class Accountcontroller extends ResourceController
         return $this->respond($resposta); // Retorna com a resposta
     }
 
+    /**
+     * Realiza o depósito de saldo em uma conta
+     * 
+     */
+    public function cashDeposit(){
+        $contaNum = $this->request->getPost('conta');
+        $valor = str_replace(',', '.', $this->request->getPost('valor'));
+
+        $bankAccount = new BankAccountModel();
+        if($bankAccount->VerifyIfExists($contaNum) && $bankAccount->isActive($contaNum)){
+            $accountBallance = new AccountBallanceModel();
+            $valor += $accountBallance->getBalance($contaNum);
+            if($accountBallance->updateBalance($contaNum, $valor)){
+                $dadosReturn = [
+                    'status'  => true,
+                    'Message' => 'Depósito feito com sucesso!'
+                ];
+            }else{
+                $dadosReturn = [
+                    'status'  => false,
+                    'Message' => 'Não foi possível fazer este depósito! Contate o gerente!'
+                ];
+            }
+        }else{
+            $dadosReturn = [
+                'status'  => false,
+                'Message' => 'Esta conta não existe ou não está ativa!'
+            ];
+        }
+
+        return $this->respond($dadosReturn);
+    }
 }
