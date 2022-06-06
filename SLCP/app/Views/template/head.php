@@ -26,4 +26,4 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
 
-<title>SLCP - Sistema Laniaker de Cadastramento de Pessoas - <?= $title ?></title>
+<title>SLCP - Sistema Laniaker de Cadastramento de Pessoas - </title>

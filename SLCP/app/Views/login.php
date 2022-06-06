@@ -31,6 +31,7 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Entrar</button>
+                        <a href="<?= BASE_URL . "login/forgot-password" ?>" class="ml-3 text-white">Esqueci minha senha</a>
                     </form>
                 </div><!-- form login -->
             </div><!-- col -->
