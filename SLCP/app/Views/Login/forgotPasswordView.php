@@ -17,7 +17,10 @@
             <div class="col-md-4">
                 <div class="form-login text-white">
                     <form method="post" action="check">
-                        
+                        <div class="form-group mb-2">
+                            <label for="mail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="mail" name="mail" aria-describedby="emailHelp">
+                        </div>
                         
                         <button type="submit" class="btn btn-primary">Entrar</button>
                     </form>
