@@ -1,0 +1,55 @@
+*{
+    /* background-color: #F67221; */
+}
+
+section#boas-vindas{
+    background: #47837B;
+    padding: 7%;
+}
+
+section#boas-vindas div.msg-bem-vindo h2{
+    /* width: 50%; */
+    padding-bottom: 8px;
+    border-bottom: 7px solid white;
+}
+.text-suave{
+    font-family: 300;
+}
+button.btn-entrar{
+    background: #F67221;
+    color: white;
+}
+.title-top{
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 28px;
+}
+.menu-top{
+    padding-top: 25px;
+}
+
+section#servicos-destaque{
+    padding: 3% 0;
+    height: 700px;
+    font-family: 'Lato', sans-serif;
+}
+.destaque-single{
+    width: 33%;
+    height: 300px;
+    margin: 15px 25px;
+    cursor: pointer;
+    
+}
+.destaque-single a{
+    text-decoration: none;
+
+}
+.destaque-single h2{
+    font-size: 23px;
+    padding-top: 50%; 
+    color: white;
+}
+
+/* Página dados oficiais */
+.btn-back{
+    /* width: 240%; */
+}
