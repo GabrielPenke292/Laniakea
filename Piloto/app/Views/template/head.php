@@ -1,5 +1,4 @@
-<head>
-  
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
@@ -30,5 +29,3 @@
         })(window,document,'script','dataLayer','GTM-PFK425');</script>
         <!-- End Google Tag Manager --> 
   
-
-</head>
