@@ -1,3 +1,4 @@
+<?= $this->extend('template/layout'); ?>
 
 <!DOCTYPE html>
 <html lang="pt-br" >
@@ -7,14 +8,11 @@
   <!-- Conteúdo da página -->
 
 
-
-  <?= $this->renderSection('head'); ?>
 </head>
 
 <body>
   <!-- View Navbar -->
   <header>
-      <?= $this->include('template/navbar'); ?>
       <?= $this->include('template/header'); ?>
     
   </header>

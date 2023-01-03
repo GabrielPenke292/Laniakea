@@ -1,34 +1,20 @@
-<section data-bs-version="5" class="menu menu1 cid-sz55TXuY2C" once="menu" id="menu1-1">
-    <div class="container">
+<div class="container d-flex align-items-center justify-content-between">
 
-        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-            <div class="container">
-                <div class="navbar-brand">
-                    
-                    <span class="navbar-caption-wrap"><a class="navbar-caption text-color display-5" href="#">Laniakea</a></span>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
-                <div     id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-success display-7" href="<?= base_url('/') ?>" aria-expanded="false">
-                                Home</a></li>
-                        <li class="nav-item"><a class="nav-link link text-success display-7" href="#" aria-expanded="false">
-                                Dados</a></li>
-                        <li class="nav-item"><a class="nav-link link text-success display-7" href="#">
-                                Links</a></li>
-                        <li class="nav-item"><a class="nav-link link text-success display-7" href="/projeto">O projeto</a>
-                        </li>
-                    </ul>
-                    
-    
-                </div>
-            </div>
-        </nav>
+    <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Laniakea</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
     </div>
-</section>
+
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="nav-link scrollto active" href="/">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">Dados</a></li>
+            <li><a class="nav-link scrollto" href="#services">Links</a></li>
+            <li><a class="nav-link scrollto" href="projeto">O Projeto</a></li>
+            
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+</div>
