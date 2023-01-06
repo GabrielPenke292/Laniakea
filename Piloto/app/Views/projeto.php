@@ -36,7 +36,7 @@
                 <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Por que foi criado? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                 <div id="faq2" class="collapse" data-bs-parent=".faq-list">
                     <p>
-                    idéia é criar um ambiente onde diversos projetos possam ser desenvolvidos simulando um grau de complexidade mais próximo do real. Por exemplo: Em Laniakea existe um banco federal, e um sistema de cadastro de pessoas (Como se fosse o registro onde tira certidão de nascimento no Brasil). Uma pessoa pode ser registrada nesse sistema (chamado SLCP, sistema laniaker de cadastro de pessoas) e posteriormente criar uma conta bancária no banco federal. O sistema bancário jamais pode aceitar criar uma conta sem que o DI (Documento de identificação) exista no SLCP.
+                    A idéia é criar um ambiente onde diversos projetos possam ser desenvolvidos simulando um grau de complexidade mais próximo do real. Por exemplo: Em Laniakea existe um banco federal, e um sistema de cadastro de pessoas (Como se fosse o registro onde tira certidão de nascimento no Brasil). Uma pessoa pode ser registrada nesse sistema (chamado SLCP, sistema laniaker de cadastro de pessoas) e posteriormente criar uma conta bancária no banco federal. O sistema bancário jamais pode aceitar criar uma conta sem que o DI (Documento de identificação) exista no SLCP.
                     </p>
                     <p>
                     Outros sistemas criados também tem dependência entre sí, criando assim um organismo que gera a complexidade próxima a de um país de verdade.

@@ -8,10 +8,10 @@
 
     <nav id="navbar" class="navbar">
         <ul>
-            <li><a class="nav-link scrollto active" href="/">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">Dados</a></li>
-            <li><a class="nav-link scrollto" href="#services">Links</a></li>
-            <li><a class="nav-link scrollto" href="projeto">O Projeto</a></li>
+            <li><a class="nav-link scrollto <?= $page == 'home' ? 'active' : '' ?>" href="/">Home</a></li>
+            <li><a class="nav-link scrollto <?= $page == 'dados' ? 'active' : '' ?>" href="dados">Dados</a></li>
+            <li><a class="nav-link scrollto <?= $page == 'links' ? 'active' : '' ?>" href="links">Links</a></li>
+            <li><a class="nav-link scrollto <?= $page == 'projeto' ? 'active' : '' ?>" href="projeto">O Projeto</a></li>
             
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
