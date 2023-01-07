@@ -22,8 +22,8 @@
             <div class="dados-oficiais mt-3">
                 <div class="col-md-4">
                     <div class="card text-center mb-3" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title" style="font-size: 45px; color: #eb5d1e;" >45</h5>
+                        <div class="card-body"> 
+                            <h5 class="card-title" style="font-size: 45px; color: #eb5d1e;" ><?= $quantidadePessoas?></h5>
                             <p class="card-text">Pessoas oficialmente registradas.</p>
                         </div>
 
