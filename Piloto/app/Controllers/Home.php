@@ -31,9 +31,14 @@ class Home extends BaseController
      * Retorna a view da página de dados
      */
     public function dados(){
+        $pessoasModel = new \App\Models\PessoasModel();
+        
+        $pessoas = $pessoasModel->findAll();
+
         $page = [
             'title' => 'Dados',
-            'page' => 'dados'
+            'page' => 'dados',
+            'quantidadePessoas' => count($pessoas),
         ];
         return view('dados', $page);
     }
