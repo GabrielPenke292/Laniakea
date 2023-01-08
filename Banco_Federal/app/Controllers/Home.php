@@ -8,4 +8,18 @@ class Home extends BaseController
 	{
 		return view('pages/index');
 	}
+
+	/**
+	 * Retorna a view de login
+	 */
+	public function accountLoginView(){
+		return view('pages/login/accountLogin');
+	}
+
+	/**
+	 * Retorna a view de login administrativo
+	 */
+	public function accountLoginAdministrativeView(){
+		return view('pages/login/accountLoginAdministrative');
+	}
 }

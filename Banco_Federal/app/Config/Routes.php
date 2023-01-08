@@ -34,6 +34,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('account-login', 							'Home::accountLoginView');
+$routes->get('account-login-administrative', 			'Home::accountLoginAdministrativeView');
+
+
+
 $routes->get('/administrativo', 						'Administrativo::dashboard'); // Dashboard com todas as opções administrativas
 $routes->get('/administrativo/abrir-conta', 			'Administrativo::openAccount');	// Renderiza a view de abertura de conta
 $routes->post('/administrativo/abrirConta', 			'Administrativo::startAccount');	// Realiza a abertura de conta

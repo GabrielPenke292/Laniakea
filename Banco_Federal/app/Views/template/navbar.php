@@ -10,7 +10,7 @@
                     <a class="nav-link" href="/">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="trainings.html">MINHA CONTA</a>
+                    <a class="nav-link" href="account-login">MINHA CONTA</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="classes.html">ABRA SUA CONTA</a>
