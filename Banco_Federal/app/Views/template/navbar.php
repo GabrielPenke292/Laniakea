@@ -1,28 +1,28 @@
 <div class="header_section">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="logo"><a href="index.html"><img src="assets/template/images/logo.png"></a></div>
+        <div class="logo pl-4"><a href="/"><img src="assets/img/logo.png" width="100px"></a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">HOME</a>
+                    <a class="nav-link" href="/">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="trainings.html">TRAININGS</a>
+                    <a class="nav-link" href="trainings.html">MINHA CONTA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="classes.html">CLASSES</a>
+                    <a class="nav-link" href="classes.html">ABRA SUA CONTA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shows.html">SHOWS</a>
+                    <a class="nav-link" href="shows.html">RENEGOCIAÇÃO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shortcodes.html">SHORTCODES</a>
+                    <a class="nav-link" href="shortcodes.html">INVESTIMENTOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">CONTACT</a>
+                    <a class="nav-link" href="contact.html">CONTATO</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
