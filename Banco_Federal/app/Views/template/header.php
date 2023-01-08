@@ -6,8 +6,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="banner_taital">
-                                <h1 class="dance_text">Dance beat</h1>
-                                <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magn</p>
+                                <h1 class="dance_text">Banco Federal de Laniakea</h1>
+                                <p class="consectetur_text">O primeiro banco do novo país.</p>
                                 <div class="about_bt"><a href="about.html">About Us</a></div>
                                 <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
                             </div>
