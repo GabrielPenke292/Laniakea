@@ -12,23 +12,55 @@
             </div><!-- col -->
         </div><!-- row -->
 
-        <div class="row d-flex justify-content-around mb-5">
-            <div class="col-2 text-white service-box text-center align-self-center" id="service-one">
-                <p>Abertura de conta</p>
-            </div><!-- service one -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="<?= base_url('assets/img/abertura_conta.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Abertura de conta</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
 
-            <div class="col-2 text-white service-box" id="service-two">
-                <p>Crédito</p>
-            </div><!-- service two -->
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="<?= base_url('assets/img/card.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Crédito</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="<?= base_url('assets/img/financing.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Financiamentos e consórcios</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
 
-            <div class="col-2 text-white service-box" id="service-three">
-                <p>Financiamentos e consórcios</p>
-            </div><!-- service three -->
-
-            <div class="col-2 text-white service-box" id="service-four">
-                <p>Renegociação de dívidas</p>
-            </div><!-- service four -->
-        </div><!-- row -->
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="<?= base_url('assets/img/contrato.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Renegociação de dívidas</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
 
     </div><!-- container -->
 </section><!-- services -->
