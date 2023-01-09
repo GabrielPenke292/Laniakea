@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://localhost/meus-projetos/Laniakea/Banco_Federal/public/';
+	public $baseURL = 'http://localhost:8080';
 
 	/**
 	 * --------------------------------------------------------------------------

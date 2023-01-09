@@ -18,8 +18,8 @@
                     <img src="<?= base_url('assets/img/abertura_conta.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Abertura de conta</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Abra sua conta conosco e faça parte dessa incrível jornada que é desbravar esse novo país.</p>
+                        <a href="#" class="btn btn-primary">Clique aqui</a>
                     </div>
                 </div>
             </div>
@@ -29,8 +29,8 @@
                     <img src="<?= base_url('assets/img/card.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Crédito</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Aqui você conta com uma análise justa de crédito e pode já sair com um cartão logo de cara.</p>
+                        <a href="#" class="btn btn-primary">Clique aqui</a>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,8 @@
                     <img src="<?= base_url('assets/img/financing.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Financiamentos e consórcios</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Sabe aquele sonho que você quer realizar? Pode estar muito próximo com os nossos programas de financiamento e consórcio.</p>
+                        <a href="#" class="btn btn-primary">Clique aqui</a>
                     </div>
                 </div>
             </div>
@@ -53,8 +53,8 @@
                     <img src="<?= base_url('assets/img/contrato.jpg') ?>" class="card-img-top" style="height: 257px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Renegociação de dívidas</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">Aqui você encontra as melhores taxas na renegociação da sua dívida. Não perca essa oportunidade...</p>
+                        <a href="#" class="btn btn-primary">Clique aqui</a>
                     </div>
                 </div>
             </div>
