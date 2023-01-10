@@ -34,6 +34,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+
+$routes->get('credit', 'Home::creditView');
+
 $routes->get('account-login', 							'Home::accountLoginView');
 $routes->get('account-login-administrative', 			'Home::accountLoginAdministrativeView');
 

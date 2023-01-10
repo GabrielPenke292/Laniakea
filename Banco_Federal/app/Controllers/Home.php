@@ -22,4 +22,11 @@ class Home extends BaseController
 	public function accountLoginAdministrativeView(){
 		return view('pages/login/accountLoginAdministrative');
 	}
+
+	/**
+	 * Retorna a view de crédito
+	 */
+	public function creditView(){
+		return view('pages/credit');
+	}
 }
