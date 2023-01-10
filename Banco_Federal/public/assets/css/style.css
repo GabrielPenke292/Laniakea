@@ -12,13 +12,7 @@ body{
 .login-form{
     background-color: #C4C4C4;
 }
-header .logo{
-    width: 150px;
-    height: 100px;
-    background-image: url("../img/logo-fundo-branco.png");
-    background-position: center;
-    background-size: cover;
-}
+
 
 /* BANNER */
 #banner-principal{
@@ -33,7 +27,8 @@ header .logo{
 
 /* SERVICES */
 .services-title{
-    background-color: #7C640C;
+    background-color: #ff5333;
+    color: white;
 }
 .service-box{
     height: 125px;
@@ -50,6 +45,12 @@ header .logo{
     background-position: center;
     height: 400px;
 }
+#img-dual-cards{
+    text-align: right;
+}
+#text-dual-cards{
+    text-align: left;
+}
 .msg p{
     font-family: 'Viaoda Libre', cursive;
     font-size: 24px;
@@ -63,4 +64,12 @@ footer{
 
 #agencia, #conta{
     border-radius: 10px;
+}
+
+@media (max-width: 775px)
+{
+  #img-dual-cards, #text-dual-cards
+   {
+    text-align: center;
+   }
 }

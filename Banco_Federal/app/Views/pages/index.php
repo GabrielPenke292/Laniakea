@@ -65,16 +65,15 @@
     </div><!-- container -->
 </section><!-- services -->
 
-<section id="dual-cards">
+<section id="dual-cards mt-3">
     <div class="row my-4">
-        <div class="col-6">
-            <div class="card-img">
-
-            </div>
+        <div class="col-md-6 col-sm-12 " id="img-dual-cards">
+            <img src="<?= base_url('assets/img/agencia.jpg') ?>" alt="" >
+            
         </div><!-- col -->
 
-        <div class="col-6">
-            <div class="card-info d-flex h-100 justify-content-center">
+        <div class="col-md-6 col-sm-12 " id="text-dual-cards">
+            <div class="card-info ">
                 <div class="msg align-self-center">
                     <p>Somos o primeiro banco de Laniakea!</p>
                     <p>Contem conosco para construir essa incrível nação!</p>
