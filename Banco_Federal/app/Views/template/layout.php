@@ -14,7 +14,10 @@
   <!-- View Navbar -->
   <header class="pt-2">
     <?= $this->include('template/navbar'); ?>
-    <?= $this->include('template/header'); ?>
+
+    <?php echo $this->renderSection('headerSection'); ?>
+
+
 
   </header>
 

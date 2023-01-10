@@ -1,5 +1,9 @@
 <?= $this->extend('template/layout'); ?>
 
+<?= $this->section('headerSection'); ?>
+    <?= $this->include('template/header'); ?>
+<?= $this->endSection(); ?>
+
 <?= $this->section('content'); ?>
 
 <section id="services">
@@ -30,7 +34,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Crédito</h5>
                         <p class="card-text">Aqui você conta com uma análise justa de crédito e pode já sair com um cartão logo de cara.</p>
-                        <a href="#" class="btn btn-primary">Clique aqui</a>
+                        <a href="credit" class="btn btn-primary">Clique aqui</a>
                     </div>
                 </div>
             </div>
