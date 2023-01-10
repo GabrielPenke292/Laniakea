@@ -6,12 +6,12 @@
 
 <?= $this->section('content'); ?>
 
-<section id="services">
+<section id="services" class="mb-5">
     <div class="container">
         <div class="row mb-3">
             <div class="col-12">
                 <div class="services-title text-center p-5 text-white">
-                    <h2>O que podemos fazer por você:</h2>
+                    <h2 class="text-white">O que podemos fazer por você:</h2>
                 </div>
             </div><!-- col -->
         </div><!-- row -->
@@ -69,12 +69,12 @@
     </div><!-- container -->
 </section><!-- services -->
 
-<section id="dual-cards mt-3">
+<!-- <section id="dual-cards mt-3">
     <div class="row my-4">
         <div class="col-md-6 col-sm-12 " id="img-dual-cards">
             <img src="<?= base_url('assets/img/agencia.jpg') ?>" alt="" >
             
-        </div><!-- col -->
+        </div>
 
         <div class="col-md-6 col-sm-12 " id="text-dual-cards">
             <div class="card-info ">
@@ -83,8 +83,8 @@
                     <p>Contem conosco para construir essa incrível nação!</p>
                 </div>
             </div>
-        </div><!-- col -->
-    </div><!-- row -->
-</section><!-- dual cards -->
+        </div>
+    </div>
+</section>dual cards -->
 
 <?= $this->endSection(); ?>

@@ -27,8 +27,7 @@ body{
 
 /* SERVICES */
 .services-title{
-    background-color: #ff5333;
-    color: white;
+    background-color: #003c61;
 }
 .service-box{
     height: 125px;
@@ -58,7 +57,7 @@ body{
 
 /* FOOTER */
 footer{
-    background-color: #A99033;
+    background-color: #003c61;
     height: 200px;
 }
 
