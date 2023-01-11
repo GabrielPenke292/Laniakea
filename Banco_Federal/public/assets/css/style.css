@@ -25,6 +25,16 @@ body{
     height: 300px;
 }
 
+.banner_section_credit{
+    background-image: url('../img/cartao_credito_banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    object-fit: cover;
+
+}
+
 /* SERVICES */
 .services-title{
     background-color: #003c61;
