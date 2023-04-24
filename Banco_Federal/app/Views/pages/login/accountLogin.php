@@ -15,33 +15,38 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
-<body >
+<body>
 	<div class="container">
-		
-		<div class="login-box animated fadeInUp">
-			<div class="box-header">
-				<h2>Acessar conta</h2>
+		<form action="/login" method="post">
+			<div class="login-box animated fadeInUp">
+				<div class="box-header">
+					<h2>Acessar conta</h2>
+				</div>
+				<label for="username">Usuario</label>
+				<br />
+				<input type="text" id="username">
+				<br />
+				<label for="password">Senha</label>
+				<br />
+				<input type="password" id="password">
+				<br />
+				<button type="submit">Acessar</button>
+				<br />
+				<a href="#">
+					<p class="small">Esqueceu sua senha?</p>
+				</a>
+				<a href="account-login-administrative">
+					<p class="small">Adminstrativo?</p>
+				</a>
 			</div>
-			<label for="username">Usuario</label>
-			<br/>
-			<input type="text" id="username">
-			<br/>
-			<label for="password">Senha</label>
-			<br/>
-			<input type="password" id="password">
-			<br/>
-			<button type="submit">Acessar</button>
-			<br/>
-			<a href="#"><p class="small">Esqueceu sua senha?</p></a>
-			<a href="account-login-administrative"><p class="small">Adminstrativo?</p></a>
-		</div>
+		</form>
 	</div>
 </body>
 
 <script>
-	$(document).ready(function () {
-    	$('#logo').addClass('animated fadeInDown');
-    	$("input:text:visible:first").focus();
+	$(document).ready(function() {
+		$('#logo').addClass('animated fadeInDown');
+		$("input:text:visible:first").focus();
 	});
 	$('#username').focus(function() {
 		$('label[for="username"]').addClass('selected');
