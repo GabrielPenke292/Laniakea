@@ -40,6 +40,11 @@ $routes->get('credit', 'Home::creditView');
 $routes->get('account-login', 							'Home::accountLoginView');
 $routes->get('account-login-administrative', 			'Home::accountLoginAdministrativeView');
 
+$routes->group('login', function($routes) {
+	$routes->post('/', 									'LoginController::login');
+	$routes->post('administrativo', 					'LoginController::loginAdministrative');
+});
+
 
 
 $routes->get('/administrativo', 						'Administrativo::dashboard'); // Dashboard com todas as opções administrativas
