@@ -17,7 +17,7 @@
 
 <body>
 	<div class="container">
-		<form action="/login/administrativo" method="post">
+		<form action="<?= BASE_URL . 'login/administrativo' ?> " method="post">
 
 			<div class="login-box animated fadeInUp">
 				<div class="box-header">
@@ -25,11 +25,11 @@
 				</div>
 				<label for="username">Usuario</label>
 				<br />
-				<input type="text" id="username">
+				<input type="text" id="username" name="username">
 				<br />
 				<label for="password">Senha</label>
 				<br />
-				<input type="password" id="password">
+				<input type="password" id="password" name="password">
 				<br />
 				<button type="submit">Acessar</button>
 				<br />

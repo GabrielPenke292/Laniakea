@@ -60,10 +60,9 @@ class LoginController extends BaseController
 
         $validation = $this->validate([
             'username'=>[
-                'rules' =>'required|valid_user',
+                'rules' =>'required',
                 'errors'=>[
                     'required'      =>  'Email é um campo obrigatório',
-                    'valid_user'   =>  'Digite um email válido',
                     ]
                 ],
             'password'=>[
@@ -80,26 +79,34 @@ class LoginController extends BaseController
             return view("login", ['validation'=>$this->validator]);
         }else{  
 
-            $username = $this->request->getGet('username');
-            $password = $this->request->getGet('password');
+            $username = $this->request->getPost('username');
+            $password = $this->request->getPost('password');
 
-            $funcionario = new \App\Models\Funcionario_Model();
-            $userModel = new \App\Models\User_Model();
+            $client = \Config\Services::curlrequest(); // inicializa o curl
 
-            // $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
-            $userInfo = $funcionario->getData($email);
-            $checkPassword = Hash::checkPassword($password, $userInfo[0]['FUNCIONARIO_PASSWORD']);
+            $response = $client->request('POST', API_URL.'federal-bank/login/administrativ', [
+                'form_params' => $dataRequest // Dados passados na requisição
+            ], false);
+    
+            $responseBody = json_decode($response->getBody()); //Corpo da Requisição
 
-            if(!$checkPassword){
-                session()->setFlashdata('fail', 'Incorrect password');
-                return redirect()->to(BASE_URL.'login')->withInput();
-            }else{
-                $user_id = $userInfo[0]['FUNCIONARIO_ID'];
-				$user_name = $userInfo[0]['PES_NOME'];
-                session()->set('loggedUser', $user_id);
-                session()->set('userName', $user_name);
-                return redirect()->to(BASE_URL);
-            }
+            // $funcionario = new \App\Models\Funcionario_Model();
+            // $userModel = new \App\Models\User_Model();
+
+            // // $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
+            // $userInfo = $funcionario->getData($email);
+            // $checkPassword = Hash::checkPassword($password, $userInfo[0]['FUNCIONARIO_PASSWORD']);
+
+            // if(!$checkPassword){
+            //     session()->setFlashdata('fail', 'Incorrect password');
+            //     return redirect()->to(BASE_URL.'login')->withInput();
+            // }else{
+            //     $user_id = $userInfo[0]['FUNCIONARIO_ID'];
+			// 	$user_name = $userInfo[0]['PES_NOME'];
+            //     session()->set('loggedUser', $user_id);
+            //     session()->set('userName', $user_name);
+            //     return redirect()->to(BASE_URL);
+            // }
         }
 
 
