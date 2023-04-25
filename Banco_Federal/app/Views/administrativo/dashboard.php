@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?= $this->include('templates/adm-head')?>
+    <?= $this->include('template/adm-head')?>
 </head>
 <body>
     <h1>Área Administrativa</h1>

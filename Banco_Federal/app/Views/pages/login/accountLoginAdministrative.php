@@ -33,12 +33,12 @@
 				<br />
 				<button type="submit">Acessar</button>
 				<br />
-				<a href="#">
+				<!-- <a href="#">
 					<p class="small">Esqueceu sua senha?</p>
 				</a>
 				<a href="account-login">
 					<p class="small">cliente?</p>
-				</a>
+				</a> -->
 			</div>
 		</form>
 	</div>
