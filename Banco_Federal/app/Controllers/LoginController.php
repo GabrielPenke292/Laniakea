@@ -82,9 +82,14 @@ class LoginController extends BaseController
             $username = $this->request->getPost('username');
             $password = $this->request->getPost('password');
 
+            $dataRequest = [
+                'username' => $username,
+                'password' => $password
+            ];
+
             $client = \Config\Services::curlrequest(); // inicializa o curl
 
-            $response = $client->request('POST', API_URL.'federal-bank/login/administrativ', [
+            $response = $client->request('POST', API_URL.'federal-bank/login/administrative', [
                 'form_params' => $dataRequest // Dados passados na requisição
             ], false);
     
