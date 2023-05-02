@@ -48,8 +48,8 @@ $routes->group('federal-bank', function($routes){
 	$routes->post('generate-billet', 		"BFL/PaymentsController::generateBillet"); // Gerar boleto
 
 	$routes->group('login', function($routes){
-		$routes->post('adminstrative', 		"BFL/LoginController::login_administrative"); // login administrativo')
-	})
+		$routes->post('administrative', 		"BFL/LoginController::loginAdministrative"); // login administrativo')
+	});
 
 });
 

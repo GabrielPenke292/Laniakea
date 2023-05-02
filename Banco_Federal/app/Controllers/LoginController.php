@@ -90,28 +90,18 @@ class LoginController extends BaseController
             $client = \Config\Services::curlrequest(); // inicializa o curl
 
             $response = $client->request('POST', API_URL.'federal-bank/login/administrative', [
-                'form_params' => $dataRequest // Dados passados na requisição
+                'query' => $dataRequest // Dados passados na requisição
             ], false);
     
             $responseBody = json_decode($response->getBody()); //Corpo da Requisição
 
-            // $funcionario = new \App\Models\Funcionario_Model();
-            // $userModel = new \App\Models\User_Model();
+            if($responseBody->status){
+                
+            }else{
 
-            // // $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
-            // $userInfo = $funcionario->getData($email);
-            // $checkPassword = Hash::checkPassword($password, $userInfo[0]['FUNCIONARIO_PASSWORD']);
+            }
 
-            // if(!$checkPassword){
-            //     session()->setFlashdata('fail', 'Incorrect password');
-            //     return redirect()->to(BASE_URL.'login')->withInput();
-            // }else{
-            //     $user_id = $userInfo[0]['FUNCIONARIO_ID'];
-			// 	$user_name = $userInfo[0]['PES_NOME'];
-            //     session()->set('loggedUser', $user_id);
-            //     session()->set('userName', $user_name);
-            //     return redirect()->to(BASE_URL);
-            // }
+
         }
 
 
