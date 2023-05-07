@@ -96,9 +96,14 @@ class LoginController extends BaseController
             $responseBody = json_decode($response->getBody()); //Corpo da Requisição
 
             if($responseBody->status){
-                
-            }else{
+                session()->set('loggedUser', true);
+                session()->set('userName', $responseBody->data->peopleData->PES_NOME);
+                session()->set('function', $responseBody->data->function->funcao_nome);
+                return redirect()->to(BASE_URL . 'administrativo');
 
+            }else{
+                session()->setFlashdata('fail', 'Dados incorretos');
+                return redirect()->to(BASE_URL . 'account-login-administrative')->withInput();
             }
 
 

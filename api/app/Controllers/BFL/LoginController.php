@@ -7,8 +7,7 @@ use CodeIgniter\API\ResponseTrait;
 use App\models\bancos\WorkersModel;
 use App\models\M_Cadastro;
 use App\Libraries\Hash;
-
-
+use App\Models\M_Funcao;
 
 class LoginController extends ResourceController
 {
@@ -18,10 +17,12 @@ class LoginController extends ResourceController
         try{
             $peopleModel = new M_Cadastro();
             $workersModel = new WorkersModel();
+            $functionModel = new M_Funcao();
 
-            $UserData = $workersModel->where('BF_F_LOGIN', $this->request->getPost('username'))->first();
+            $UserData = $workersModel->where('BF_F_LOGIN', $this->request->getGet('username'))->first();
+            $sql = $workersModel->getLastQuery()->getQuery();
             if( isset($UserData) ){
-                $checkPassword = Hash::checkPassword($this->request->getPost('password'), $UserData[0]['BF_F_SENHA']);
+                $checkPassword = Hash::checkPassword($this->request->getGet('password'), $UserData['BF_F_SENHA']);
     
                 if(!$checkPassword){
                     $dataReturn = [
@@ -31,10 +32,15 @@ class LoginController extends ResourceController
                     ];
                     
                 }else{
+                    $peopleData = $peopleModel->find($UserData['BF_F_PES_ID']);
+                    $function = $functionModel->find($UserData['BF_F_FUNCAO_ID']);
                     $dataReturn = [
                         'status'    => true,
                         'message'   => 'Login efetuado com sucesso',
-                        'data'      => $UserData
+                        'data'      => [
+                            'peopleData' =>$peopleData,
+                            'function' => $function
+                        ]
                     ];
                 }
             }else{
