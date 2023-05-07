@@ -51,17 +51,21 @@ $routes->group('logout', function($routes) {
 });
 
 
+$routes->group('administrativo', ['filter' => 'signIn'], function($routes){
+	$routes->get('/', 									'Administrativo::dashboard');  // Dashboard com todas as opções administrativas
+	$routes->get('abrir-conta',				 			'Administrativo::openAccount');	// Renderiza a view de abertura de conta
+	$routes->post('abrirConta', 						'Administrativo::startAccount');	// Realiza a abertura de conta
+	$routes->get('ativ-reativ-conta', 					'Administrativo::ativarReativarContaView'); // View de ativar ou reativar uma conta
+	$routes->post('ativar-reativar-conta', 				'Administrativo::ativarReativarConta'); // Ativar ou reativar uma conta
+	$routes->get('avaliar-credito', 					'Administrativo::creditRating'); // Avaliação de crédito
+	$routes->get('pagar-conta', 						'Administrativo::payBillView'); // Pagamento de contas
+	$routes->get('renegociacao', 						'Administrativo::renegociation'); // Renegociação de dívidas
+	$routes->get('financiamento', 						'Administrativo::financing'); // Financiamentos
+	$routes->get('get-cities-by-uf', 					'Administrativo::get_cities_by_uf'); // Busca todas as cidades pelo estado (uf)
 
-$routes->get('/administrativo', 						'Administrativo::dashboard'); // Dashboard com todas as opções administrativas
-$routes->get('/administrativo/abrir-conta', 			'Administrativo::openAccount');	// Renderiza a view de abertura de conta
-$routes->post('/administrativo/abrirConta', 			'Administrativo::startAccount');	// Realiza a abertura de conta
-$routes->get('/administrativo/ativ-reativ-conta', 		'Administrativo::ativarReativarContaView'); // View de ativar ou reativar uma conta
-$routes->post('/administrativo/ativar-reativar-conta', 	'Administrativo::ativarReativarConta'); // Ativar ou reativar uma conta
-$routes->get('/administrativo/avaliar-credito', 		'Administrativo::creditRating'); // Avaliação de crédito
-$routes->get('/administrativo/pagar-conta', 			'Administrativo::payBillView'); // Pagamento de contas
-$routes->get('/administrativo/renegociacao', 			'Administrativo::renegociation'); // Renegociação de dívidas
-$routes->get('/administrativo/financiamento', 			'Administrativo::financing'); // Financiamentos
-$routes->get('/administrativo/get-cities-by-uf', 		'Administrativo::get_cities_by_uf'); // Busca todas as cidades pelo estado (uf)
+});
+
+
 
 
 /*

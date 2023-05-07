@@ -102,7 +102,7 @@ class LoginController extends BaseController
                 return redirect()->to(BASE_URL . 'administrativo');
 
             }else{
-                session()->setFlashdata('fail', 'Dados incorretos');
+                session()->setFlashdata('error', 'Dados incorretos');
                 return redirect()->to(BASE_URL . 'account-login-administrative')->withInput();
             }
         }

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Daily UI - Day 1 Sign In</title>
+	<title>BFL - Login</title>
 
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
@@ -41,6 +41,11 @@
 				</a> -->
 			</div>
 		</form>
+		<?php if (isset($_SESSION['error'])) : ?>
+			<div class="alert alert-danger" role="alert">
+				<p class="bg-danger">Deu ruim aq!</p>
+			</div>
+		<?php endif; ?>
 	</div>
 </body>
 
