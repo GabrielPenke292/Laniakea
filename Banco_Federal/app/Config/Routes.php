@@ -45,6 +45,11 @@ $routes->group('login', function($routes) {
 	$routes->post('administrativo', 					'LoginController::loginAdministrative');
 });
 
+$routes->group('logout', function($routes) {
+	$routes->post('/', 									'LoginController::logout');
+	$routes->get('administrativo', 					    'LoginController::logout');
+});
+
 
 
 $routes->get('/administrativo', 						'Administrativo::dashboard'); // Dashboard com todas as opções administrativas

@@ -6,6 +6,8 @@
 <body>
     <h1>Área Administrativa</h1>
     <ul>
+        <a href="<?= BASE_URL ?>logout/administrativo"><li>Sair</li></a>
+        <hr>
         <a href="<?= BASE_URL ?>administrativo/abrir-conta"><li>Abrir Conta</li></a>
         <a href="<?= BASE_URL ?>administrativo/ativ-reativ-conta"><li>Ativar/Reativar Conta</li></a>
         <a href="<?= BASE_URL ?>administrativo/avaliar-credito"><li>Avaliação de Crédito</li></a>
