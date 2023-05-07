@@ -20,6 +20,11 @@ class Home extends BaseController
 	 * Retorna a view de login administrativo
 	 */
 	public function accountLoginAdministrativeView(){
+		if(session()->get('loggedUser') == true)
+		{
+			return redirect()->to(base_url('administrativo'));
+		}
+
 		return view('pages/login/accountLoginAdministrative');
 	}
 
