@@ -5,7 +5,9 @@
 </head>
 <body>
     <h1>Área Administrativa</h1>
+    <p>Bem vindo(a), <?= $_SESSION['userName'] ?></p>
     <ul>
+
         <a href="<?= BASE_URL ?>logout/administrativo"><li>Sair</li></a>
         <hr>
         <a href="<?= BASE_URL ?>administrativo/abrir-conta"><li>Abrir Conta</li></a>
