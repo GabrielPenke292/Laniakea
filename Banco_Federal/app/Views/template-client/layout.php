@@ -2,10 +2,10 @@
 <html lang="pt-br">
 
 <head>
-  <?= $this->include('template/head'); ?>
+  <?= $this->include('template-client/head'); ?>
   <!-- Conteúdo da página -->
 
-  <?= $this->include('template/scripts'); ?>
+  <?= $this->include('template-client/scripts'); ?>
 
 
 </head>
@@ -13,7 +13,7 @@
 <body>
   <!-- View Navbar -->
   <header class="pt-2">
-    <?= $this->include('template/navbar'); ?>
+    <?= $this->include('template-client/navbar'); ?>
 
     <?php echo $this->renderSection('headerSection'); ?>
 
