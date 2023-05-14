@@ -15,7 +15,7 @@
   <header class="pt-2">
     <?= $this->include('template-client/navbar'); ?>
 
-    <?php echo $this->renderSection('headerSection'); ?>
+
 
 
 
@@ -37,7 +37,7 @@
   </main>
 
   <footer id="footer">
-    <?= $this->include('template/footer'); ?>
+    <?= $this->include('template-client/footer'); ?>
 
   </footer>
 
