@@ -27,7 +27,14 @@
       <div class="content-wrapper">
         <!-- Inner content -->
         <div class="content-inner">
-          <?php echo $this->renderSection('content'); ?>
+          <div class="col-3">
+            <?= $this->include('template-client/sidebar'); ?>
+
+          </div>
+          <div class="col-md-9">
+            <?php echo $this->renderSection('content'); ?>
+
+          </div>
         </div>
         <!-- /inner content -->
       </div>
