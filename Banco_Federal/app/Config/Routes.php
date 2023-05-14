@@ -65,6 +65,10 @@ $routes->group('administrativo', ['filter' => 'signIn'], function($routes){
 
 });
 
+$routes->group('client', function ($routes){
+	$routes->get('/', 									'Client::home'); //Tela inicial do cliente
+});
+
 
 
 
