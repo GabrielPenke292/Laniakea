@@ -14,23 +14,15 @@
   <!-- View Navbar -->
   <header class="pt-2">
     <?= $this->include('template-client/navbar'); ?>
-
-
-
-
-
   </header>
 
   <main>
-    <div class="col-md-4">
-      <?= $this->include('template-client/sidebar'); ?>
-    </div>
+    
+    <?= $this->include('template-client/sidebar'); ?>
+    
 
 
-    <div class="col-md-8">
-      <?php echo $this->renderSection('content'); ?>
-
-    </div>
+    <?php echo $this->renderSection('content'); ?>
 
 
   </main>
