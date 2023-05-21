@@ -13,7 +13,7 @@
         </div>
 
         <div class="card " style="width: 18rem;">
-            <img src="assets/img/client/money.svg" class="card-img-top" alt="saldo" id="icon-home">
+            <img src="assets/img/client/money.svg" class="card-img-top pt-2" alt="saldo" id="icon-home">
             <div class="card-body">
                 <h5 class="card-title">Saldo</h5>
                 <h3 class="card-text">R$ 5320,10</h3>
@@ -23,34 +23,8 @@
 
         <hr>
 
-        <h5 class="mb-3">O que deseja fazer?</h5>
-
-        <div class="row">
-            <div class="card col-md-3 col-sm-12 mr-1" style="width: 14rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            
-            <div class="card col-md-3 col-sm-12 mr-1" style="width: 14rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            
-            <div class="card col-md-3 col-sm-12 " style="width: 14rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-        </div>
+        <?= $this->include('client/destaques'); ?>
+        
 
     </main>
 
