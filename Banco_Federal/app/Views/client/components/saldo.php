@@ -3,6 +3,6 @@
     <div class="card-body">
         <h5 class="card-title">Saldo</h5>
         <h3 class="card-text">R$ 5320,10</h3>
-        <a href="#" class="btn btn-primary">Extrato</a>
+        <a href="<?php echo base_url("extract");  ?>" class="btn btn-primary">Extrato</a>
     </div>
 </div>

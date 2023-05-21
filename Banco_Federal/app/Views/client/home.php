@@ -12,11 +12,11 @@
 
         </div>
 
-        <?= $this->include('client/saldo'); ?>
+        <?= $this->include('client/components/saldo'); ?>
 
         <hr>
 
-        <?= $this->include('client/destaques'); ?>
+        <?= $this->include('client/components/destaques'); ?>
         
 
     </main>
