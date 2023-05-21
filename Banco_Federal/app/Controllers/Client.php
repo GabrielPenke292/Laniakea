@@ -12,4 +12,8 @@ class Client extends BaseController
     public function home(){
         return view('client/home');
     }
+
+    public function extract(){
+        return view('client/extract');
+    }
 }
