@@ -4,37 +4,37 @@
           <li class="nav-item">
             <a class="nav-link active" href="#">
               <span data-feather="home"></span>
-              Dashboard <span class="sr-only">(current)</span>
+              Início <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="file"></span>
-              Orders
+              Extrato
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="shopping-cart"></span>
-              Products
+              Transferência
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
-              Customers
+              Investimentos
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              Reports
+              Empréstimo
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="layers"></span>
-              Integrations
+              Cartão
             </a>
           </li>
         </ul>
