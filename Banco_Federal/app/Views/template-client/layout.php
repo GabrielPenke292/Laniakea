@@ -5,6 +5,7 @@
   <?= $this->include('template-client/head'); ?>
   <!-- Conteúdo da página -->
 
+  <?= $this->include('template-client/css-plugins'); ?>
   <?= $this->include('template-client/scripts'); ?>
 
 
