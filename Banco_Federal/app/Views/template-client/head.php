@@ -11,20 +11,20 @@
 <meta name="description" content="">
 <meta name="author" content=""> 
 <!-- bootstrap css -->
-<link rel="stylesheet" type="text/css" href="assets/template/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url('assets/template/css/bootstrap.min.css')?>">
 <!-- style css -->
-<link rel="stylesheet" type="text/css" href="assets/template/css/client/style.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url('assets/template/css/client/style.css')?>">
 <!-- Responsive-->
-<link rel="stylesheet" href="assets/template/css/responsive.css">
+<link rel="stylesheet" href="<?= base_url('assets/template/css/responsive.css') ?>">
 <!-- fevicon -->
-<link rel="icon" href="assets/template/images/fevicon.png" type="image/gif" />
+<link rel="icon" href="<?= base_url('assets/template/images/fevicon.png" type="image/gif')?>" />
 <!-- Scrollbar Custom CSS -->
-<link rel="stylesheet" href="assets/template/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="<?= base_url('assets/template/css/jquery.mCustomScrollbar.min.css')?>">
 <!-- Tweaks for older IEs-->
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="<?= base_url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')?>">
 <!-- owl stylesheets --> 
-<link rel="stylesheet" href="assets/template/css/owl.carousel.min.css">
-<link rel="stylesheet" href="assets/template/css/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<link rel="stylesheet" href="<?= base_url('assets/template/css/owl.carousel.min.css')?>">
+<link rel="stylesheet" href="<?= base_url('assets/template/css/owl.theme.default.min.css')?>">
+<link rel="stylesheet" href="<?= base_url('https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css')?>" media="screen">
 
-<link rel="stylesheet" href="assets/css/client/style.css">
+<link rel="stylesheet" href="<?= base_url('assets/css/client/style.css') ?>">
