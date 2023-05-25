@@ -10,6 +10,9 @@
 
         <?= $this->include('client/components/filtro') ?>
         
+        <?= $this->include('client/components/resumo_extrato') ?>
+
+        
         
 
     </main>
