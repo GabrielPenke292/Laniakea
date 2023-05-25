@@ -8,8 +8,8 @@
                     <div class="row">
                         <div class="bg-success  col-1"></div>
                         <div class="card-body col-11">
+                            <p class="card-text">Entraram na sua conta:</p>
                             <h6 class="card-title">$500,00</h6>
-                            <p class="card-text">Entraram na sua conta.</p>
                         </div>
 
                     </div>
@@ -21,8 +21,8 @@
                     <div class="row">
                         <div class="bg-danger col-1"></div>
                         <div class="card-body col-11">
+                            <p class="card-text">Saíram da sua conta:</p>
                             <h6 class="card-title">$760,00</h6>
-                            <p class="card-text">Saíram da sua conta.</p>
                         </div>
 
                     </div>
