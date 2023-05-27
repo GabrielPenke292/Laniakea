@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+
   <?= $this->include('template-client/head'); ?>
   <!-- Conteúdo da página -->
 

@@ -1,3 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
 <script src="<?= base_url('assets/plugins/datepicker/js/bootstrap-clockpicker.min.js')?>"></script>
 <script src="<?= base_url('assets/plugins/datepicker/js/bootstrap-material-datetimepicker.js')?>"></script>
 <script src="<?= base_url('assets/plugins/datepicker/js/bs-daterange-picker-init.js')?>"></script>
@@ -11,5 +15,3 @@
 <script src="<?= base_url('assets/plugins/datepicker/js/picker.date.js')?>"></script>
 <script src="<?= base_url('assets/plugins/datepicker/js/picker.js')?>"></script>
 <script src="<?= base_url('assets/plugins/datepicker/js/picker.time.js')?>"></script>
-<!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

@@ -21,10 +21,10 @@
 <!-- Scrollbar Custom CSS -->
 <link rel="stylesheet" href="assets/template/css/jquery.mCustomScrollbar.min.css">
 <!-- Tweaks for older IEs-->
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.css">
 <!-- owl stylesheets --> 
 <link rel="stylesheet" href="assets/template/css/owl.carousel.min.css">
 <link rel="stylesheet" href="assets/template/css/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<link rel="stylesheet" href="assets/plugins/fancybox/jquery.fancybox.min.css" media="screen">
 
 <link rel="stylesheet" href="assets/css/style.css">
