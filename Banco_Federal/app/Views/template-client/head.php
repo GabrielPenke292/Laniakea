@@ -11,7 +11,9 @@
 <meta name="description" content="">
 <meta name="author" content=""> 
   <!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+<!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
 <!-- bootstrap css -->
 <link rel="stylesheet" type="text/css" href="<?= base_url('assets/template/css/bootstrap.min.css')?>">
 <!-- style css -->

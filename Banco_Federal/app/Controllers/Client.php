@@ -14,6 +14,13 @@ class Client extends BaseController
     }
 
     public function extract(){
-        return view('client/extract');
+        return view('client/extract/extract');
+    }
+
+    /**
+     * Retorna o modal de um movimento específico
+     */
+    public function moviment(int $id){
+        return view('client/extract/movement_modal');
     }
 }
