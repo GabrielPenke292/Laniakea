@@ -16,7 +16,7 @@
     </div>
 
     <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
-        dados
+      <?= $this->include('client/components/transfer_tab_account'); ?>
     </div>
     <div class="tab-pane fade" id="confirmation" role="tabpanel" aria-labelledby="confirmation-tab">
         confirmação
