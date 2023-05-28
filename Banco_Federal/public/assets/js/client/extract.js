@@ -1,7 +1,7 @@
 const app = {
     modalMoviment : function(idModal, idMovimento){
-        // $.blockUI();
-        $.blockUI({ css: { backgroundColor: '#f00', color: '#fff'} });
+
+        openBlockUI();
 
         $.ajax({
             type: "GET",
@@ -13,8 +13,7 @@ const app = {
 
             }
         }).done(function(){
-
-            $.unblockUI();
+            closeBlockUI();
         });
     }
 }
