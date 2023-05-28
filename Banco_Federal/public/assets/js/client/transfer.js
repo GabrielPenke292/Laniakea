@@ -28,5 +28,8 @@ const app = {
 
         // Adicionar a classe 'show active' para o conteúdo da próxima tab
         $(`#${idTabAnterior}`).addClass('show active');
+    },
+    transferir: function(){
+        alert("Transferência realizada com sucesso!");
     }
 }
