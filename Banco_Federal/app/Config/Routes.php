@@ -71,7 +71,12 @@ $routes->group('client', function ($routes){
 		$routes->get('/', 								'Client::extract'); //Tela de extrato bancário
 		$routes->get('moviment/(:num)', 				'Client::moviment/$1'); //Tela de extrato bancário
 	});
+
+	$routes->group('transfer', function($routes){
+		$routes->get('/', 								'Client\Transfer::home'); //Tela de transferência
+	});
 });
+
 
 
 
