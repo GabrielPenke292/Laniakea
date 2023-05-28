@@ -20,6 +20,8 @@
         
         
     </main>
+    
+    <script src="<?php echo base_url('assets/js/client/transfer.js') ?>"></script>
 
     <?= $this->endSection(); ?>
 </div>

@@ -18,7 +18,7 @@
             </div>
             
             <div class="text-center">
-                <button type="submit" class="btn btn-primary">Avançar</button>
+                <button type="button" class="btn btn-primary" onclick="app.avancarProximaTab('value', 'account')">Avançar</button>
             </div>
         </form><!-- End Horizontal Form -->
 
