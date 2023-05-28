@@ -2,7 +2,7 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="<?php echo base_url("client") ?>">
               <span data-feather="home"></span>
               Início <span class="sr-only">(current)</span>
             </a>
