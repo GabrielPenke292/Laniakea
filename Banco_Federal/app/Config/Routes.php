@@ -75,6 +75,11 @@ $routes->group('client', function ($routes){
 	$routes->group('transfer', function($routes){
 		$routes->get('/', 								'Client\Transfer::home'); //Tela de transferência
 	});
+
+	$routes->group('pay', function($routes){
+		$routes->get("/", 								'Client\Pay::home'); //Tela de pagamento")
+	});
+
 });
 
 

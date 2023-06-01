@@ -6,7 +6,7 @@
         <div class="card-body">
             <h5 class="card-title">Transferência</h5>
             <p class="card-text">Envie dinheiro para outra conta.</p>
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="<?php echo base_url('client/transfer')?>" class="btn btn-primary">Acessar</a>
         </div>
     </div>
     
@@ -22,7 +22,7 @@
         <div class="card-body">
             <h5 class="card-title">Investimentos</h5>
             <p class="card-text">Acompanhamento em tempo real.</p>
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="<?php echo base_url('client/investments') ?>" class="btn btn-primary">Acessar</a>
         </div>
     </div>
 

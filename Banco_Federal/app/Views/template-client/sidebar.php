@@ -2,7 +2,7 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="<?php echo base_url("client") ?>">
+            <a class="nav-link active" href="<?php echo base_url("client"); ?>">
               <span data-feather="home"></span>
               Início <span class="sr-only">(current)</span>
             </a>
@@ -14,13 +14,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url("client/transfer") ?>">
+            <a class="nav-link" href="<?php echo base_url("client/transfer"); ?>">
               <span data-feather="shopping-cart"></span>
               Transferência
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?php echo base_url("client/pay"); ?>">
+              <span data-feather="shopping-cart"></span>
+              Pagar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('client/investments'); ?> ?>">
               <span data-feather="users"></span>
               Investimentos
             </a>
