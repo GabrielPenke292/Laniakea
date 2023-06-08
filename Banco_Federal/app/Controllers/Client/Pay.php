@@ -13,5 +13,14 @@ class Pay extends BaseController
         return view('client/pay/payView');
     }
 
+    // Retorna o card de detalhes da conta a pagar
+    public function details_bill($idBill){
+        $dataView = $this->request->getGet();
+        $dataView['idBill'] = $idBill;
+
+        return view('client/pay/detailsBillCard', $dataView);
+
+    }
+
     
 }

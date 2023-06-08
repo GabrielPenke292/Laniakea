@@ -41,7 +41,7 @@ $bills = [
             </div>
 
             <div class="col-md-8" style="max-height: 300px; overflow-y: auto;">
-                <table class="table">
+                <table class="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Código</th>
@@ -52,7 +52,7 @@ $bills = [
                     </thead>
                     <tbody>
                         <?php if(isset($bills)){ foreach($bills as $bill): ?>
-                            <tr>
+                            <tr onclick="app.detail_Bill(this,'<?= $bill['id'] ?>')" style="cursor: pointer;">
                                 <th scope="row"><?= $bill['id'] ?></th>
                                 <td><?= $bill['description'] ?></td>
                                 <td><?= $bill['value'] ?></td>
@@ -66,12 +66,12 @@ $bills = [
         
         <hr>    
 
-
+        <div id="details_bill_card"></div>
         
         
     </main>
     
-    <script src="<?php echo base_url('assets/js/client/transfer.js') ?>"></script>
+    <script src="<?php echo base_url('assets/js/client/pay.js') ?>"></script>
 
     <?= $this->endSection(); ?>
 </div>
