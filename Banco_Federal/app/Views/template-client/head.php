@@ -33,3 +33,7 @@
 
 <link rel="stylesheet" href="<?= base_url('assets/css/client/style.css') ?>">
 
+
+<!-- PACE JS-->
+<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<link href="<?= base_url('../assets/plugins/pace/loading-bar.css')?>" rel="stylesheet" />
