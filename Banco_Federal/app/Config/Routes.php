@@ -89,7 +89,7 @@ $routes->group('client',					 			function ($routes){
 	
 	//investimentos
 	$routes->group('investments', 						function($routes){
-		$routes->get('/', 								'Client\Investments::home'); //Tela de investimentos")	
+		$routes->get('/', 								'Client\Investment::home'); //Tela de investimentos")	
 	});
 
 });
