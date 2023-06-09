@@ -49,5 +49,13 @@ const app = {
         });
     },
 
+    cancel_bill : function(idBill){
+        $("#details_bill_card").html('<img src="' + base_url + 'assets/gifs/table.gif" alt="Carregando...">');
+        // esperar 1/2 segundo
+        setTimeout(function(){
+            $("#details_bill_card").html('');
+        }, 500);
+
+    }
 
 }
