@@ -37,3 +37,10 @@
 <!-- PACE JS-->
 <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 <link href="<?= base_url('../assets/plugins/pace/loading-bar.css')?>" rel="stylesheet" />
+
+<!-- BLOCK UI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+
+<!-- SWEET ALERT -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
