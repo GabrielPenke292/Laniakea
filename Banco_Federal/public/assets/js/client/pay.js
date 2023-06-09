@@ -20,5 +20,34 @@ const app = {
             }
         });
     },
-    
+    pay_bill : function(idBill){
+        $.blockUI({ message: '' });
+        $.ajax({
+            type: "POST",
+            url: base_url + "client/pay/pay-bill/" + idBill,
+            dataType: "JSON",
+            success: function (response) {
+                if(response.error == false){
+                    Swal.fire({
+                        title: 'Sucesso!',
+                        text: response.message,
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                    window.location.reload();
+                }else{
+                    Swal.fire({
+                        title: 'Erro!',
+                        text: response.message,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            }
+        }).done(function(){
+            $.unblockUI();
+        });
+    },
+
+
 }

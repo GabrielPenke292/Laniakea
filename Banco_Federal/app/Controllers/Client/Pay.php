@@ -22,5 +22,26 @@ class Pay extends BaseController
 
     }
 
+    // Realiza o pagamento de uma conta
+    public function pay_bill($idBill){
+
+        // verifica o valor da conta
+
+        // verifica o saldo do cliente
+
+        // realiza o pagamento
+
+        // retorna o status do pagamento
+
+        $dataReturn = [
+            'error' => false,
+            'message' => 'Pagamento realizado com sucesso!',
+            'data' => []
+        ];
+
+        echo json_encode($dataReturn);
+        exit();
+    }
+
     
 }

@@ -9,10 +9,10 @@
                 <p class="card-text">Esse débito foi gerado no dia: 05/06/2023</p>
             </div>
             <div class="col-md-4 col-sm-6 d-flex align-items-stretch ">
-                <button type="button" class="btn btn-primary w-50" onclick="app.pay_bill(<?= $idBill ?>)">Pagar</button>
+                <button type="button" class="btn btn-primary w-50" onclick="app.pay_bill('<?= $idBill ?>')">Pagar</button>
             </div>
             <div class="col-md-4 col-sm-6 d-flex align-items-stretch">
-                <button type="button" class="btn btn-danger w-50" onclick="app.cancel_bill(<?= $idBill ?>)">Cancelar</button>
+                <button type="button" class="btn btn-danger w-50" onclick="app.cancel_bill('<?= $idBill ?>')">Cancelar</button>
             </div>
         </div>
 

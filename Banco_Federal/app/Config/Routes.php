@@ -79,6 +79,7 @@ $routes->group('client', function ($routes){
 	$routes->group('pay', function($routes){
 		$routes->get("/", 								'Client\Pay::home'); //Tela de pagamento")
 		$routes->get("details/(:any)", 		     	    'Client\Pay::details_bill/$1'); //card de detalhes")
+		$routes->post("pay-bill/(:any)", 		     	'Client\Pay::pay_bill/$1'); //realiza o pagamento de uma conta")
 	});
 
 });
