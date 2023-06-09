@@ -1,4 +1,5 @@
 const app = {
+    // detlhar uma conta
     detail_Bill : function(row, idBill){
         const description = $(row).find('td:nth-child(2)').text();
         const value = $(row).find('td:nth-child(3)').text();
@@ -20,6 +21,7 @@ const app = {
             }
         });
     },
+    // pagar uma conta
     pay_bill : function(idBill){
         $.blockUI({ message: '' });
         $.ajax({
@@ -48,7 +50,7 @@ const app = {
             $.unblockUI();
         });
     },
-
+    // cancelar o pagamento de uma conta
     cancel_bill : function(idBill){
         $("#details_bill_card").html('<img src="' + base_url + 'assets/gifs/table.gif" alt="Carregando...">');
         // esperar 1/2 segundo

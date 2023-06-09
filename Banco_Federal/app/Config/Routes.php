@@ -65,21 +65,31 @@ $routes->group('administrativo', ['filter' => 'signIn'], function($routes){
 
 });
 
-$routes->group('client', function ($routes){
+// Rotas do cliente
+$routes->group('client',					 			function ($routes){
 	$routes->get('/', 									'Client::home'); //Tela inicial do cliente
-	$routes->group('extract', function ($routes){
+
+	// extrato
+	$routes->group('extract', 							function ($routes){
 		$routes->get('/', 								'Client::extract'); //Tela de extrato bancário
 		$routes->get('moviment/(:num)', 				'Client::moviment/$1'); //Tela de extrato bancário
 	});
 
-	$routes->group('transfer', function($routes){
+	// transferências
+	$routes->group('transfer', 							function($routes){
 		$routes->get('/', 								'Client\Transfer::home'); //Tela de transferência
 	});
 
-	$routes->group('pay', function($routes){
+	// pagamentos
+	$routes->group('pay', 								function($routes){
 		$routes->get("/", 								'Client\Pay::home'); //Tela de pagamento")
 		$routes->get("details/(:any)", 		     	    'Client\Pay::details_bill/$1'); //card de detalhes")
 		$routes->post("pay-bill/(:any)", 		     	'Client\Pay::pay_bill/$1'); //realiza o pagamento de uma conta")
+	});
+	
+	//investimentos
+	$routes->group('investments', 						function($routes){
+		$routes->get('/', 								'Client\Investments::home'); //Tela de investimentos")	
 	});
 
 });
