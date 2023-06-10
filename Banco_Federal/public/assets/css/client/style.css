@@ -22,6 +22,172 @@ body {
     padding: 48px 0 0; /* Height of navbar */
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
   }
+
+
+
+  .confirmation-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .confirmation-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .confirmation-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .confirmation-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .confirmation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .confirmation-label {
+    font-weight: bold;
+    width: 150px;
+  }
+  
+  .confirmation-value {
+    margin-left: 10px;
+  }
+  
+  .download-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+
+  .simulation-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .simulation-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .simulation-form {
+    margin-bottom: 15px;
+  }
+  
+  .simulation-label {
+    font-weight: bold;
+  }
+  
+  .simulation-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .simulation-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .simulation-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .simulation-result {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .simulation-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .simulation-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .simulation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px
+  }
+  
+  .data-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .data-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .data-form {
+    margin-bottom: 15px;
+  }
+  
+  .data-label {
+    font-weight: bold;
+  }
+  
+  .data-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .data-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .data-button:hover {
+    background-color: #0056b3;
+  }
+  
   
   @media (max-width: 767.98px) {
     .sidebar {
