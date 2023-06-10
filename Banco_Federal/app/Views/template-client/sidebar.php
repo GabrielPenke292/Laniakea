@@ -26,13 +26,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('client/investments'); ?> ?>">
+            <a class="nav-link" href="<?php echo base_url('client/investments'); ?> ">
               <span data-feather="users"></span>
               Investimentos
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?php echo base_url('client/loans'); ?>">
               <span data-feather="bar-chart-2"></span>
               Empréstimo
             </a>
