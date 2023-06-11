@@ -1,5 +1,6 @@
 <div class="simulation-container">
-  <h3 class="simulation-heading">Simulação de Empréstimo</h3><hr>
+  <h3 class="simulation-heading">Simulação de Empréstimo</h3>
+  <hr>
   <form class="simulation-form">
     <div class="form-group">
       <label for="loan-amount" class="simulation-label">Valor do Empréstimo:</label>
@@ -32,4 +33,12 @@
       </li>
     </ul>
   </div>
+
+  <div class="row">
+    <div class="col-12 mt-2 d-flex justify-content-center">
+      <button class="btn btn-secondary mr-1 text-white">Voltar</button>
+      <button class="btn btn-primary ml-1">Avançar</button>
+    </div>
+  </div>
+
 </div>

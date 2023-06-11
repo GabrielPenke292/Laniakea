@@ -33,7 +33,7 @@
 
     </main>
 
-
+    <script src="<?php echo base_url('assets/js/client/loan.js') ?>"></script>
 
     <?= $this->endSection(); ?>
 </div>

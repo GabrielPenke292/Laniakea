@@ -1,5 +1,6 @@
 <div class="confirmation-container">
-  <h3 class="confirmation-heading">Confirmação de Empréstimo</h3><hr>
+  <h3 class="confirmation-heading">Confirmação de Empréstimo</h3>
+  <hr>
   <p class="confirmation-text">Por favor, revise os detalhes do seu empréstimo antes de prosseguir:</p>
   <ul class="confirmation-list">
     <li class="confirmation-item">
@@ -18,5 +19,10 @@
   <p class="confirmation-text">Para visualizar e baixar o contrato do empréstimo, clique no link abaixo:</p>
   <a class="download-link" href="<?= $contractUrl ?>" target="_blank">Baixar Contrato</a>
   <br><br>
-  <button type="button" class="btn btn-success">Confirmar Empréstimo</button>
+  <div class="row">
+    <div class="col-12 mt-2 d-flex justify-content-center">
+      <button class="btn btn-secondary mr-1 text-white">Voltar</button>
+      <button type="button" class="btn btn-success">Confirmar Empréstimo</button>
+    </div>
+  </div>
 </div>

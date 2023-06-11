@@ -1,6 +1,7 @@
 <div class="load-data-container">
   <div class="tab-pane fade show active" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
-    <h3>Dados de Empréstimo</h3><hr> 
+    <h3>Dados de Empréstimo</h3>
+    <hr>
     <p>Aqui estão alguns exemplos de empréstimos disponíveis:</p>
     <ul>
       <li class="mb-2">Empréstimo Pessoal:
@@ -26,6 +27,13 @@
       </li>
     </ul>
     <p>Esses exemplos são apenas ilustrativos. Para obter informações mais precisas e personalizadas sobre empréstimos, taxas de juros e condições de pagamento, entre em contato com o nosso banco.</p>
+
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <button class="btn btn-primary">Avançar</button>
+      </div>
+    </div>
+
   </div>
 
 </div>
