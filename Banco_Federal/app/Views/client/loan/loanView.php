@@ -8,9 +8,9 @@
         <div class="card mt-3">
             <div class="card-body">
                 <nav class="nav nav-pills flex-column flex-sm-row">
-                    <a class="flex-sm-fill text-sm-center nav-link active" id="nav-data-tab" data-toggle="tab" data-target="#nav-data" role="tab" aria-controls="nav-data" aria-selected="true" href="#">Dados</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" id="nav-simulation-tab" data-toggle="tab" data-target="#nav-simulation" role="tab" aria-controls="nav-simulation" aria-selected="false" href="#">Simulação</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" id="nav-confirmation-tab" data-toggle="tab" data-target="#nav-confirmation" role="tab" aria-controls="nav-confirmation" aria-selected="false" href="#">Confirmação</a>
+                    <a class="flex-sm-fill text-sm-center nav-link active" id="nav-data-tab" aria-selected="true" href="#">Dados</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" id="nav-simulation-tab" aria-selected="false" href="#">Simulação</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" id="nav-confirmation-tab" aria-selected="false" href="#">Confirmação</a>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">

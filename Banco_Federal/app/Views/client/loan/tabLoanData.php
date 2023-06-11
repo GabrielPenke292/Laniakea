@@ -30,7 +30,7 @@
 
     <div class="row">
       <div class="col-12 d-flex justify-content-center">
-        <button class="btn btn-primary">Avançar</button>
+        <button class="btn btn-primary" onclick="app.stepForward('data', 'simulation')">Avançar</button>
       </div>
     </div>
 

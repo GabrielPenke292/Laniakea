@@ -1,9 +1,28 @@
 const app = {
-    stepForward: function (step) {
-        let currentStep = parseInt(step);
-        let nextStep = currentStep + 1;
+    stepForward: function (actualTab, nextTab) {
+        // Remover a classe 'active' da tab atual
+        $(`#nav-${actualTab}-tab`).removeClass('active');
 
-        $(`#step-${currentStep}`).addClass('d-none');
-        $(`#step-${nextStep}`).removeClass('d-none');
-    }
+        // Adicionar a classe 'active' para a próxima tab
+        $(`#nav-${nextTab}-tab`).addClass('active');
+
+        // Remover a classe 'show active' do conteúdo da tab atual
+        $(`#nav-${actualTab}`).removeClass('show active');
+
+        // Adicionar a classe 'show active' para o conteúdo da próxima tab
+        $(`#nav-${nextTab}`).addClass('show active');
+    },
+    backStep: function(actualTab, previusTab){
+        // Remover a classe 'active' da tab atual
+        $(`#nav-${actualTab}-tab`).removeClass('active');
+
+        // Adicionar a classe 'active' para a próxima tab
+        $(`#nav-${previusTab}-tab`).addClass('active');
+
+        // Remover a classe 'show active' do conteúdo da tab atual
+        $(`#nav-${actualTab}`).removeClass('show active');
+
+        // Adicionar a classe 'show active' para o conteúdo da próxima tab
+        $(`#nav-${previusTab}`).addClass('show active');
+    },
 }

@@ -36,8 +36,8 @@
 
   <div class="row">
     <div class="col-12 mt-2 d-flex justify-content-center">
-      <button class="btn btn-secondary mr-1 text-white">Voltar</button>
-      <button class="btn btn-primary ml-1">Avançar</button>
+      <button class="btn btn-secondary mr-1 text-white" onclick="app.backStep('simulation','data')">Voltar</button>
+      <button class="btn btn-primary ml-1" onclick="app.stepForward('simulation', 'confirmation')">Avançar</button>
     </div>
   </div>
 
