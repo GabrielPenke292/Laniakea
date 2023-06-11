@@ -1,18 +1,31 @@
-<div class="data-container">
-  <h3 class="data-heading">Dados de Empréstimo</h3>
-  <form class="data-form">
-    <div class="form-group">
-      <label for="loan-amount" class="data-label">Valor do Empréstimo:</label>
-      <input type="text" class="form-control data-input" id="loan-amount" name="loan-amount">
-    </div>
-    <div class="form-group">
-      <label for="loan-duration" class="data-label">Duração do Empréstimo:</label>
-      <input type="text" class="form-control data-input" id="loan-duration" name="loan-duration">
-    </div>
-    <div class="form-group">
-      <label for="interest-rate" class="data-label">Taxa de Juros:</label>
-      <input type="text" class="form-control data-input" id="interest-rate" name="interest-rate">
-    </div>
-    <button type="submit" class="btn btn-primary data-button">Salvar</button>
-  </form>
+<div class="load-data-container">
+  <div class="tab-pane fade show active" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
+    <h3>Dados de Empréstimo</h3><hr> 
+    <p>Aqui estão alguns exemplos de empréstimos disponíveis:</p>
+    <ul>
+      <li class="mb-2">Empréstimo Pessoal:
+        <ul>
+          <li>Valor: R$10.000</li>
+          <li>Taxa de juros: 8%</li>
+          <li>Condições de pagamento: 12 meses</li>
+        </ul>
+      </li>
+      <li class="mb-2">Empréstimo para Automóvel:
+        <ul>
+          <li>Valor: R$30.000</li>
+          <li>Taxa de juros: 6%</li>
+          <li>Condições de pagamento: 48 meses</li>
+        </ul>
+      </li>
+      <li class="mb-2">Empréstimo para Moradia:
+        <ul>
+          <li>Valor: R$200.000</li>
+          <li>Taxa de juros: 5.5%</li>
+          <li>Condições de pagamento: 240 meses</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Esses exemplos são apenas ilustrativos. Para obter informações mais precisas e personalizadas sobre empréstimos, taxas de juros e condições de pagamento, entre em contato com o nosso banco.</p>
+  </div>
+
 </div>

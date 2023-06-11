@@ -1,5 +1,5 @@
 <div class="simulation-container">
-  <h3 class="simulation-heading">Simulação de Empréstimo</h3>
+  <h3 class="simulation-heading">Simulação de Empréstimo</h3><hr>
   <form class="simulation-form">
     <div class="form-group">
       <label for="loan-amount" class="simulation-label">Valor do Empréstimo:</label>

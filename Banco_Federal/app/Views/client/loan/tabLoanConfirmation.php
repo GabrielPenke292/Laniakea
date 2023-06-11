@@ -1,5 +1,5 @@
 <div class="confirmation-container">
-  <h3 class="confirmation-heading">Confirmação de Empréstimo</h3>
+  <h3 class="confirmation-heading">Confirmação de Empréstimo</h3><hr>
   <p class="confirmation-text">Por favor, revise os detalhes do seu empréstimo antes de prosseguir:</p>
   <ul class="confirmation-list">
     <li class="confirmation-item">
