@@ -25,4 +25,7 @@ const app = {
         // Adicionar a classe 'show active' para o conteúdo da próxima tab
         $(`#nav-${previusTab}`).addClass('show active');
     },
+    confirmLoan: function(){
+        alert("Empréstimo realizado com sucesso!");
+    }
 }

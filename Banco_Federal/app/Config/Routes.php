@@ -97,6 +97,11 @@ $routes->group('client',					 			function ($routes){
 		$routes->get('/', 								'Client\Loan::home'); //Tela de emprestimos")	
 	});
 
+	//cartão
+	$routes->group('card', 								function($routes){
+		$routes->get('/', 								'Client\Card::home'); //Tela de cartão")	
+	});
+
 });
 
 

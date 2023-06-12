@@ -22,7 +22,7 @@
   <div class="row">
     <div class="col-12 mt-2 d-flex justify-content-center">
       <button class="btn btn-secondary mr-1 text-white" onclick="app.backStep('confirmation','simulation')">Voltar</button>
-      <button type="button" class="btn btn-success">Confirmar Empréstimo</button>
+      <button type="button" class="btn btn-success" onclick="app.confirmLoan()">Confirmar Empréstimo</button>
     </div>
   </div>
 </div>
