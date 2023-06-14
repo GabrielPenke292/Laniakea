@@ -29,3 +29,13 @@ const app = {
         alert("Empréstimo realizado com sucesso!");
     }
 }
+
+
+$(document).ready(function() {
+    Inputmask("currency", {
+        radixPoint: ',',
+        prefix: '$ ',
+        inputtype: "numeric"
+    }).mask("#loan-amount");
+
+  });
