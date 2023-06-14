@@ -48,3 +48,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
 
+<!-- FEATHER ICONS -->
+<link rel="stylesheet" href="node_modules/feather-icons/dist/feather.css">
+
