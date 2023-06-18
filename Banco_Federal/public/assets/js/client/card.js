@@ -18,9 +18,15 @@ const app = {
         });
     },
 
-    pay_invoice: function (invoice_id){
-        $.blockUI({ message: '' });
+    open_modal: function (invoice_id){
+        $('#invoice_id').val(invoice_id);
+        $('#confirmation-modal').modal('show');
+    },
+    pay_invoice: function (){
+        $('#confirmation-modal').modal('hide');
 
+        $.blockUI({ message: '' });
+        const invoice_id = $('#invoice_id').val();
         $.ajax({
             url: base_url + 'client/card/pay_invoice/' + invoice_id,
             type: 'POST',

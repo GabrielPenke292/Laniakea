@@ -16,7 +16,7 @@
                                     Abril/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$3200.13</div>
                             </div>
-                            <button class="btn btn-success w-100 text-white mt-2" onclick="app.pay_invoice(1)" disabled >Paga</button>
+                            <button class="btn btn-success w-100 text-white mt-2" onclick="app.open_modal(1)" disabled >Paga</button>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                                     Maio/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$4233.25</div>
                             </div>
-                            <button class="btn btn-success w-100 text-white mt-2" onclick="app.pay_invoice(2)" disabled >Paga</button>
+                            <button class="btn btn-success w-100 text-white mt-2" onclick="app.open_modal(2)" disabled >Paga</button>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                                     Junho/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$4200.00</div>
                             </div>
-                            <button class="btn btn-primary w-100 text-white mt-2" onclick="app.pay_invoice(3)" >Pagar</button>
+                            <button class="btn btn-primary w-100 text-white mt-2" onclick="app.open_modal(3)" >Pagar</button>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                                     Julho/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$780.33</div>
                             </div>
-                            <button class="btn btn-warning w-100 text-white mt-2" onclick="app.pay_invoice(4)" disabled >A fechar</button>
+                            <button class="btn btn-warning w-100 text-white mt-2" onclick="app.open_modal(4)" disabled >A fechar</button>
 
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                     Agosto/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$320.01</div>
                             </div>
-                            <button class="btn btn-warning w-100 text-white mt-2" onclick="app.pay_invoice(5)" disabled >A fechar</button>
+                            <button class="btn btn-warning w-100 text-white mt-2" onclick="app.open_modal(5)" disabled >A fechar</button>
 
                         </div>
                     </div>
@@ -88,6 +88,28 @@
         <hr>
 
         <div id="invoiceMonth"></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="confirmation-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmar pagamento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="invoice_id">
+                Confirma o pagamento da fatura com o saldo?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="app.pay_invoice()">Confirmar</button>
+            </div>
+            </div>
+        </div>
+        </div>
 
     </main>
 
