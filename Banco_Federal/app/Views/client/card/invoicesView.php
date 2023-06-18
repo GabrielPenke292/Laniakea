@@ -16,7 +16,7 @@
                                     Abril/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$3200.13</div>
                             </div>
-
+                            <button class="btn btn-success w-100 text-white mt-2" onclick="app.pay_invoice('abril')" disabled >Paga</button>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                                     Maio/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$4233.25</div>
                             </div>
-
+                            <button class="btn btn-success w-100 text-white mt-2" onclick="app.pay_invoice('junho')" disabled >Paga</button>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                                     Junho/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$4200.00</div>
                             </div>
-
+                            <button class="btn btn-primary w-100 text-white mt-2" onclick="app.pay_invoice('junho')" >Pagar</button>
                         </div>
                     </div>
                 </div>
@@ -61,6 +61,7 @@
                                     Julho/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$780.33</div>
                             </div>
+                            <button class="btn btn-warning w-100 text-white mt-2" onclick="app.pay_invoice('julho')" disabled >A fechar</button>
 
                         </div>
                     </div>
@@ -76,6 +77,7 @@
                                     Agosto/23</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$320.01</div>
                             </div>
+                            <button class="btn btn-warning w-100 text-white mt-2" onclick="app.pay_invoice('agosto')" disabled >A fechar</button>
 
                         </div>
                     </div>
