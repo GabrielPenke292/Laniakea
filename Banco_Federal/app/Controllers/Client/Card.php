@@ -16,6 +16,7 @@ class Card extends BaseController
 
     public function invoices(){
             
+        
         return view('client/card/invoicesView');
     }
 
