@@ -16,8 +16,15 @@ class Card extends BaseController
 
     public function invoices(){
             
-        
+
         return view('client/card/invoicesView');
+    }
+
+    public function getInvoiceMonth(){
+        $month = $this->request->getPost('month');
+
+        return view('client/card/invoiceMonth');
+        
     }
 
     

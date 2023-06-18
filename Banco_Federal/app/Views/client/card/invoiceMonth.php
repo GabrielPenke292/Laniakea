@@ -1,5 +1,5 @@
 <div class="row">
-    <div class=" col-12 mt-2 text-center">
+    <div class=" col-12 my-2 text-center">
         <h5>
             Detalhes da fatura de Abril/23
         </h5>
