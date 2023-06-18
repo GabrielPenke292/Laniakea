@@ -30,8 +30,16 @@ const app = {
         $.ajax({
             url: base_url + 'client/card/pay_invoice/' + invoice_id,
             type: 'POST',
+            dataType: "JSON",
             success: function (response){
+                console.log(response)
                 if(response == 'success'){
+                    Swal.fire({
+                        title: 'Sucesso!',
+                        text: response.message,
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
                     app.get_invoices(app.get_actual_month());
                 }
             }
