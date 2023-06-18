@@ -99,10 +99,11 @@ $routes->group('client',					 			function ($routes){
 
 	//cartão
 	$routes->group('card', 								function($routes){
-		$routes->get('invoices', 						'Client\Card::invoices'); //Tela de cartão")	
-		$routes->get('limit', 							'Client\Card::limit'); //Tela de cartão")	
-		$routes->get('cancel', 							'Client\Card::cancel'); //Tela de cartão")	
-		$routes->get('graphic', 					    'Client\Card::graphic'); //Tela de cartão")	
+		$routes->get('/', 						        'Client\Card::home'); //Tela de cartão")	
+		$routes->get('invoices', 						'Client\Card::invoices'); //Tela de fatura")	
+		$routes->get('limit', 							'Client\Card::limit'); //Tela de limit")	
+		$routes->get('cancel', 							'Client\Card::cancel'); //Tela de cancelar cartão")	
+		$routes->get('graphic', 					    'Client\Card::graphic'); //Tela de gráficos do cartão")	
 	});
 
 });
