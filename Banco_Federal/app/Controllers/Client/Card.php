@@ -27,5 +27,18 @@ class Card extends BaseController
         
     }
 
+    /**
+     * Realiza o pagamento de uma fatura
+     * @param int $invoice_id // id da fatura
+     */
+    public function payInvoice(int $invoice_id){
+        $data_return = [
+            'status' => true,
+            'message' => 'Fatura paga com sucesso!'
+        ];
+
+        echo json_encode($data_return); 
+        exit();
+    }
     
 }

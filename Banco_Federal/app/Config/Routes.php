@@ -105,6 +105,7 @@ $routes->group('client',					 			function ($routes){
 		$routes->get('cancel', 							'Client\Card::cancel'); //Tela de cancelar cartão")	
 		$routes->get('graphic', 					    'Client\Card::graphic'); //Tela de gráficos do cartão")	
 		$routes->get('get_invoice_month', 				'Client\Card::getInvoiceMonth'); //Tela de fatura")	
+		$routes->post('pay_invoice/(:num)', 		    'Client\Card::payInvoice/$1'); //Tela de fatura")	
 	});
 
 });

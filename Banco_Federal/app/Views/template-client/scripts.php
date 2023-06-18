@@ -20,6 +20,5 @@
 
 <script>const base_url = '<?= base_url() ?>'</script>
 
-// helpers
 <script defer src="<?= base_url('assets/js/helpers/translate_helper.js')?>"></script>
 
