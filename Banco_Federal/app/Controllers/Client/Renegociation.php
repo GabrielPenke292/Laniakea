@@ -10,6 +10,10 @@ class Renegociation extends BaseController
     // Retorn a view principal
     public function home(){
 
-        return view('client/renegociation/renegociationView');
+        $dataView = [
+            'page' => 'renegociation',
+        ];
+
+        return view('client/renegociation/renegociationView', $dataView);
     }
 }

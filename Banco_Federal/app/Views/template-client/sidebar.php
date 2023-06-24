@@ -2,49 +2,49 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column ">
           <li class="nav-item">
-            <a class="nav-link active" href="<?php echo base_url("client"); ?>">
+            <a class="nav-link <?= $page == 'home' ? 'active' : ''  ?>" href="<?php echo base_url("client"); ?>">
               <span data-feather="home"></span>
               Início <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url("client/extract");  ?>">
+            <a class="nav-link <?= $page == 'extract' ? 'active' : ''  ?>" href="<?php echo base_url("client/extract");  ?>">
               <span data-feather="file"></span>
               Extrato
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url("client/transfer"); ?>">
+            <a class="nav-link <?= $page == 'transfer' ? 'active' : ''  ?>" href="<?php echo base_url("client/transfer"); ?>">
               <span data-feather="shopping-cart"></span>
               Transferência
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url("client/pay"); ?>">
+            <a class="nav-link <?= $page == 'pay' ? 'active' : ''  ?>" href="<?php echo base_url("client/pay"); ?>">
               <span data-feather="shopping-cart"></span>
               Pagar
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('client/investments'); ?> ">
+            <a class="nav-link <?= $page == 'investments' ? 'active' : ''  ?>" href="<?php echo base_url('client/investments'); ?> ">
               <span data-feather="users"></span>
               Investimentos
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('client/loans'); ?>">
+            <a class="nav-link <?= $page == 'loan' ? 'active' : ''  ?>" href="<?php echo base_url('client/loans'); ?>">
               <span data-feather="bar-chart-2"></span>
               Empréstimo
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('client/card'); ?>">
+            <a class="nav-link <?= $page == 'card' ? 'active' : ''  ?>" href="<?php echo base_url('client/card'); ?>">
               <span data-feather="layers"></span>
               Cartão
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('client/renegociation') ?>">
+            <a class="nav-link <?= $page == 'renegociation' ? 'active' : ''  ?>" href="<?php echo base_url('client/renegociation') ?>">
               <span data-feather="layers"></span>
               Renegociação
             </a>

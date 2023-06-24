@@ -12,11 +12,14 @@ class Investment extends BaseController
     public function home(){
 
         $maintenance = true;
+        $dataView = [
+            'page' => 'investments',
+        ];
 
         if($maintenance){
-            return view('client/maintenance');
+            return view('client/maintenance', $dataView);
         }
-        return view('client/investments/investmentView');
+        return view('client/investments/investmentView', $dataView);
     }
 
     

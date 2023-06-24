@@ -10,7 +10,10 @@ class Transfer extends BaseController
 {
     // Retorn a view principal
     public function home(){
-        return view('client/transfer/transferView');
+        $dataView = [
+            'page' => 'transfer',
+        ];
+        return view('client/transfer/transferView', $dataView);
     }
 
     

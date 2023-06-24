@@ -10,11 +10,17 @@ class Client extends BaseController
 {
     // Retorn a view principal
     public function home(){
-        return view('client/home');
+        $dataView = [
+            'page' => 'home',
+        ];
+        return view('client/home', $dataView);
     }
 
     public function extract(){
-        return view('client/extract/extract');
+        $dataView = [
+            'page' => 'extract',
+        ];
+        return view('client/extract/extract', $dataView);
     }
 
     /**

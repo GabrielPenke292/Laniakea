@@ -11,8 +11,10 @@ class Loan extends BaseController
     // Retorn a view principal
     public function home(){
 
-
-        return view('client/loan/loanView');
+        $dataView = [
+            'page' => 'loan',
+        ];
+        return view('client/loan/loanView', $dataView);
     }
 
     
