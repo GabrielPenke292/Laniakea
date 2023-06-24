@@ -108,6 +108,9 @@ $routes->group('client',					 			function ($routes){
 		$routes->post('pay_invoice/(:num)', 		    'Client\Card::payInvoice/$1'); //Tela de fatura")	
 	});
 
+	$routes->group('renegociation', function($routes){
+		$routes->get('/', 								'Client\Renegociation::home'); //Tela de renegociação")
+	});
 });
 
 
