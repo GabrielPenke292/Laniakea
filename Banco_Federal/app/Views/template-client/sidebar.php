@@ -44,7 +44,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('cliente/renegociation') ?>">
+            <a class="nav-link" href="<?php echo base_url('client/renegociation') ?>">
               <span data-feather="layers"></span>
               Renegociação
             </a>
