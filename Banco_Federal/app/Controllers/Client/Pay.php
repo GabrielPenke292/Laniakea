@@ -10,7 +10,10 @@ class Pay extends BaseController
 {
     // Retorn a view principal
     public function home(){
-        return view('client/pay/payView');
+        $dataView = [
+            'page' => 'pay',
+        ];
+        return view('client/pay/payView', $dataView);
     }
 
     // Retorna o card de detalhes da conta a pagar

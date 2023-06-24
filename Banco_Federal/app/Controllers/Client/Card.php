@@ -10,8 +10,10 @@ class Card extends BaseController
 {
     // Retorn a view principal
     public function home(){
-
-        return view('client/card/cardView');
+        $dataView = [
+            'page' => 'card',
+        ];
+        return view('client/card/cardView', $dataView);
     }
 
     public function invoices(){
