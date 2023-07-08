@@ -110,7 +110,7 @@ class LoginController extends BaseController
         ], false);
 
         $responseBody = json_decode($response->getBody()); //Corpo da Requisição
-
+        // var_dump($responseBody);die;
         return $responseBody;
     }
 

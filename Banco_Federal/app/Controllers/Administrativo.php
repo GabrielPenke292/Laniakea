@@ -18,7 +18,6 @@ class Administrativo extends BaseController
 
     public function openAccount(){
         $client = \Config\Services::curlrequest(); // inicializa o curl
-
         $response = $client->request('GET', API_URL.'states/get-all-states'); // Busca os estados (UF) para montar a view
 
         $estados = json_decode($response->getBody()); // Array com os estados   
