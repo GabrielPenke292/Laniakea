@@ -8,11 +8,11 @@ class LoginController extends BaseController
         $login = $this->request->getPost();
 
         $validation = $this->validate([
-            'username'=>[
-                'rules' =>'required|valid_user',
+            'id'=>[
+                'rules' =>'required',
                 'errors'=>[
-                    'required'      =>  'Email é um campo obrigatório',
-                    'valid_user'   =>  'Digite um email válido',
+                    'required'      =>  'id é um campo obrigatório',
+                    // 'valid_user'    =>  'Digite um id válido',
                     ]
                 ],
             'password'=>[
@@ -25,14 +25,14 @@ class LoginController extends BaseController
             ]
         ]);
 		
-		if(!$validation){
-            return view("client/login", ['validation'=>$this->validator]);
+		if(!$validation && false){
+            return view("pages/login/accountLogin", ['validation'=>$this->validator]);
         }else{  
 
-            $username = $this->request->getGet('username');
-            $password = $this->request->getGet('password');
+            $id = $this->request->getPost('id');
+            $password = $this->request->getPost('password');
 
-            $responseBody = $this->login_api($username, $password, 'administrative');
+            $responseBody = $this->login_api($id, $password, 'client');
 
             if($responseBody->status){
                 session()->set('loggedUser', true);
@@ -110,7 +110,7 @@ class LoginController extends BaseController
         ], false);
 
         $responseBody = json_decode($response->getBody()); //Corpo da Requisição
-        // var_dump($responseBody);die;
+        var_dump($responseBody);die;
         return $responseBody;
     }
 
