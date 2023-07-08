@@ -26,28 +26,23 @@ class LoginController extends BaseController
         ]);
 		
 		if(!$validation){
-            return view("login", ['validation'=>$this->validator]);
+            return view("client/login", ['validation'=>$this->validator]);
         }else{  
 
             $username = $this->request->getGet('username');
             $password = $this->request->getGet('password');
 
-            $funcionario = new \App\Models\Funcionario_Model();
-            $userModel = new \App\Models\User_Model();
+            $responseBody = $this->login_api($username, $password, 'administrative');
 
-            // $userInfo = $funcionario->where('FUNCIONARIO_EMAIL', $email)->first();
-            $userInfo = $funcionario->getData($email);
-            $checkPassword = Hash::checkPassword($password, $userInfo[0]['FUNCIONARIO_PASSWORD']);
+            if($responseBody->status){
+                session()->set('loggedUser', true);
+                session()->set('userName', $responseBody->data->peopleData->PES_NOME);
+                session()->set('function', $responseBody->data->function->funcao_nome);
+                return redirect()->to(BASE_URL . 'administrativo');
 
-            if(!$checkPassword){
-                session()->setFlashdata('fail', 'Incorrect password');
-                return redirect()->to(BASE_URL.'login')->withInput();
             }else{
-                $user_id = $userInfo[0]['FUNCIONARIO_ID'];
-				$user_name = $userInfo[0]['PES_NOME'];
-                session()->set('loggedUser', $user_id);
-                session()->set('userName', $user_name);
-                return redirect()->to(BASE_URL);
+                session()->setFlashdata('error', 'Dados incorretos');
+                return redirect()->to(BASE_URL . 'account-login-administrative')->withInput();
             }
         }
 
@@ -82,18 +77,7 @@ class LoginController extends BaseController
             $username = $this->request->getPost('username');
             $password = $this->request->getPost('password');
 
-            $dataRequest = [
-                'username' => $username,
-                'password' => $password
-            ];
-
-            $client = \Config\Services::curlrequest(); // inicializa o curl
-
-            $response = $client->request('POST', API_URL.'federal-bank/login/administrative', [
-                'query' => $dataRequest // Dados passados na requisição
-            ], false);
-    
-            $responseBody = json_decode($response->getBody()); //Corpo da Requisição
+            $responseBody = $this->login_api($username, $password, 'administrative');
 
             if($responseBody->status){
                 session()->set('loggedUser', true);
@@ -111,6 +95,23 @@ class LoginController extends BaseController
     public function logout(){
         session()->destroy();
         return redirect()->to(BASE_URL);
+    }
+
+    private function login_api(string $username, string $password, string $segment = 'client'){
+        $dataRequest = [
+            'username' => $username,
+            'password' => $password
+        ];
+
+        $client = \Config\Services::curlrequest(); // inicializa o curl
+
+        $response = $client->request('POST', API_URL.'federal-bank/login/' . $segment, [
+            'query' => $dataRequest // Dados passados na requisição
+        ], false);
+
+        $responseBody = json_decode($response->getBody()); //Corpo da Requisição
+
+        return $responseBody;
     }
 
 }
