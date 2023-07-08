@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Daily UI - Day 1 Sign In</title>
+	<title>BFL - Login</title>
 
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
@@ -17,18 +17,18 @@
 
 <body>
 	<div class="container">
-		<form action="/login" method="post">
+		<form action="<?= BASE_URL . 'login' ?>" method="post">
 			<div class="login-box animated fadeInUp">
 				<div class="box-header">
 					<h2>Acessar conta</h2>
 				</div>
-				<label for="username">Usuario</label>
+				<label for="id">ID</label>
 				<br />
-				<input type="text" id="username">
+				<input type="number" name='id' id="id">
 				<br />
 				<label for="password">Senha</label>
 				<br />
-				<input type="password" id="password">
+				<input type="password" name='password' id="password">
 				<br />
 				<button type="submit">Acessar</button>
 				<br />
