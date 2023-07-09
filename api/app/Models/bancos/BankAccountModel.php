@@ -45,6 +45,17 @@ class BankAccountModel extends Model
             where('CONTA_ATIVA', 1)->
             get()->getResult();
     }
+
+    /**
+     * Tras os dados de uma conta
+     */
+    public function getUserData($id){
+        return $this->
+            select('pessoas.PES_NOME, contas.*')->
+            join('pessoas', 'pessoas.PES_ID = contas.CONTA_PESSOA_ID')->
+            where('CONTA_ID', $id)->
+            get()->getResult();
+    }
     
 
 }
