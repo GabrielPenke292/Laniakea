@@ -114,6 +114,8 @@ $routes->group('client',	['filter' => 'signIn'],	function ($routes){
 	$routes->group('renegociation', function($routes){
 		$routes->get('/', 								'Client\Renegociation::home'); //Tela de renegociação")
 	});
+
+	$routes->get("logout", 								'LoginController::logout'); //Realiza o logout do cliente"
 });
 
 
