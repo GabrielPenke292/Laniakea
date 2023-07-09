@@ -36,13 +36,14 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('credit', 'Home::creditView');
+$routes->group('/', ['filter' => 'clientSession'], function($routes){
+	$routes->get('account-login', 							'Home::accountLoginView');
+	$routes->get('account-login-administrative', 			'Home::accountLoginAdministrativeView');
+});
 
-$routes->get('account-login', 							'Home::accountLoginView');
-$routes->get('account-login-administrative', 			'Home::accountLoginAdministrativeView');
-
-$routes->group('login', function($routes) {
+$routes->group('login', 							 function($routes) {
 	$routes->post('/', 									'LoginController::login');
-	$routes->post('administrativo', 					'LoginController::loginAdministrative');
+	$routes->post('administrativo',    					'LoginController::loginAdministrative');
 });
 
 $routes->group('logout', function($routes) {
@@ -66,7 +67,7 @@ $routes->group('administrativo', ['filter' => 'signIn'], function($routes){
 });
 
 // Rotas do cliente
-$routes->group('client',					 			function ($routes){
+$routes->group('client',	['filter' => 'signIn'],	function ($routes){
 	$routes->get('/', 									'LoginController::index'); //Tela inicial do cliente
 
 	$routes->get('home', 								'Client::home'); //Tela inicial do cliente

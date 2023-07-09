@@ -36,6 +36,7 @@ class LoginController extends BaseController
 
             if($responseBody->status && isset($responseBody->data[0])){
                 session()->set('loggedUser', true);
+                session()->set('ClientLogged', true);
                 session()->set('userName', $responseBody->data[0]->PES_NOME);
                 return redirect()->to(BASE_URL . 'client/home');
 
@@ -80,6 +81,7 @@ class LoginController extends BaseController
 
             if($responseBody->status){
                 session()->set('loggedUser', true);
+                session()->set('AdmLogged', true);
                 session()->set('userName', $responseBody->data->peopleData->PES_NOME);
                 session()->set('function', $responseBody->data->function->funcao_nome);
                 return redirect()->to(BASE_URL . 'administrativo');

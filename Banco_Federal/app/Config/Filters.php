@@ -20,6 +20,7 @@ class Filters extends BaseConfig
 		'toolbar'  => DebugToolbar::class,
 		'honeypot' => Honeypot::class,
 		'signIn' => \App\Filters\SignIn::class,
+		'clientSession' => \App\Filters\ClientSession::class,
 	];
 
 	/**
