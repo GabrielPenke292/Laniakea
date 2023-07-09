@@ -66,7 +66,7 @@ $routes->group('administrativo', ['filter' => 'signIn'], function($routes){
 });
 
 // Rotas do cliente
-$routes->group('client',					 			function ($routes){
+$routes->group('client',		['filter' => 'signIn'],	function ($routes){
 	$routes->get('/', 									'LoginController::index'); //Tela inicial do cliente
 
 	$routes->get('home', 								'Client::home'); //Tela inicial do cliente
