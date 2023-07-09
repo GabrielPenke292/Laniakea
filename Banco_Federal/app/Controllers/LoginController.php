@@ -34,15 +34,14 @@ class LoginController extends BaseController
 
             $responseBody = $this->login_api($id, $password, 'client');
 
-            if($responseBody->status){
+            if($responseBody->status && isset($responseBody->data[0])){
                 session()->set('loggedUser', true);
-                session()->set('userName', $responseBody->data->peopleData->PES_NOME);
-                session()->set('function', $responseBody->data->function->funcao_nome);
-                return redirect()->to(BASE_URL . 'administrativo');
+                session()->set('userName', $responseBody->data[0]->PES_NOME);
+                return redirect()->to(BASE_URL . 'client/home');
 
             }else{
                 session()->setFlashdata('error', 'Dados incorretos');
-                return redirect()->to(BASE_URL . 'account-login-administrative')->withInput();
+                return redirect()->to(BASE_URL . 'account-login')->withInput();
             }
         }
 
@@ -110,7 +109,7 @@ class LoginController extends BaseController
         ], false);
 
         $responseBody = json_decode($response->getBody()); //Corpo da Requisição
-        var_dump($responseBody);die;
+        
         return $responseBody;
     }
 
