@@ -10,8 +10,13 @@ class Client extends BaseController
 {
     // Retorn a view principal
     public function home(){
+        //obtem os dados do cliente
+        $response = $this->curl_get('client', $_SESSION);
+        $responseBody = json_decode($response->getBody()); //Corpo da Requisição
+
         $dataView = [
             'page' => 'home',
+            'client' => $responseBody->data->conta,
         ];
         return view('client/home', $dataView);
     }

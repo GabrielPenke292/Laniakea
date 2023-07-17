@@ -141,4 +141,29 @@ class Accountcontroller extends ResourceController
 
         return $this->respond($dadosReturn);
     }
+
+    /**
+     * Busca os dados da conta do cliente
+     */
+    public function getAccountData(){
+        $contaNum = $this->request->getGet('account');
+        $bankAccount = new BankAccountModel();
+        $data = $bankAccount->get($contaNum)->getRow();
+        if($data){            
+            $dadosReturn = [
+                'status'  => true,
+                'Message' => 'Dados da conta',
+                'data'    => [
+                    'conta'  => $data,
+                ]
+            ];
+        }else{
+            $dadosReturn = [
+                'status'  => false,
+                'Message' => 'Esta conta não existe ou não está ativa!'
+            ];
+        }
+
+        return $this->respond($dadosReturn);
+    }
 }

@@ -9,7 +9,7 @@
                                 <h1 class="dance_text">Banco Federal de Laniakea</h1>
                                 <p class="consectetur_text">O primeiro banco do novo país.</p>
                                 <div class="about_bt"><a href="about.html">Abrir conta</a></div>
-                                <div class="contact_bt"><a href="contact.html">Já sou cliente</a></div>
+                                <div class="contact_bt"><a href="<?= base_url('account-login') ?>">Já sou cliente</a></div>
                             </div>
                         </div>
                         <div class="col-md-6">
