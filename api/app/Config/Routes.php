@@ -54,6 +54,10 @@ $routes->group('federal-bank', function($routes){
 	
 	$routes->group('client', function($routes){
 		$routes->post('/', 					"BFL\AccountController::getAccountData"); // login administrativo')
+		$routes->group('extract', function($routes){
+			$routes->get('/', 	    "BFL\ExtractController::extract"); // login administrativo')
+
+		});
 	});
 
 });

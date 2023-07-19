@@ -22,6 +22,7 @@ class Client extends BaseController
     }
 
     public function extract(){
+        $responseBody = $this->curl_get('client/extract', $_SESSION);
         $dataView = [
             'page' => 'extract',
         ];

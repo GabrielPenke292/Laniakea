@@ -59,7 +59,7 @@ class BaseController extends Controller
 	public function curl_get($segment = null, $dataRequest = []){
 		$client = \Config\Services::curlrequest(); // inicializa o curl
 
-        $response = $client->request('POST', API_URL.'federal-bank/' . $segment, [
+        $response = $client->request('GET', API_URL.'federal-bank/' . $segment, [
             'query' => $dataRequest // Dados passados na requisição
         ], false);
 
