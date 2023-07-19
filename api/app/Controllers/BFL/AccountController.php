@@ -148,7 +148,7 @@ class Accountcontroller extends ResourceController
     public function getAccountData(){
         $contaNum = $this->request->getGet('account');
         $bankAccount = new BankAccountModel();
-        $data = $bankAccount->get($contaNum)->getRow();
+        $data = $bankAccount->find($contaNum);
         if($data){            
             $dadosReturn = [
                 'status'  => true,
