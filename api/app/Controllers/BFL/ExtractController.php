@@ -15,6 +15,30 @@ use App\Libraries\Hash;
 class Extractcontroller extends ResourceController
 {
     public function extract(){
-        $account = $this->request->getGet('account');
+        try{
+            $account = $this->request->getGet('account');
+            $startDate = $this->request->getGet('startDate') ?? date('Y-m-01');
+            $finalDate = $this->request->getGet('finalDate') ?? date('Y-m-d');
+
+            $dataReturn = [
+                'status'    => true,
+                'message'   => 'Extrato gerado com sucesso',
+                'data'      => [
+                    'account'   => $account,
+                    'startDate' => $startDate,
+                    'finalDate' => $finalDate,
+                    'extract'   => []
+                ]
+            ];
+
+            return $this->respond($dataReturn);
+            
+        }catch(\Exception $e){
+            return $this->respond([
+                'status'    => false,
+                'message'   => $e->getMessage()
+            ]);
+        }
+
     }
 }
