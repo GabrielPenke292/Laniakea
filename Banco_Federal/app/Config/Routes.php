@@ -75,6 +75,7 @@ $routes->group('client',	['filter' => 'signIn'],	function ($routes){
 	// extrato
 	$routes->group('extract', 							function ($routes){
 		$routes->get('/', 								'Client::extract'); //Tela de extrato bancário
+		$routes->get('filter', 							'Client::extract'); //Tela de extrato bancário
 		$routes->get('moviment/(:num)', 				'Client::moviment/$1'); //Tela de extrato bancário
 	});
 
