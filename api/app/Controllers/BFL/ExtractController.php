@@ -7,6 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\API\ResponseTrait;
 use App\models\bancos\BankAccountModel;
 use App\models\bancos\AccountBallanceModel;
+use App\models\bancos\AccountMovementModel;
 use App\models\M_Cadastro;
 use App\Libraries\Hash;
 
@@ -19,7 +20,11 @@ class Extractcontroller extends ResourceController
             $account = $this->request->getGet('account');
             $startDate = $this->request->getGet('startDate') ?? date('Y-m-01');
             $finalDate = $this->request->getGet('finalDate') ?? date('Y-m-d');
+            
+            $accountMovementModel = new AccountMovementModel();
 
+            $extract = $accountMovementModel->getExtract($account, $startDate, $finalDate);
+        
             $dataReturn = [
                 'status'    => true,
                 'message'   => 'Extrato gerado com sucesso',
