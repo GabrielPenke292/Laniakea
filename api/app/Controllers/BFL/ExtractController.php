@@ -20,11 +20,15 @@ class Extractcontroller extends ResourceController
             $account = $this->request->getGet('account');
             $startDate = $this->request->getGet('startDate') ?? date('Y-m-01');
             $finalDate = $this->request->getGet('finalDate') ?? date('Y-m-d');
-            
+
             $accountMovementModel = new AccountMovementModel();
 
             $extract = $accountMovementModel->getExtract($account, $startDate, $finalDate);
-        
+            
+            if( !empty($extract)){
+                $resume = $this->getResume($extract);
+            }
+
             $dataReturn = [
                 'status'    => true,
                 'message'   => 'Extrato gerado com sucesso',
@@ -32,7 +36,8 @@ class Extractcontroller extends ResourceController
                     'account'   => $account,
                     'startDate' => $startDate,
                     'finalDate' => $finalDate,
-                    'extract'   => []
+                    'extract'   => $extract ?? [],
+                    'resume'    => $resume ?? null
                 ]
             ];
 
@@ -45,5 +50,31 @@ class Extractcontroller extends ResourceController
             ]);
         }
 
+    }
+
+    /**
+     * @param array $extract
+     * @return array
+     * retorna um array com os valores de entradas, saídas e saldo
+     */
+    public function getResume($extract){
+        $data = [
+            'entered' => 0,
+            'left'    => 0,
+            'balance' => 0
+        ];
+
+        if(is_array($extract)){
+            foreach($extract as $key => $value){
+                if($value->cm_entrada_saida == '1'){
+                    $data['entered'] += $value->cm_valor;
+                }else{
+                    $data['left'] += $value->cm_valor;
+                }
+            }
+            $data['balance'] = $data['entered'] - $data['left'];
+        }
+
+        return $data;
     }
 }
