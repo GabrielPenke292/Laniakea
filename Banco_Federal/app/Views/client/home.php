@@ -12,14 +12,15 @@
 
         </div>
 
+        <div id="component_saldo"></div>
         <?= $this->include('client/components/saldo'); ?>
 
         <hr>
 
         <?= $this->include('client/components/destaques'); ?>
-        
+
 
     </main>
-
+    <script src="<?php echo base_url('assets/js/client/home.js') ?>"></script>
     <?= $this->endSection(); ?>
 </div>

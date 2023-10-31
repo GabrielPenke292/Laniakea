@@ -16,3 +16,15 @@ function openBlockUI(){
 function closeBlockUI(){
     $.unblockUI();
 }   
+
+const httpRequest = (url, method, data) => {
+    $.ajax({
+        url: url,
+        type: method,
+        dataType: 'json',
+        data: data,
+        success: function (response) {
+            
+        }
+    });
+}
