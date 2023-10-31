@@ -5,19 +5,19 @@
   <ul class="confirmation-list">
     <li class="confirmation-item">
       <span class="confirmation-label">Valor do Empréstimo:</span>
-      <span class="confirmation-value">R$<?= number_format($loanAmount, 2, ',', '.') ?></span>
+      <span class="confirmation-value">$<?= isset($loanAmount) ? number_format($loanAmount, 2, ',', '.') : '3000.00' ?></span>
     </li>
     <li class="confirmation-item">
       <span class="confirmation-label">Duração do Empréstimo:</span>
-      <span class="confirmation-value"><?= $loanDuration ?> meses</span>
+      <span class="confirmation-value"><?= isset($loanDuration) ? $loanDuration : '12 ' ?> meses</span>
     </li>
     <li class="confirmation-item">
       <span class="confirmation-label">Taxa de Juros:</span>
-      <span class="confirmation-value"><?= $interestRate ?>%</span>
+      <span class="confirmation-value"><?= isset($interestRate) ? $interestRate : "3.45" ?>%</span>
     </li>
   </ul>
   <p class="confirmation-text">Para visualizar e baixar o contrato do empréstimo, clique no link abaixo:</p>
-  <a class="download-link" href="<?= $contractUrl ?>" target="_blank">Baixar Contrato</a>
+  <a class="download-link" href="<?= $contractUrl ?? '' ?>" target="_blank">Baixar Contrato</a>
   <br><br>
   <div class="row">
     <div class="col-12 mt-2 d-flex justify-content-center">
