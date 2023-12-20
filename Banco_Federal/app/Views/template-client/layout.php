@@ -19,15 +19,25 @@
   </header>
 
   <main>
-    
+
     <?= $this->include('template-client/sidebar'); ?>
-    
+
 
 
     <?php echo $this->renderSection('content'); ?>
 
 
   </main>
+
+  <!-- Default dropup button -->
+  <div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropup
+    </button>
+    <ul class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </ul>
+  </div>
 
   <footer id="footer">
     <?= $this->include('template-client/footer'); ?>
