@@ -21,7 +21,7 @@
          * this Adds a random point to the graph
          */
         function addRandomPoint() {
-            graph.addPoint(
+            const success = graph.tryAddPoint(
                 new Point(
                     Math.floor(Math.random() * myCanvas.width),
                     Math.floor(Math.random() * myCanvas.height)
@@ -30,6 +30,7 @@
             // refresh the canvas
             ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); // clear canvas
             graph.draw(ctx); // redraw the graph
+            console.log(success);
         }
 
         myCanvas.width = 600;

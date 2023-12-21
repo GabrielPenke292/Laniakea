@@ -4,6 +4,11 @@ class Point {
         this.y = y;
     }
 
+    // this is a method that checks if two points are equal
+    equals(point) {
+        return this.x == point.x && this.y == point.y;
+    }
+
     draw(ctx, size = 18, color = "black") {
         const rad = size / 2; // radius
         ctx.beginPath();
