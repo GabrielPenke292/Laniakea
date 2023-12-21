@@ -4,6 +4,9 @@ class Graph{
         this.segments = segments;
     }
 
+    addPoint(point) {
+        this.points.push(point);
+    }
 
     /**
      * this makes a graph from a list of points and segments
